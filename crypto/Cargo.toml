@@ -1,0 +1,24 @@
+[package]
+name = "crypto"
+version = "0.1.0"
+authors = ["hermitsage <dth.bht@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pvss = { git = "https://github.com/zhtluo/rust-pvss" }
+
+[dependencies.evss]
+package="evss" 
+git = "https://github.com/zhtluo/rust-evss"
+branch = "main" 
+
+[dev-dependencies]
+criterion = "0.3"
+
+# I must do this it seems
+[[bench]]
+name = "bench_pvss"
+# path = "benches/bench_pvss.rs"
+harness = false

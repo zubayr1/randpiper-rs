@@ -3,7 +3,13 @@ name = "randpiper-rs"
 version = "0.1.0"
 authors = ["hermitsage <dth.bht@gmail.com>"]
 edition = "2018"
+autobenches = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[workspace]
+members = [
+    "crypto",
+]
