@@ -8,9 +8,10 @@ edition = "2018"
 
 [dependencies]
 pvss = { git = "https://github.com/zhtluo/rust-pvss" }
+rand = "0.7.3"
 
 [dependencies.evss]
-package="evss" 
+package = "evss" 
 git = "https://github.com/zhtluo/rust-evss"
 branch = "main" 
 
@@ -21,4 +22,9 @@ criterion = "0.3"
 [[bench]]
 name = "bench_pvss"
 # path = "benches/bench_pvss.rs"
+harness = false
+
+[[bench]]
+name = "bench_evss"
+# path = "benches/bench_evss.rs"
 harness = false
