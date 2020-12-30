@@ -4,7 +4,7 @@ use evss::evss381::*;
 use criterion::{criterion_group, criterion_main, BenchmarkId, Criterion, Throughput};
 
 const SEED: u64 = 42;
-const MAX_COUNT: usize = 5;
+const MAX_COUNT: usize = 1000;
 
 pub fn sh_gen(c: &mut Criterion) {
     let rng = &mut StdRng::seed_from_u64(SEED);
