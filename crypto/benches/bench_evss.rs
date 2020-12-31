@@ -6,9 +6,9 @@ use criterion::{criterion_group, criterion_main, BenchmarkId, Criterion, Through
 const SEED: u64 = 42;
 const MAX_COUNT: usize = 1000;
 
-pub fn sh_gen(c: &mut Criterion) {
+pub fn evss_sh_gen(c: &mut Criterion) {
     let rng = &mut StdRng::seed_from_u64(SEED);
-    let mut group = c.benchmark_group("sh_gen");
+    let mut group = c.benchmark_group("evss_sh_gen");
     let secret = F381::rand(rng);
     for n in 3..MAX_COUNT {
         let t = (n + 1) / 2;
@@ -27,9 +27,9 @@ pub fn sh_gen(c: &mut Criterion) {
     group.finish();
 }
 
-pub fn sh_vrfy(c: &mut Criterion) {
+pub fn evss_sh_vrfy(c: &mut Criterion) {
     let rng = &mut StdRng::seed_from_u64(SEED);
-    let mut group = c.benchmark_group("sh_vrfy");
+    let mut group = c.benchmark_group("evss_sh_vrfy");
     let secret = F381::rand(rng);
     for n in 3..MAX_COUNT {
         let t = (n + 1) / 2;
@@ -51,9 +51,9 @@ pub fn sh_vrfy(c: &mut Criterion) {
     group.finish();
 }
 
-pub fn sh_recon(c: &mut Criterion) {
+pub fn evss_sh_recon(c: &mut Criterion) {
     let rng = &mut StdRng::seed_from_u64(SEED);
-    let mut group = c.benchmark_group("sh_recon");
+    let mut group = c.benchmark_group("evss_sh_recon");
     let secret = F381::rand(rng);
     for n in 3..MAX_COUNT {
         let t = (n + 1) / 2;
@@ -73,5 +73,5 @@ pub fn sh_recon(c: &mut Criterion) {
     group.finish();
 }
 
-criterion_group!(benches, sh_gen, sh_vrfy, sh_recon);
+criterion_group!(benches, evss_sh_gen, evss_sh_vrfy, evss_sh_recon);
 criterion_main!(benches);
