@@ -11,10 +11,10 @@ pub fn bi_sh_gen(c: &mut Criterion) {
     let mut group = c.benchmark_group("bi_sh_gen");
     for n in 3..MAX_COUNT {
         let vec: Vec<F381> = (0..n).map(|_| F381::rand(rng)).collect();
+        let params = Biaccumulator381::setup(&vec[..], n, rng).expect("");
         group.throughput(Throughput::Bytes(n as u64));
-        group.bench_with_input(BenchmarkId::from_parameter(n), &n, |b, &n| {
+        group.bench_with_input(BenchmarkId::from_parameter(n), &n, |b, &_n| {
             b.iter(|| {
-                let params = Biaccumulator381::setup(&vec[..], n, rng).expect("");
                 for cred in &vec {
                     Biaccumulator381::create_witness(*cred, &params, rng).expect("");
                 }
