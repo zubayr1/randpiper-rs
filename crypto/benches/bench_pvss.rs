@@ -1,12 +1,16 @@
 use pvss;
 
-use criterion::{criterion_group, criterion_main, BenchmarkId, Criterion, Throughput};
+use criterion::{BenchmarkGroup, BenchmarkId, Criterion, Throughput, criterion_group, criterion_main};
 
-const MAX_COUNT: usize = 1000;
+// const MAX_COUNT: usize = 1000;
+const TEST_POINTS: [usize; 19] = [3, 10, 30, 60, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 700, 800, 900, 1000];
+const BENCH_COUNT:usize = 10;
 
 pub fn pvss_sh_gen(c: &mut Criterion) {
     let mut group = c.benchmark_group("pvss_sh_gen");
-    for n in 3..MAX_COUNT {
+    BenchmarkGroup::sampling_mode(&mut group, criterion::SamplingMode::Flat);
+    for n in &TEST_POINTS {
+        let n = *n;
         let t = (n + 1) / 2;
         let mut keys = Vec::with_capacity(n);
         let mut pubs = Vec::with_capacity(n);
@@ -28,7 +32,9 @@ pub fn pvss_sh_gen(c: &mut Criterion) {
 
 pub fn pvss_sh_vrfy(c: &mut Criterion) {
     let mut group = c.benchmark_group("pvss_sh_vrfy");
-    for n in 3..MAX_COUNT {
+    BenchmarkGroup::sampling_mode(&mut group, criterion::SamplingMode::Flat);
+    for n in &TEST_POINTS {
+        let n = *n;
         let t = (n + 1) / 2;
         let mut keys = Vec::with_capacity(n);
         let mut pubs = Vec::with_capacity(n);
@@ -57,7 +63,9 @@ pub fn pvss_sh_vrfy(c: &mut Criterion) {
 
 pub fn pvss_sh_recon(c: &mut Criterion) {
     let mut group = c.benchmark_group("pvss_sh_recon");
-    for n in 3..MAX_COUNT {
+    BenchmarkGroup::sampling_mode(&mut group, criterion::SamplingMode::Flat);
+    for n in &TEST_POINTS {
+        let n = *n;
         let t = (n + 1) / 2;
         let mut keys = Vec::with_capacity(n);
         let mut pubs = Vec::with_capacity(n);
@@ -84,5 +92,8 @@ pub fn pvss_sh_recon(c: &mut Criterion) {
     group.finish();
 }
 
-criterion_group!(benches, pvss_sh_gen, pvss_sh_vrfy, pvss_sh_recon);
+criterion_group!(
+    name = benches;
+    config = Criterion::default().sample_size(BENCH_COUNT);
+    targets = pvss_sh_gen, pvss_sh_vrfy, pvss_sh_recon);
 criterion_main!(benches);
