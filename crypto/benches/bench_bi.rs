@@ -1,11 +1,15 @@
-use rand::{rngs::StdRng, SeedableRng};
 use evss::biaccumulator381::*;
+use rand::{rngs::StdRng, SeedableRng};
 
-use criterion::{criterion_group, criterion_main, BenchmarkId, Criterion, Throughput, BenchmarkGroup};
+use criterion::{
+    criterion_group, criterion_main, BenchmarkGroup, BenchmarkId, Criterion, Throughput,
+};
 
 const SEED: u64 = 42;
-const TEST_POINTS: [usize; 19] = [3, 10, 30, 60, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 700, 800, 900, 1000];
-const BENCH_COUNT:usize = 10;
+const TEST_POINTS: [usize; 19] = [
+    3, 10, 30, 60, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 700, 800, 900, 1000,
+];
+const BENCH_COUNT: usize = 10;
 
 pub fn bi_sh_gen(c: &mut Criterion) {
     let rng = &mut StdRng::seed_from_u64(SEED);
@@ -35,7 +39,7 @@ pub fn bi_sh_vrfy(c: &mut Criterion) {
         let params = Biaccumulator381::setup(&vec[..], *n, rng).expect("");
         let mut shares = Vec::new();
         for cred in &vec {
-           shares.push(Biaccumulator381::create_witness(*cred, &params, rng).expect(""));
+            shares.push(Biaccumulator381::create_witness(*cred, &params, rng).expect(""));
         }
         group.throughput(Throughput::Bytes(*n as u64));
         group.bench_with_input(BenchmarkId::from_parameter(n), &n, |b, &_n| {

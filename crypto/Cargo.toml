@@ -10,6 +10,9 @@ edition = "2018"
 pvss = { git = "https://github.com/zhtluo/rust-pvss" }
 evss = { git = "https://github.com/zhtluo/rust-evss", branch = "main" }
 rand = "0.7.3"
+sha2 = "0.9.2"
+serde = "1.0.118"
+flexbuffers = "0.2.1"
 
 [dev-dependencies]
 criterion = "0.3"

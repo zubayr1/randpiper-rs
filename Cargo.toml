@@ -11,5 +11,11 @@ autobenches = true
 
 [workspace]
 members = [
+    "types",
+    "config",
     "crypto",
+    "tools/genconfig",
+    "consensus",
+    "net",
+    "main/bft/node",
 ]
