@@ -30,6 +30,7 @@ pub async fn reactor(
     let pl_size = config.payload;
     let delta = config.delta;
     let mut epoch_end = time::interval(Duration::from_millis(delta * 11));
+    epoch_end.tick().await;
     loop {
         tokio::select! {
             pmsg_opt = net_recv.recv() => {

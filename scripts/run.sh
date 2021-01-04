@@ -1,4 +1,5 @@
 set -e
+trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
 cargo build --package=node-bft
 ./target/debug/node-bft -c ./target/config/nodes-0.json -i ./scripts/ip_file &
