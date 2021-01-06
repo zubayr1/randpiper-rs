@@ -1,4 +1,4 @@
-use serde::{Deserialize, Serialize};
+use serde::{Serialize, Deserialize};
 
 use crate::{Propose, Replica, Vote, WireReady};
 
@@ -11,8 +11,8 @@ pub enum ProtocolMsg {
 
 impl ProtocolMsg {
     pub fn from_bytes(bytes: Vec<u8>) -> Self {
-        let c: ProtocolMsg =
-            flexbuffers::from_slice(&bytes).expect("failed to decode the protocol message");
+        let c:ProtocolMsg = flexbuffers::from_slice(&bytes)
+            .expect("failed to decode the protocol message");
         return c;
     }
 }

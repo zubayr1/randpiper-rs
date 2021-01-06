@@ -8,20 +8,12 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct BlockBody {
-    pub tx_hashes: Vec<Hash>,
-    pub responses: Vec<u8>,
+    pub data: Vec<u8>,
 }
 
 impl BlockBody {
-    pub fn new(txs: Vec<Transaction>) -> Self {
-        let mut hashes = Vec::new();
-        for tx in txs {
-            hashes.push(crypto::hash::ser_and_hash(&tx));
-        }
-        BlockBody {
-            tx_hashes: hashes,
-            responses: Vec::new(),
-        }
+    pub fn new() -> Self {
+        BlockBody { data: Vec::new() }
     }
 }
 
@@ -46,19 +38,9 @@ impl std::fmt::Debug for BlockHeader {
 
 impl std::fmt::Debug for BlockBody {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        if self.tx_hashes.len() > 0 {
-            f.debug_struct("Block Body")
-                .field("Length", &self.tx_hashes.len())
-                .field("First", &self.tx_hashes[0])
-                .field("Last", &self.tx_hashes[self.tx_hashes.len() - 1])
-                .field("Payload", &self.responses)
-                .finish()
-        } else {
-            f.debug_struct("Block Body")
-                .field("Length", &self.tx_hashes.len())
-                .field("Payload", &self.responses)
-                .finish()
-        }
+        f.debug_struct("Block Body")
+            .field("data", &self.data)
+            .finish()
     }
 }
 
@@ -91,10 +73,10 @@ impl Block {
         return c;
     }
 
-    pub fn with_tx(txs: Vec<Transaction>) -> Self {
+    pub fn new() -> Self {
         Block {
             header: BlockHeader::new(),
-            body: BlockBody::new(txs),
+            body: BlockBody::new(),
             hash: EMPTY_HASH,
             payload: Vec::new(),
         }
@@ -107,9 +89,10 @@ impl Block {
     }
 
     pub fn update_hash(&mut self) {
-        let temp = self.payload.drain(..).collect();
+        let empty_vec = vec![0; 0];
+        let old_vec = std::mem::replace(&mut self.payload, empty_vec);
         self.hash = crypto::hash::ser_and_hash(&self);
-        self.payload = temp;
+        let _ = std::mem::replace(&mut self.payload, old_vec);
     }
 }
 
@@ -122,8 +105,7 @@ pub const GENESIS_BLOCK: Block = Block {
         blame_certificates: Vec::new(),
     },
     body: BlockBody {
-        tx_hashes: Vec::new(),
-        responses: Vec::new(),
+        data: Vec::new(),
     },
     hash: EMPTY_HASH,
     payload: vec![],

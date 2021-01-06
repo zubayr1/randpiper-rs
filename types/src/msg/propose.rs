@@ -1,6 +1,6 @@
+use serde::{Serialize, Deserialize};
 use super::Block;
-use serde::{Deserialize, Serialize};
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug,Clone)]
 pub struct Propose {
     pub new_block: Block,
     pub proof: Vec<u8>,
@@ -8,9 +8,9 @@ pub struct Propose {
 
 impl Propose {
     pub fn new(b: Block) -> Self {
-        Propose {
+        Propose{
             new_block: b,
-            proof: Vec::new(),
+            proof:Vec::new(),
         }
     }
 

@@ -1,4 +1,4 @@
-use types::Vote;
+use types::{Vote};
 
 use super::context::Context;
 

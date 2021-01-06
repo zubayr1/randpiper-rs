@@ -1,10 +1,10 @@
+use serde::{Serialize, Deserialize};
 use crate::Certificate;
-use serde::{Deserialize, Serialize};
 
-use super::super::Block;
+use super::super::{Block};
 use crate::View;
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug,Clone)]
 pub struct Propose {
     /// New block being proposed
     pub new_block: Block,
@@ -18,10 +18,10 @@ pub struct Propose {
 
 impl Propose {
     pub fn new(b: Block) -> Self {
-        Propose {
+        Propose{
             new_block: b,
-            proof: Vec::new(),
-            cert: Certificate::empty_cert(),
+            proof:Vec::new(),
+            cert:Certificate::empty_cert(),
             view: 0,
         }
     }

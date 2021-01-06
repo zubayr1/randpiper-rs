@@ -6,6 +6,7 @@ mod tests {
     }
 }
 
+
 mod protocol;
 pub use protocol::*;
 
@@ -15,7 +16,7 @@ use tokio_util::codec::{Decoder, Encoder};
 // use serde::{Deserialize, Serialize};
 // use tokio_util::codec::{Encoder, Decoder};
 
-pub const LIBP2P_MULTIADDR_FMT: &str = "/ip4/0.0.0.0/tcp";
+pub const LIBP2P_MULTIADDR_FMT:&str = "/ip4/0.0.0.0/tcp";
 
 pub type View = u64;
 
@@ -25,11 +26,10 @@ pub trait WireReady: Send {}
 
 // /// A trait that defines how we can identify ourselves to others, and
 // /// how others can identify us
-pub trait EnCodec<T, U>
-where
-    U: Encoder<T> + Send + 'static,
+pub trait EnCodec<T,U>
+where U: Encoder<T>+Send+'static
 {
     fn encoder() -> U;
 }
 
-pub trait DeCodec<T>: Decoder<Item = T, Error = std::io::Error> + Send + 'static {}
+pub trait DeCodec<T>: Decoder<Item=T,Error=std::io::Error>+Send+'static {}

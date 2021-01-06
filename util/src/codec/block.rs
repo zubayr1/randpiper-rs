@@ -1,12 +1,18 @@
+use types::{Block};
+use tokio_util::codec::{
+    Decoder, 
+    Encoder, 
+    length_delimited::LengthDelimitedCodec
+};
 use bytes::{Bytes, BytesMut};
-use std::borrow::Borrow;
-use std::io::Error;
+use std::io::{
+    Error,
+};
 use std::sync::Arc;
-use tokio_util::codec::{length_delimited::LengthDelimitedCodec, Decoder, Encoder};
-use types::Block;
+use std::borrow::Borrow;
 
 use crate::io::to_bytes;
-pub struct Codec(pub LengthDelimitedCodec);
+pub struct Codec (pub LengthDelimitedCodec);
 
 impl Codec {
     pub fn new() -> Self {
@@ -46,5 +52,11 @@ impl Decoder for Codec {
             Some(data) => Ok(Some(Block::from_bytes(data.to_vec()))),
             None => Ok(None),
         }
+    }
+}
+
+impl std::clone::Clone for Codec {
+    fn clone(&self) -> Self {
+        Codec::new()
     }
 }

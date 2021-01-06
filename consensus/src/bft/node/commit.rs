@@ -1,6 +1,6 @@
-use std::borrow::Borrow;
-use std::sync::Arc;
 use types::{Block, Propose, ProtocolMsg};
+use std::sync::Arc;
+use std::borrow::Borrow;
 
 use super::context::Context;
 
@@ -18,32 +18,26 @@ pub async fn on_finish_propose(p: &Propose, cx: &mut Context) {
         if forward_leader == myid {
             return;
         }
-        if let Err(e) = send_p
-            .send((forward_leader, Arc::new(ProtocolMsg::NewProposal(p_copy))))
-            .await
-        {
+        if let Err(e) = send_p.send(
+            (
+                forward_leader, 
+                Arc::new(ProtocolMsg::NewProposal(p_copy))
+            )
+        ).await {
             println!("Failed to forward proposal to the next leader: {}", e);
         }
     });
     cx.height = new_block.header.height;
-    cx.storage
-        .all_delivered_blocks_by_hash
-        .insert(new_block.hash, new_block_ref.clone());
-    cx.storage
-        .all_delivered_blocks_by_ht
-        .insert(new_block.header.height, new_block_ref.clone());
+    cx.storage.all_delivered_blocks_by_hash.insert(
+        new_block.hash, new_block_ref.clone());
+    cx.storage.all_delivered_blocks_by_ht.insert(
+        new_block.header.height, new_block_ref.clone());
     // change the leader
     cx.last_leader = new_block.header.author;
 
-    assert_eq!(
-        cx.last_seen_block.hash, new_block.header.prev,
-        "blocks must be delivered before this step"
-    );
-    assert_eq!(
-        cx.last_seen_block.header.height + 1,
-        new_block.header.height,
-        "blocks must be processed in order"
-    );
+    assert_eq!(cx.last_seen_block.hash, new_block.header.prev, "blocks must be delivered before this step");
+    assert_eq!(cx.last_seen_block.header.height+1, 
+        new_block.header.height, "blocks must be processed in order");
     cx.last_seen_block = Arc::new(new_block.clone());
     // Do we have any blocks to commit?
     if cx.height < cx.num_faults as u64 {
@@ -55,30 +49,19 @@ pub async fn on_finish_propose(p: &Propose, cx: &mut Context) {
         "There should be a difference of f+1 between the last committed block and the latest proposal");
     // Add all parents if not committed already
     let commit_height = cx.last_committed_block_ht + 1;
-    if !cx
-        .storage
-        .all_delivered_blocks_by_ht
-        .contains_key(&commit_height)
+    if !cx.storage.all_delivered_blocks_by_ht.contains_key(
+        &commit_height) 
     {
-        println!(
-            "Could not find missing parent for block:{:?}",
-            commit_height
-        );
+        println!("Could not find missing parent for block:{:?}",commit_height);
         return;
     };
     // commit block
     cx.last_committed_block_ht = commit_height;
-    let block = cx
-        .storage
-        .all_delivered_blocks_by_ht
+    let block = cx.storage.all_delivered_blocks_by_ht
         .get(&commit_height)
         .expect("we committed this block. It must be delivered");
-    cx.storage
-        .committed_blocks_by_ht
-        .insert(commit_height, block.clone());
-    cx.storage
-        .committed_blocks_by_hash
-        .insert(block.hash, block.clone());
+    cx.storage.committed_blocks_by_ht.insert(commit_height, block.clone());
+    cx.storage.committed_blocks_by_hash.insert(block.hash, block.clone());
 
     let cli_block = if cx.is_client_apollo_enabled {
         new_block_ref
@@ -96,7 +79,7 @@ pub async fn on_finish_propose(p: &Propose, cx: &mut Context) {
 
     // The server need not wait for the client to get the blocks, it can proceed
     // to handling the next proposal
-
+    
     if let Err(e) = cli_send.await {
         println!("Failed to send the block to the client: {}", e);
     }
