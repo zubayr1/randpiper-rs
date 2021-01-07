@@ -17,7 +17,7 @@ pub struct Certificate {
 }
 
 impl Certificate {
-    pub fn empty_cert() -> Self {
+    pub const fn empty_cert() -> Self {
         Certificate { votes: Vec::new() }
     }
 }

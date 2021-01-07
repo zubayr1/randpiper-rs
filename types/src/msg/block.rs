@@ -102,7 +102,7 @@ pub const GENESIS_BLOCK: Block = Block {
         extra: Vec::new(),
         author: 0,
         height: 0,
-        certificates: Certificate::empty_cert(),
+        certificate: Certificate::empty_cert(),
     },
     body: BlockBody { data: Vec::new() },
     hash: EMPTY_HASH,

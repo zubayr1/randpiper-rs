@@ -162,4 +162,10 @@ impl Node {
             .expect("Failed to obtain IP for self. Incorrect config file.")
             .clone()
     }
+
+    /// Returns the address at which a server should listen to incoming client
+    /// connections
+    pub fn client_ip(&self) -> String {
+        format!("0.0.0.0:{}", self.client_port)
+    }
 }

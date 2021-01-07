@@ -74,7 +74,7 @@ impl Context {
             payload: config.payload * config.block_size,
 
             highest_cert: Certificate::empty_cert(),
-            highest_height: -1,
+            highest_height: 0,
         };
         c.storage.committed_blocks_by_hash.insert(GENESIS_BLOCK.hash, Arc::clone(&genesis_block));
         c.storage.committed_blocks_by_ht.insert(0, Arc::clone(&genesis_block));
