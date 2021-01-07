@@ -1,29 +1,12 @@
 use std::collections::VecDeque;
 
-use futures::{
-    SinkExt, 
-    stream
-};
-use tokio::{
-    net::tcp::{
-        OwnedReadHalf, 
-        OwnedWriteHalf
-    }
-};
-use tokio_util::codec::{
-    Decoder, 
-    Encoder, 
-    FramedRead, 
-    FramedWrite
-};
-use types::WireReady;
-use tokio_stream::StreamExt;
+use futures::{stream, SinkExt};
 use std::sync::Arc;
-use tokio::sync::mpsc::{
-    Sender, 
-    Receiver, 
-    channel
-};
+use tokio::net::tcp::{OwnedReadHalf, OwnedWriteHalf};
+use tokio::sync::mpsc::{channel, Receiver, Sender};
+use tokio_stream::StreamExt;
+use tokio_util::codec::{Decoder, Encoder, FramedRead, FramedWrite};
+use types::WireReady;
 
 /// A Peer is a network object that abstracts as a type that is a stream of type
 /// O, and is a sink of type I
@@ -32,9 +15,10 @@ use tokio::sync::mpsc::{
 ///
 /// The types I and O must be thread safe, unpin, and can be encoded, decoded
 /// into.
-pub struct Peer<I,O> 
-where I: WireReady,
-O: WireReady,
+pub struct Peer<I, O>
+where
+    I: WireReady,
+    O: WireReady,
 {
     /// Send O msg to this peer
     pub send: Sender<Arc<O>>,
@@ -50,31 +34,32 @@ enum InternalOutMsg<O> {
     Batch(VecDeque<Arc<O>>),
 }
 
-impl<'de,I,O> Peer<I,O> 
-where I: WireReady+'static+Sync+Unpin,
-O: WireReady+'static + Clone+Sync,
+impl<'de, I, O> Peer<I, O>
+where
+    I: WireReady + 'static + Sync + Unpin,
+    O: WireReady + 'static + Clone + Sync,
 {
     pub fn new(
         rd: OwnedReadHalf,
         wr: OwnedWriteHalf,
-        d: impl Decoder<Item=I, Error=std::io::Error> + Send + 'static,
-        e: impl Encoder<Arc<O>> + Send + 'static
-    ) -> Self 
-    {
+        d: impl Decoder<Item = I, Error = std::io::Error> + Send + 'static,
+        e: impl Encoder<Arc<O>> + Send + 'static,
+    ) -> Self {
         log::trace!(target:"net/peer", "Creating a new peer");
-        // channels used by the peer to talk to the sockets: 
+        // channels used by the peer to talk to the sockets:
         // the send is used to get message from the outside and send it to the
         // network
         //
-        // 
+        //
         let (send_in, recv_in) = channel::<I>(util::CHANNEL_SIZE);
         let (send_out, mut recv_out) = channel::<Arc<O>>(util::CHANNEL_SIZE);
-        
+
         let mut reader = FramedRead::new(rd, d);
         let mut writer = FramedWrite::new(wr, e);
         let handle = tokio::runtime::Handle::current();
         let (internal_ch_in_send, mut internal_ch_in_recv) = channel(util::CHANNEL_SIZE);
-        let (internal_ch_out_send, mut internal_ch_out_recv) = channel::<InternalOutMsg<O>>(util::CHANNEL_SIZE);
+        let (internal_ch_out_send, mut internal_ch_out_recv) =
+            channel::<InternalOutMsg<O>>(util::CHANNEL_SIZE);
         handle.spawn(async move {
             loop {
                 let opt = internal_ch_out_recv.recv().await;
@@ -133,7 +118,7 @@ O: WireReady+'static + Clone+Sync,
                     },
                     internal_ch_recv_opt = internal_ch_in_recv.recv() => {
                         if let Some(InternalInMsg::Ready) = internal_ch_recv_opt {
-                            ready = true;                                
+                            ready = true;
                         } else {
                             log::warn!(target:"net", "Error in getting message from int channel");
                             std::process::exit(0);
@@ -142,7 +127,7 @@ O: WireReady+'static + Clone+Sync,
                 }
             }
         });
-        
+
         Self {
             send: send_out,
             recv: recv_in,

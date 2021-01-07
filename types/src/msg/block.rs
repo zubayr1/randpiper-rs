@@ -23,7 +23,7 @@ pub struct BlockHeader {
     pub extra: Vec<u8>,
     pub author: Replica,
     pub height: Height,
-    pub blame_certificates: Vec<Certificate>,
+    pub certificate: Certificate,
 }
 
 impl std::fmt::Debug for BlockHeader {
@@ -51,7 +51,7 @@ impl BlockHeader {
             extra: Vec::new(),
             author: 0,
             height: 0,
-            blame_certificates: Vec::new(),
+            certificate: Certificate::empty_cert(),
         }
     }
 }
@@ -102,11 +102,9 @@ pub const GENESIS_BLOCK: Block = Block {
         extra: Vec::new(),
         author: 0,
         height: 0,
-        blame_certificates: Vec::new(),
+        certificates: Certificate::empty_cert(),
     },
-    body: BlockBody {
-        data: Vec::new(),
-    },
+    body: BlockBody { data: Vec::new() },
     hash: EMPTY_HASH,
     payload: vec![],
     // cert: Certificate{

@@ -1,18 +1,21 @@
-/// The core consensus module used for Apollo
-/// 
-/// The reactor reacts to all the messages from the network, and talks to the
-/// clients accordingly.
-
-use tokio::sync::mpsc::{channel, Sender, Receiver};
-use tokio::time;
-use types::{Block, Replica, ProtocolMsg, Transaction};
-use config::Node;
 use super::context::Context;
-use std::time::{Duration, Instant};
-use std::{sync::Arc, borrow::Borrow};
+use crypto::hash::{Hash, EMPTY_HASH};
+use config::Node;
+use std::time::Duration;
+use std::{borrow::Borrow, sync::Arc};
+use tokio::sync::mpsc::{channel, Receiver, Sender};
+use tokio::time;
+use types::{Block, ProtocolMsg, Replica, Certificate, Transaction};
+
+#[derive(PartialEq)]
+enum Phase {
+    Propose,
+    DeliverPropose,
+    End,
+}
 
 pub async fn reactor(
-    config:&Node,
+    config: &Node,
     is_client_apollo_enabled: bool,
     net_send: Sender<(Replica, Arc<ProtocolMsg>)>,
     mut net_recv: Receiver<(Replica, ProtocolMsg)>,
@@ -26,21 +29,56 @@ pub async fn reactor(
     let block_size = config.block_size;
     let myid = config.id;
     let pl_size = config.payload;
-    let cli_send_p = cli_send.clone();
     let delta = config.delta;
-    let mut epoch_end = time::interval(Duration::from_millis(delta * 11));
+    // A little time to boot everything up
+    let mut phase = Phase::End;
+    let mut phase_end = time::sleep_until(time::Instant::now() + Duration::from_millis(delta * 11));
     loop {
         tokio::select! {
             pmsg_opt = net_recv.recv() => {
                 // Received a protocol message
+                if let None = pmsg_opt {
+                    log::error!(target:"node", "Protocol message channel closed");
+                    std::process::exit(0);
+                }
+                let (_, pmsg) = pmsg_opt.unwrap();
+                match pmsg {
+                    ProtocolMsg::Certificate(p) => {
+                        if myid == cx.last_leader && phase == Phase::Propose {
+                            // TODO: Check that the certificate is valid
+                            let hash = if p.votes.len() == 0 { EMPTY_HASH } else { p.votes[0].msg };
+                            if let Some(block) = cx.storage.committed_blocks_by_hash.find(hash) {
+                                if block.header.height > cx.highest_height {
+                                    cx.highest_cert = p;
+                                    cx.highest_height = block.header.height;
+                                }
+                            }
+                        }
+                    },
+                    _ => {},
+                };
             },
             tx_opt = cli_recv.recv() => {
                 // We received a message from the client
             },
-            _ = epoch_end.tick() => {
-                cx.last_leader = cx.next_leader();
-                println!("{}: 11 delta has elapsed. Leader is {}.", myid, cx.last_leader);
-                // Send the certification
+            _ = phase_end => {
+                match phase {
+                    Phase::End => {
+                        cx.last_leader = cx.next_leader();
+                        println!("{}: 11 delta has elapsed. Leader is {}.", myid, cx.last_leader);
+                        if myid != cx.last_leader {
+                            phase = Phase::DeliverPropose;
+                            phase_end = time::sleep_until(time::Instant::now() + Duration::from_millis(delta * 7));
+                            // Send the certification
+                            cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.header.certificate.clone())))).await.unwrap();
+                        } else {
+                            highest_cert = Certificate::empty_cert()
+                            highest_height = -1;
+                            phase = Phase::Propose;
+                            phase_end = time::sleep_until(time::Instant::now() + Duration::from_millis(delta * 2));
+                        }
+                    }
+                }
             },
         }
     }

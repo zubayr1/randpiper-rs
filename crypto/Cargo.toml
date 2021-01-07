@@ -17,7 +17,6 @@ flexbuffers = "0.2.1"
 [dev-dependencies]
 criterion = "0.3"
 
-# I must do this it seems
 [[bench]]
 name = "bench_pvss"
 harness = false

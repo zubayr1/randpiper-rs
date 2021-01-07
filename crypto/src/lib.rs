@@ -10,3 +10,6 @@ pub mod hash;
 
 mod crypto;
 pub use crypto::*;
+pub use evss::evss381::*;
+pub use evss::biaccumulator381::*;
+

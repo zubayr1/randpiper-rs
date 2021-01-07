@@ -1,41 +1,42 @@
-use tokio::{net::TcpStream, sync::mpsc::{Receiver, Sender, channel}};
-use tokio_stream::StreamMap;
-use tokio_util::codec::{
-    Decoder, 
-    Encoder
+use crate::{peer::Peer, Client};
+use std::{collections::HashMap, io::Error, sync::Arc};
+use tokio::{
+    net::TcpStream,
+    sync::mpsc::{channel, Receiver, Sender},
 };
-use std::{io::Error, sync::Arc, collections::HashMap};
-use types::{Replica, WireReady};
-use crate::{Client, peer::Peer};
 use tokio_stream::StreamExt;
+use tokio_stream::StreamMap;
+use tokio_util::codec::{Decoder, Encoder};
+use types::{Replica, WireReady};
 
-impl<I,O> Client<I,O>
-where I:WireReady + Send + Sync + 'static + Unpin,
-O:WireReady + Clone + Sync + 'static + Unpin, 
+impl<I, O> Client<I, O>
+where
+    I: WireReady + Send + Sync + 'static + Unpin,
+    O: WireReady + Clone + Sync + 'static + Unpin,
 {
     pub async fn setup(
         &mut self,
-        node_addr: HashMap<Replica, String>, 
-        enc: impl Encoder<Arc<O>> + Send + Clone + 'static, 
-        dec: impl Decoder<Item=I, Error=Error> + Clone + Send + 'static
-    ) -> (Sender<(Replica, Arc<O>)>, Receiver<(Replica, I)>)
-    {
+        node_addr: HashMap<Replica, String>,
+        enc: impl Encoder<Arc<O>> + Send + Clone + 'static,
+        dec: impl Decoder<Item = I, Error = Error> + Clone + Send + 'static,
+    ) -> (Sender<(Replica, Arc<O>)>, Receiver<(Replica, I)>) {
         let n = node_addr.len();
         let mut read_stream = StreamMap::with_capacity(n);
 
         for (i, addr) in node_addr {
             let peer = self.add_new_peer(addr, enc.clone(), dec.clone()).await;
-            
+
             // Add the receive part of the peer to the read stream
             let mut recv = peer.recv;
-            
+
             // Create a read stream from a receiver
-            let recv = Box::pin(async_stream::stream!{
+            let recv = Box::pin(async_stream::stream! {
                 while let Some(item) = recv.recv().await {
                     yield item;
                 }
-            }) as std::pin::Pin<Box<dyn futures_util::stream::Stream<Item=I> +Send>>;
-            
+            })
+                as std::pin::Pin<Box<dyn futures_util::stream::Stream<Item = I> + Send>>;
+
             // Add it to our maps
             read_stream.insert(i, recv);
             self.peers.insert(i, peer.send);
@@ -46,10 +47,10 @@ O:WireReady + Clone + Sync + 'static + Unpin,
 
     pub(crate) async fn add_new_peer(
         &self,
-        addr: String, 
-        enc: impl Encoder<Arc<O>> + Send + 'static, 
-        dec: impl Decoder<Item=I, Error=Error> + Clone + Send + 'static
-    ) -> Peer<I,O> {
+        addr: String,
+        enc: impl Encoder<Arc<O>> + Send + 'static,
+        dec: impl Decoder<Item = I, Error = Error> + Clone + Send + 'static,
+    ) -> Peer<I, O> {
         // Connect to the server
         let conn = TcpStream::connect(addr)
             .await
@@ -68,12 +69,10 @@ O:WireReady + Clone + Sync + 'static + Unpin,
 
     pub(crate) fn start_event_loop(
         &mut self,
-        mut stream: impl tokio_stream::Stream<Item=(Replica, I)> + Unpin + Send + 'static
+        mut stream: impl tokio_stream::Stream<Item = (Replica, I)> + Unpin + Send + 'static,
     ) -> (Sender<(Replica, Arc<O>)>, Receiver<(Replica, I)>) {
-        let (in_send, mut in_recv) 
-            = channel::<(Replica, Arc<O>)>(util::CHANNEL_SIZE);
-        let (out_send, out_recv) 
-            = channel(util::CHANNEL_SIZE);
+        let (in_send, mut in_recv) = channel::<(Replica, Arc<O>)>(util::CHANNEL_SIZE);
+        let (out_send, out_recv) = channel(util::CHANNEL_SIZE);
         // I hope no new peers will be added later
         let n = self.peers.len();
         let peers = self.peers.clone();
@@ -121,4 +120,3 @@ O:WireReady + Clone + Sync + 'static + Unpin,
         (in_send, out_recv)
     }
 }
-

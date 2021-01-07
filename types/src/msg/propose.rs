@@ -1,20 +1,20 @@
-use serde::{Serialize, Deserialize};
+use crate::Height;
 use super::Block;
-#[derive(Serialize, Deserialize, Debug,Clone)]
-pub struct Propose {
-    pub new_block: Block,
-    pub proof: Vec<u8>,
+use crypto::EVSSPublicParams381;
+use serde::{Deserialize, Serialize};
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct Proof {
+    pub block_hash: Vec<u8>,
+    pub certificate_hash: Vec<u8>,
+    pub epoch: Height,
+    pub accumulator: EVSSPublicParams381,
 }
 
-impl Propose {
-    pub fn new(b: Block) -> Self {
-        Propose{
-            new_block: b,
-            proof:Vec::new(),
-        }
-    }
-
-    pub fn init(&mut self) {
-        self.new_block.update_hash();
-    }
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct Propose {
+    pub new_block: Block,
+    pub certificate: Certificate,
+    pub proof: Proof,
+    pub sign: Vec<u8>,
 }

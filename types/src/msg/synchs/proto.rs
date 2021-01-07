@@ -1,17 +1,6 @@
-use serde::{
-    Serialize, 
-    Deserialize
-};
+use serde::{Deserialize, Serialize};
 
-use crate::{
-    Certificate, 
-    Replica, 
-    View, 
-    Vote, 
-    msg::block::Block, 
-    synchs::Propose,
-    WireReady
-};
+use crate::{msg::block::Block, synchs::Propose, Certificate, Replica, View, Vote, WireReady};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ProtocolMsg {
@@ -22,17 +11,17 @@ pub enum ProtocolMsg {
     /// Can be a blame or a vote
     Vote(Vote),
     /// VoteMsg because a vote needs to have a block
-    VoteMsg(Vote, Propose), 
+    VoteMsg(Vote, Propose),
     /// Certificate saying that all the nodes are waiting to quit the view
-    QuitView(View, Certificate), 
+    QuitView(View, Certificate),
     /// Status: Contains the block and its certificate
     Status(Block, Certificate),
 }
 
 impl ProtocolMsg {
     pub fn from_bytes(bytes: Vec<u8>) -> Self {
-        let c:ProtocolMsg = flexbuffers::from_slice(&bytes)
-            .expect("failed to decode the protocol message");
+        let c: ProtocolMsg =
+            flexbuffers::from_slice(&bytes).expect("failed to decode the protocol message");
         return c;
     }
 
@@ -40,12 +29,12 @@ impl ProtocolMsg {
         match self {
             ProtocolMsg::NewProposal(mut p) => {
                 p.init();
-                return ProtocolMsg::NewProposal(p)
-            },
+                return ProtocolMsg::NewProposal(p);
+            }
             ProtocolMsg::VoteMsg(_v, mut p) => {
                 p.init();
                 return ProtocolMsg::VoteMsg(_v, p);
-            },
+            }
             _ => (),
         }
         self
