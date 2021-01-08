@@ -6,7 +6,7 @@ use tokio::sync::mpsc::Sender;
 // use crate::Sender;
 use config::Node;
 use std::sync::Arc;
-use types::{Block, Height, ProtocolMsg, Replica, Storage, Certificate, GENESIS_BLOCK};
+use types::{Block, Certificate, Height, ProtocolMsg, Replica, Storage, GENESIS_BLOCK};
 
 // type Sender<T> = TxFuture<T, SharedFutureBoth>;
 
@@ -76,8 +76,12 @@ impl Context {
             highest_cert: Certificate::empty_cert(),
             highest_height: 0,
         };
-        c.storage.committed_blocks_by_hash.insert(GENESIS_BLOCK.hash, Arc::clone(&genesis_block));
-        c.storage.committed_blocks_by_ht.insert(0, Arc::clone(&genesis_block));
+        c.storage
+            .committed_blocks_by_hash
+            .insert(GENESIS_BLOCK.hash, Arc::clone(&genesis_block));
+        c.storage
+            .committed_blocks_by_ht
+            .insert(0, Arc::clone(&genesis_block));
         for (id, mut pk_data) in &config.pk_map {
             if *id == c.myid {
                 continue;

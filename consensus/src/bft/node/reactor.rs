@@ -1,11 +1,11 @@
 use super::context::Context;
-use crypto::hash::{Hash, EMPTY_HASH};
 use config::Node;
+use crypto::hash::{Hash, EMPTY_HASH};
 use std::time::Duration;
 use std::{borrow::Borrow, convert::TryInto, sync::Arc};
 use tokio::sync::mpsc::{channel, Receiver, Sender};
 use tokio::time;
-use types::{Block, ProtocolMsg, Replica, Certificate, Transaction};
+use types::{Block, Certificate, ProtocolMsg, Replica, Transaction};
 
 #[derive(PartialEq)]
 enum Phase {
@@ -30,9 +30,11 @@ pub async fn reactor(
     let myid = config.id;
     let pl_size = config.payload;
     let delta = config.delta;
+    let mut epoch = 1;
+    let begin = time::Instant::now();
     // A little time to boot everything up
     let mut phase = Phase::End;
-    let phase_end = time::sleep_until(time::Instant::now() + Duration::from_millis(delta * 11));
+    let phase_end = time::sleep_until(begin + Duration::from_millis(delta * 11));
     tokio::pin!(phase_end);
     loop {
         tokio::select! {
@@ -64,16 +66,29 @@ pub async fn reactor(
             },
             _ = &mut phase_end => {
                 match phase {
-                    Phase::Propose => {}
+                    Phase::Propose => {
+                        let mut new_block = Block::new();
+                        if cx.highest_cert.votes.len() == 0 {
+                            new_block.header.prev = EMPTY_HASH;
+                        } else {
+                            new_block.header.prev = cx.highest_cert.votes[0].msg.clone().try_into().unwrap();
+                        };
+                        new_block.header.author = myid;
+                        new_block.header.height = cx.highest_height + 1;
+                        // TODO: Maybe add something to body?
+                        new_block.update_hash();
+
+                    }
                     Phase::DeliverPropose => {}
                     Phase::End => {
                         cx.last_leader = cx.next_leader();
+                        epoch += 1;
                         println!("{}: 11 delta has elapsed. Leader is {}.", myid, cx.last_leader);
                         if myid != cx.last_leader {
                             phase = Phase::DeliverPropose;
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 7));
                             // Send the certification
-                            cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.header.certificate.clone())))).await.unwrap();
+                            cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.certificate.clone())))).await.unwrap();
                         } else {
                             cx.highest_cert = Certificate::empty_cert();
                             cx.highest_height = 0;

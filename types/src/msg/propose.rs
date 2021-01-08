@@ -34,7 +34,7 @@ impl Clone for Proof {
             accumulator: EVSSPublicParams381 {
                 verifier_key: self.accumulator.verifier_key.clone(),
                 commit: self.accumulator.commit.clone(),
-            }
+            },
         }
     }
 }

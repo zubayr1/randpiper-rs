@@ -23,7 +23,6 @@ pub struct BlockHeader {
     pub extra: Vec<u8>,
     pub author: Replica,
     pub height: Height,
-    pub certificate: Certificate,
 }
 
 impl std::fmt::Debug for BlockHeader {
@@ -51,7 +50,6 @@ impl BlockHeader {
             extra: Vec::new(),
             author: 0,
             height: 0,
-            certificate: Certificate::empty_cert(),
         }
     }
 }
@@ -65,6 +63,7 @@ pub struct Block {
     pub hash: Hash,
     // #[serde(skip_serializing, skip_deserializing)]
     pub payload: Vec<u8>,
+    pub certificate: Certificate,
 }
 
 impl Block {
@@ -79,6 +78,7 @@ impl Block {
             body: BlockBody::new(),
             hash: EMPTY_HASH,
             payload: Vec::new(),
+            certificate: Certificate::empty_cert(),
         }
     }
 
@@ -91,8 +91,11 @@ impl Block {
     pub fn update_hash(&mut self) {
         let empty_vec = vec![0; 0];
         let old_vec = std::mem::replace(&mut self.payload, empty_vec);
+        let empty_cert = Certificate::empty_cert();
+        let old_cert = std::mem::replace(&mut self.certificate, empty_cert);
         self.hash = crypto::hash::ser_and_hash(&self);
         let _ = std::mem::replace(&mut self.payload, old_vec);
+        let _ = std::mem::replace(&mut self.certificate, old_cert);
     }
 }
 
@@ -102,11 +105,11 @@ pub const GENESIS_BLOCK: Block = Block {
         extra: Vec::new(),
         author: 0,
         height: 0,
-        certificate: Certificate::empty_cert(),
     },
     body: BlockBody { data: Vec::new() },
     hash: EMPTY_HASH,
     payload: vec![],
+    certificate: Certificate::empty_cert(),
     // cert: Certificate{
     // votes: vec![],
     // },
