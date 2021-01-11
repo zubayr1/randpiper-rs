@@ -1,5 +1,5 @@
 [package]
-name = "node-apollo"
+name = "node-bft"
 version = "0.1.0"
 authors = ["hermitsage <dth.bht@gmail.com>"]
 edition = "2018"

@@ -12,3 +12,4 @@ mod crypto;
 pub use crypto::*;
 pub use evss::biaccumulator381::*;
 pub use evss::evss381::*;
+pub use rand;

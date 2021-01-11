@@ -6,7 +6,9 @@ use tokio::sync::mpsc::Sender;
 // use crate::Sender;
 use config::Node;
 use std::sync::Arc;
-use types::{Block, Certificate, Height, ProtocolMsg, Replica, Storage, GENESIS_BLOCK};
+use types::{
+    Block, Certificate, Height, Propose, ProtocolMsg, Replica, Storage, Vote, GENESIS_BLOCK,
+};
 
 // type Sender<T> = TxFuture<T, SharedFutureBoth>;
 
@@ -29,6 +31,14 @@ pub struct Context {
 
     pub highest_cert: Certificate,
     pub highest_height: Height,
+
+    pub received_propose: Option<Propose>,
+    pub reconstructed_propose: Option<Propose>,
+
+    pub received_vote: Vec<Vote>,
+
+    pub received_certificate: Option<Certificate>,
+    pub reconstructed_certificate: Option<Certificate>,
 }
 
 const EXTRA_SPACE: usize = 100;
@@ -75,6 +85,14 @@ impl Context {
 
             highest_cert: Certificate::empty_cert(),
             highest_height: 0,
+
+            received_propose: None,
+            reconstructed_propose: None,
+
+            received_vote: Vec::new(),
+
+            received_certificate: None,
+            reconstructed_certificate: None,
         };
         c.storage
             .committed_blocks_by_hash

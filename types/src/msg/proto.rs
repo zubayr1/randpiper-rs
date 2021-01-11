@@ -2,13 +2,14 @@ use serde::{Deserialize, Serialize};
 
 use super::Certificate;
 use crate::{Propose, Replica, Vote, WireReady};
+use crypto::EVSSPublicParams381;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ProtocolMsg {
     Certificate(Certificate),
-    Identify(Replica),
-    Proposal(Propose),
-    Blame(Vote),
+    Propose(Propose),
+    Vote(Vote),
+    VoteCert(Certificate, EVSSPublicParams381),
 }
 
 impl ProtocolMsg {
