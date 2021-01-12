@@ -11,7 +11,7 @@ config = { package = "config", path="../../../config"}
 util = { package = "util", path="../../../util"}
 consensus = { package = "consensus", path="../../../consensus"}
 types = { package = "types", path="../../../types"}
-net = { package = "net", path="../../../net"}
+net = { git = "https://github.com/adithyabhatkajake/libchatter-rs" }
 clap = {version = "2.*", features = ["yaml"]}
 tokio = { version = "1.0", features = ["full"] }
 futures = "0.3.8"

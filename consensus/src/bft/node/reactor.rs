@@ -76,7 +76,11 @@ pub async fn reactor(
                             cx.received_vote = Vec::new();
                             // TODO: Make a real setup
                             let setup = Biaccumulator381::setup(&[F381::from(0 as u32), F381::from(1 as u32), F381::from(2 as u32)], 3, &mut crypto::rand::rngs::StdRng::from_entropy()).unwrap();
-                            cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::VoteCert(certificate, setup.get_public_params())))).await.unwrap();
+                            cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::VoteCert(certificate.clone(), setup.get_public_params())))).await.unwrap();
+                            cx.received_certificate = Some(certificate);
+                            cx.reconstructed_certificate = cx.received_certificate.clone();
+                            phase = Phase::Commit;
+                            phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                         }
                     },
                     ProtocolMsg::VoteCert(c, z) => {
@@ -119,7 +123,11 @@ pub async fn reactor(
                             proof: proof,
                         };
                         cx.highest_cert = Certificate::empty_cert();
-                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose)))).await.unwrap();
+                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose.clone())))).await.unwrap();
+                        cx.received_propose = Some(propose);
+                        cx.reconstructed_propose = cx.received_propose.clone();
+                        phase = Phase::End;
+                        phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * epoch));
                     }
                     Phase::DeliverPropose => {
                         // TODO: Invoke Deliver and Reconstruct
@@ -128,7 +136,7 @@ pub async fn reactor(
                     }
                     Phase::Vote => {
                         // TODO: Check the propose
-                        let propose = cx.reconstructed_propose.unwrap();
+                        let propose = cx.reconstructed_propose.clone().unwrap();
                         let mut block = propose.new_block;
                         block.update_hash();
                         let vote = Vote {
@@ -137,7 +145,6 @@ pub async fn reactor(
                             auth: cx.my_secret_key.sign(&block.hash).unwrap(),
                         };
                         cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Vote(vote)))).await.unwrap();
-                        cx.reconstructed_propose = None;
                         phase = Phase::End;
                         phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * epoch));
                     }
@@ -159,7 +166,7 @@ pub async fn reactor(
                     Phase::End => {
                         cx.last_leader = cx.next_leader();
                         epoch += 1;
-                        println!("{}: 11 delta has elapsed. Leader is {}.", myid, cx.last_leader);
+                        println!("{}: epoch {}. Leader is {}.", myid, epoch, cx.last_leader);
                         if myid != cx.last_leader {
                             phase = Phase::DeliverPropose;
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 7));
