@@ -43,7 +43,7 @@ impl Decoder for Codec {
 
     fn decode(&mut self, src: &mut BytesMut) -> Result<Option<Self::Item>, Self::Error> {
         match self.0.decode(src)? {
-            Some(data) => Ok(Some(Block::from_bytes(data.to_vec()))),
+            Some(data) => Ok(Some(Block::from_bytes(&data))),
             None => Ok(None),
         }
     }

@@ -1,10 +1,10 @@
-use super::{Certificate, Transaction};
+use super::Certificate;
 use crate::{
     protocol::{Height, Replica},
-    WireReady,
 };
 use crypto::hash::{Hash, EMPTY_HASH};
 use serde::{Deserialize, Serialize};
+use types_upstream::WireReady;
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct BlockBody {
@@ -67,9 +67,9 @@ pub struct Block {
 }
 
 impl Block {
-    pub fn from_bytes(bytes: Vec<u8>) -> Self {
+    pub fn from_bytes(bytes: &[u8]) -> Self {
         let c: Block = flexbuffers::from_slice(&bytes).expect("failed to decode the block");
-        return c;
+        return c.init();
     }
 
     pub fn new() -> Self {
@@ -115,4 +115,13 @@ pub const GENESIS_BLOCK: Block = Block {
     // },
 };
 
-impl WireReady for Block {}
+impl types_upstream::WireReady for Block {
+    fn init(self) -> Self {
+        self
+    }
+
+    fn from_bytes(data: &[u8]) -> Self {
+        Block::from_bytes(data)
+    }
+
+}

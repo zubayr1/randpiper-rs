@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 
 // use crossfire::mpsc::{SharedSenderFRecvB, TxFuture};
-use libp2p::{core::PublicKey, identity::Keypair};
-use tokio::sync::mpsc::Sender;
+use crypto_lib::{PublicKey, Keypair, ed25519, secp256k1};
+use tokio::sync::mpsc::{UnboundedSender};
 // use crate::Sender;
 use config::Node;
 use std::sync::Arc;
@@ -18,8 +18,8 @@ pub struct Context {
     pub myid: Replica,
     pub pub_key_map: HashMap<Replica, PublicKey>,
     pub my_secret_key: Keypair,
-    pub net_send: Sender<(Replica, Arc<ProtocolMsg>)>,
-    pub cli_send: Sender<Block>,
+    pub net_send: UnboundedSender<(Replica, Arc<ProtocolMsg>)>,
+    pub cli_send: UnboundedSender<Block>,
     pub is_client_apollo_enabled: bool,
 
     pub storage: Storage,
@@ -46,8 +46,8 @@ const EXTRA_SPACE: usize = 100;
 impl Context {
     pub fn new(
         config: &Node,
-        net_send: Sender<(Replica, Arc<ProtocolMsg>)>,
-        cli_send: Sender<Block>,
+        net_send: UnboundedSender<(Replica, Arc<ProtocolMsg>)>,
+        cli_send: UnboundedSender<Block>,
     ) -> Self {
         let genesis_block = Arc::new(GENESIS_BLOCK);
         let mut c = Context {
@@ -57,15 +57,15 @@ impl Context {
             my_secret_key: match config.crypto_alg {
                 crypto::Algorithm::ED25519 => {
                     let mut sk_copy = config.secret_key_bytes.clone();
-                    let kp = libp2p::identity::ed25519::Keypair::decode(&mut sk_copy)
+                    let kp = ed25519::Keypair::decode(&mut sk_copy)
                         .expect("Failed to decode the secret key from the config");
-                    libp2p::identity::Keypair::Ed25519(kp)
+                    Keypair::Ed25519(kp)
                 }
                 crypto::Algorithm::SECP256K1 => {
                     let sk_copy = config.secret_key_bytes.clone();
-                    let sk = libp2p::identity::secp256k1::SecretKey::from_bytes(sk_copy)
+                    let sk = secp256k1::SecretKey::from_bytes(sk_copy)
                         .expect("Failed to decode the secret key from the config");
-                    let kp = libp2p::identity::secp256k1::Keypair::from(sk);
+                    let kp = secp256k1::Keypair::from(sk);
                     Keypair::Secp256k1(kp)
                 }
                 _ => panic!("Unimplemented algorithm"),
@@ -106,14 +106,14 @@ impl Context {
             }
             let pk = match config.crypto_alg {
                 crypto::Algorithm::ED25519 => {
-                    let kp = libp2p::identity::ed25519::PublicKey::decode(&mut pk_data)
+                    let kp = ed25519::PublicKey::decode(&mut pk_data)
                         .expect("Failed to decode the secret key from the config");
-                    libp2p::identity::PublicKey::Ed25519(kp)
+                    PublicKey::Ed25519(kp)
                 }
                 crypto::Algorithm::SECP256K1 => {
-                    let sk = libp2p::identity::secp256k1::PublicKey::decode(&pk_data)
+                    let sk = secp256k1::PublicKey::decode(&pk_data)
                         .expect("Failed to decode the secret key from the config");
-                    libp2p::identity::PublicKey::Secp256k1(sk)
+                    PublicKey::Secp256k1(sk)
                 }
                 _ => panic!("Unimplemented algorithm"),
             };

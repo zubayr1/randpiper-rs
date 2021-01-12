@@ -1,8 +1,7 @@
 use serde::{Deserialize, Serialize};
 
-use super::super::View;
-use super::block::*;
-use crate::{protocol::*, WireReady};
+use crate::{protocol::*};
+use types_upstream::WireReady;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Vote {
@@ -37,8 +36,17 @@ pub struct Transaction {
 impl Transaction {
     pub fn from_bytes(bytes: &[u8]) -> Self {
         let c: Transaction = flexbuffers::from_slice(&bytes).expect("failed to decode the block");
-        return c;
+        return c.init();
     }
 }
 
-impl WireReady for Transaction {}
+impl WireReady for Transaction {
+    fn init(self) -> Self {
+        self
+    }
+
+    fn from_bytes(data: &[u8]) -> Self {
+        Transaction::from_bytes(data)
+    }
+
+}

@@ -20,7 +20,7 @@ impl Decoder for Codec {
 
     fn decode(&mut self, src: &mut BytesMut) -> Result<Option<Self::Item>, Self::Error> {
         match self.0.decode(src)? {
-            Some(in_data) => Ok(Some(ProtocolMsg::from_bytes(in_data.to_vec()))),
+            Some(in_data) => Ok(Some(ProtocolMsg::from_bytes(&in_data))),
             None => Ok(None),
         }
     }

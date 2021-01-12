@@ -1,11 +1,11 @@
 use super::context::Context;
 use config::Node;
-use crypto::hash::{ser_and_hash, Hash, EMPTY_HASH};
+use crypto::hash::{ser_and_hash, EMPTY_HASH};
 use crypto::rand::SeedableRng;
 use crypto::{Biaccumulator381, F381};
 use std::time::Duration;
-use std::{borrow::Borrow, convert::TryInto, sync::Arc};
-use tokio::sync::mpsc::{channel, Receiver, Sender};
+use std::{convert::TryInto, sync::Arc};
+use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 use tokio::time;
 use types::{Block, Certificate, Height, Proof, Propose, ProtocolMsg, Replica, Transaction, Vote};
 
@@ -21,13 +21,13 @@ enum Phase {
 pub async fn reactor(
     config: &Node,
     is_client_apollo_enabled: bool,
-    net_send: Sender<(Replica, Arc<ProtocolMsg>)>,
-    mut net_recv: Receiver<(Replica, ProtocolMsg)>,
-    cli_send: Sender<Arc<Block>>,
-    mut cli_recv: Receiver<Transaction>,
+    net_send: UnboundedSender<(Replica, Arc<ProtocolMsg>)>,
+    mut net_recv: UnboundedReceiver<(Replica, ProtocolMsg)>,
+    cli_send: UnboundedSender<Arc<Block>>,
+    mut cli_recv: UnboundedReceiver<Transaction>,
 ) {
     // Optimization to improve latency when the payloads are high
-    let (send, mut recv) = channel(util::CHANNEL_SIZE);
+    let (send, mut recv) = unbounded_channel();
     let mut cx = Context::new(config, net_send, send);
     cx.is_client_apollo_enabled = is_client_apollo_enabled;
     let block_size = config.block_size;
@@ -76,7 +76,7 @@ pub async fn reactor(
                             cx.received_vote = Vec::new();
                             // TODO: Make a real setup
                             let setup = Biaccumulator381::setup(&[F381::from(0 as u32), F381::from(1 as u32), F381::from(2 as u32)], 3, &mut crypto::rand::rngs::StdRng::from_entropy()).unwrap();
-                            cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::VoteCert(certificate.clone(), setup.get_public_params())))).await.unwrap();
+                            cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::VoteCert(certificate.clone(), setup.get_public_params())))).unwrap();
                             cx.received_certificate = Some(certificate);
                             cx.reconstructed_certificate = cx.received_certificate.clone();
                             phase = Phase::Commit;
@@ -123,7 +123,7 @@ pub async fn reactor(
                             proof: proof,
                         };
                         cx.highest_cert = Certificate::empty_cert();
-                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose.clone())))).await.unwrap();
+                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose.clone())))).unwrap();
                         cx.received_propose = Some(propose);
                         cx.reconstructed_propose = cx.received_propose.clone();
                         phase = Phase::End;
@@ -144,7 +144,7 @@ pub async fn reactor(
                             origin: myid,
                             auth: cx.my_secret_key.sign(&block.hash).unwrap(),
                         };
-                        cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Vote(vote)))).await.unwrap();
+                        cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Vote(vote)))).unwrap();
                         phase = Phase::End;
                         phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * epoch));
                     }
@@ -171,7 +171,7 @@ pub async fn reactor(
                             phase = Phase::DeliverPropose;
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 7));
                             // Send the certification
-                            cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.certificate.clone())))).await.unwrap();
+                            cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.certificate.clone())))).unwrap();
                             println!("{}: Certification sent.", myid);
                         } else {
                             cx.highest_cert = Certificate::empty_cert();

@@ -1,6 +1,7 @@
 use serde::{Deserialize, Serialize};
 
-use crate::{msg::block::Block, synchs::Propose, Certificate, Replica, View, Vote, WireReady};
+use crate::{msg::block::Block, synchs::Propose, Certificate, Replica, View, Vote};
+use types_upstream::WireReady;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ProtocolMsg {
@@ -19,10 +20,10 @@ pub enum ProtocolMsg {
 }
 
 impl ProtocolMsg {
-    pub fn from_bytes(bytes: Vec<u8>) -> Self {
+    pub fn from_bytes(bytes: &[u8]) -> Self {
         let c: ProtocolMsg =
             flexbuffers::from_slice(&bytes).expect("failed to decode the protocol message");
-        return c;
+        return c.init();
     }
 
     pub fn init(self) -> Self {
@@ -41,4 +42,12 @@ impl ProtocolMsg {
     }
 }
 
-impl WireReady for ProtocolMsg {}
+impl WireReady for ProtocolMsg {
+    fn init(self) -> Self {
+        self
+    }
+
+    fn from_bytes(data: &[u8]) -> Self {
+        ProtocolMsg::from_bytes(data)
+    }
+}

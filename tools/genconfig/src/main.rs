@@ -4,11 +4,10 @@
 use clap::{load_yaml, App};
 use config::{Client, Node};
 use crypto::Algorithm;
-use libp2p::core::identity::{ed25519, secp256k1};
+use crypto_lib::{ed25519, secp256k1};
 use std::collections::HashMap;
 use types::Replica;
 use util::io::*;
-// use types::LIBP2P_MULTIADDR_FMT;
 
 fn main() {
     let yaml = load_yaml!("cli.yml");
