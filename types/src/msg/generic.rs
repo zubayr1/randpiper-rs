@@ -16,9 +16,17 @@ pub struct Certificate {
 }
 
 impl Certificate {
+
     pub const fn empty_cert() -> Self {
         Certificate { votes: Vec::new() }
     }
+
+    pub fn from_bytes(bytes: &[u8]) -> Self {
+        let c: Certificate =
+            flexbuffers::from_slice(&bytes).expect("failed to decode the propose");
+        c
+    }
+
 }
 
 impl std::default::Default for Certificate {

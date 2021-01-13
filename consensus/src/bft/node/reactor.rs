@@ -3,6 +3,7 @@ use config::Node;
 use crypto::hash::{ser_and_hash, EMPTY_HASH};
 use crypto::rand::SeedableRng;
 use crypto::{Biaccumulator381, F381};
+use util::io::to_bytes;
 use std::time::Duration;
 use std::{convert::TryInto, sync::Arc};
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
@@ -28,24 +29,45 @@ fn to_shards(data: &[u8], num_nodes: usize, num_faults: usize) -> Vec<Vec<u8>> {
         data_with_suffix.push(suffix_size as u8)
     }
     let mut result = Vec::new();
-    for shard in 0..shard_size {
+    for shard in 0..num_data_shards {
         result.push(data_with_suffix[shard * shard_size..(shard + 1) * shard_size].to_vec());
+    }
+    for shard in 0..num_faults {
+        result.push(vec![0; shard_size]);
     }
     let r = ReedSolomon::new(num_data_shards, num_faults).unwrap();
     r.encode(&mut result).unwrap();
     result
 }
 
-fn from_shards(data: &mut Vec<Option<Vec<u8>>>, num_nodes: usize, num_faults: usize) -> Vec<u8> {
+fn from_shards(mut data: Vec<Option<Vec<u8>>>, num_nodes: usize, num_faults: usize) -> Vec<u8> {
     let num_data_shards = num_nodes - num_faults;
     let r = ReedSolomon::new(num_data_shards, num_faults).unwrap();
-    r.reconstruct(data).unwrap();
+    r.reconstruct(&mut data).unwrap();
     let mut result = Vec::new();
     for shard in 0..num_data_shards {
         result.append(&mut data[shard].clone().unwrap());
     }
     result.truncate(result.len() - *result.last().unwrap() as usize);
     result
+}
+
+fn update_propose(cx: &mut Context, sh: Vec<u8>, n: Replica) {
+    cx.received_propose_shard[n as usize] = Some(sh);
+    cx.received_propose_shard_num += 1;
+    if cx.received_propose_shard_num == cx.num_nodes - cx.num_faults {
+        let data = from_shards(cx.received_propose_shard.clone(), cx.num_nodes as usize, cx.num_faults as usize);
+        cx.reconstructed_propose = Some(Propose::from_bytes(&data[..]));
+    }
+}
+
+fn update_vote_cert(cx: &mut Context, sh: Vec<u8>, n: Replica) {
+    cx.received_vote_cert_shard[n as usize] = Some(sh);
+    cx.received_vote_cert_shard_num += 1;
+    if cx.received_vote_cert_shard_num == cx.num_nodes - cx.num_faults {
+        let data = from_shards(cx.received_vote_cert_shard.clone(), cx.num_nodes as usize, cx.num_faults as usize);
+        cx.reconstructed_certificate = Some(Certificate::from_bytes(&data[..]));
+    }
 }
 
 pub async fn reactor(
@@ -95,7 +117,6 @@ pub async fn reactor(
                     },
                     ProtocolMsg::Propose(p, z) => {
                         cx.received_propose = Some(p);
-                        cx.reconstructed_propose = cx.received_propose.clone();
                     },
                     ProtocolMsg::Vote(p) => {
                         cx.received_vote.push(p);
@@ -108,18 +129,27 @@ pub async fn reactor(
                             let setup = Biaccumulator381::setup(&[F381::from(0 as u32), F381::from(1 as u32), F381::from(2 as u32)], 3, &mut crypto::rand::rngs::StdRng::from_entropy()).unwrap();
                             cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::VoteCert(certificate.clone(), setup.get_public_params())))).unwrap();
                             cx.received_certificate = Some(certificate);
-                            cx.reconstructed_certificate = cx.received_certificate.clone();
+                            let shards = to_shards(&to_bytes(&cx.received_certificate.as_ref().unwrap())[..], cx.num_nodes as usize, cx.num_faults as usize);
+                            update_vote_cert(&mut cx, shards[myid as usize].clone(), myid);
+                            cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::DeliverVoteCert(shards[myid as usize].clone(), myid)))).unwrap();
                             phase = Phase::Commit;
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                         }
                     },
                     ProtocolMsg::VoteCert(c, z) => {
                         cx.received_certificate = Some(c);
-                        cx.reconstructed_certificate = cx.received_certificate.clone();
+                        let shards = to_shards(&to_bytes(&cx.received_certificate.as_ref().unwrap())[..], cx.num_nodes as usize, cx.num_faults as usize);
+                        update_vote_cert(&mut cx, shards[myid as usize].clone(), myid);
+                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::DeliverVoteCert(shards[myid as usize].clone(), myid)))).unwrap();
                         phase = Phase::Commit;
                         phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                     },
-                    _ => {}
+                    ProtocolMsg::DeliverPropose(sh, n) => {
+                        update_propose(&mut cx, sh, n)
+                    }
+                    ProtocolMsg::DeliverVoteCert(sh, n) => {
+                        update_vote_cert(&mut cx, sh, n)
+                    }
                 };
             },
             tx_opt = cli_recv.recv() => {
@@ -160,7 +190,9 @@ pub async fn reactor(
                         phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * epoch));
                     }
                     Phase::DeliverPropose => {
-                        // TODO: Invoke Deliver and Reconstruct
+                        let shards = to_shards(&to_bytes(&cx.received_propose.as_ref().unwrap())[..], cx.num_nodes as usize, cx.num_faults as usize);
+                        update_propose(&mut cx, shards[myid as usize].clone(), myid);
+                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::DeliverPropose(shards[myid as usize].clone(), myid)))).unwrap();
                         phase = Phase::Vote;
                         phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                     }
@@ -197,12 +229,16 @@ pub async fn reactor(
                         cx.last_leader = cx.next_leader();
                         epoch += 1;
                         println!("{}: epoch {}. Leader is {}.", myid, epoch, cx.last_leader);
+                        cx.received_propose_shard = vec![None; cx.num_nodes as usize];
+                        cx.received_propose_shard_num = 0;
+                        cx.received_vote_cert_shard = vec![None; cx.num_nodes as usize];
+                        cx.received_vote_cert_shard_num = 0;
                         if myid != cx.last_leader {
                             // Send the certification
                             cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.certificate.clone())))).unwrap();
                             println!("{}: Certification sent.", myid);
                             phase = Phase::DeliverPropose;
-                            phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 7));
+                            phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * (epoch - 1) + delta * 7));
                         } else {
                             cx.highest_cert = Certificate::empty_cert();
                             cx.highest_height = 0;

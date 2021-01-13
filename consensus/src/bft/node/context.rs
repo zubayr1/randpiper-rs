@@ -39,6 +39,11 @@ pub struct Context {
 
     pub received_certificate: Option<Certificate>,
     pub reconstructed_certificate: Option<Certificate>,
+
+    pub received_propose_shard: Vec<Option<Vec<u8>>>,
+    pub received_propose_shard_num: Replica, 
+    pub received_vote_cert_shard: Vec<Option<Vec<u8>>>,
+    pub received_vote_cert_shard_num: Replica, 
 }
 
 const EXTRA_SPACE: usize = 100;
@@ -93,6 +98,11 @@ impl Context {
 
             received_certificate: None,
             reconstructed_certificate: None,
+
+            received_propose_shard: vec![None; config.num_nodes as usize],
+            received_propose_shard_num: 0, 
+            received_vote_cert_shard: vec![None; config.num_nodes as usize],
+            received_vote_cert_shard_num: 0, 
         };
         c.storage
             .committed_blocks_by_hash

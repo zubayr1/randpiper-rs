@@ -17,3 +17,13 @@ pub struct Propose {
     pub proof: Proof,
     pub sign: Vec<u8>,
 }
+
+impl Propose {
+
+    pub fn from_bytes(bytes: &[u8]) -> Self {
+        let c: Propose =
+            flexbuffers::from_slice(&bytes).expect("failed to decode the propose");
+        c
+    }
+
+}
