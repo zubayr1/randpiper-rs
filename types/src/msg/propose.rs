@@ -8,7 +8,6 @@ pub struct Proof {
     pub block_hash: Vec<u8>,
     pub certificate_hash: Vec<u8>,
     pub epoch: Height,
-    pub accumulator: EVSSPublicParams381,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]

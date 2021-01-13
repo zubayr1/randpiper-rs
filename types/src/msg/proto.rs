@@ -8,9 +8,11 @@ use crypto::EVSSPublicParams381;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ProtocolMsg {
     Certificate(Certificate),
-    Propose(Propose),
+    Propose(Propose, EVSSPublicParams381),
     Vote(Vote),
     VoteCert(Certificate, EVSSPublicParams381),
+    DeliverPropose(),
+    DeliverVoteCert(),
 }
 
 impl ProtocolMsg {

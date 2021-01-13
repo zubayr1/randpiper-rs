@@ -8,6 +8,7 @@ use std::{convert::TryInto, sync::Arc};
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 use tokio::time;
 use types::{Block, Certificate, Height, Proof, Propose, ProtocolMsg, Replica, Transaction, Vote};
+use reed_solomon_erasure::galois_8::ReedSolomon;
 
 #[derive(PartialEq, Debug)]
 enum Phase {
@@ -16,6 +17,35 @@ enum Phase {
     Vote,
     Commit,
     End,
+}
+
+fn to_shards(data: &[u8], num_nodes: usize, num_faults: usize) -> Vec<Vec<u8>> {
+    let num_data_shards = num_nodes - num_faults;
+    let shard_size = (data.len() + num_data_shards - 1) / num_data_shards;
+    let mut data_with_suffix = data.to_vec();
+    let suffix_size = shard_size * num_data_shards - data.len();
+    for _ in 0..suffix_size {
+        data_with_suffix.push(suffix_size as u8)
+    }
+    let mut result = Vec::new();
+    for shard in 0..shard_size {
+        result.push(data_with_suffix[shard * shard_size..(shard + 1) * shard_size].to_vec());
+    }
+    let r = ReedSolomon::new(num_data_shards, num_faults).unwrap();
+    r.encode(&mut result).unwrap();
+    result
+}
+
+fn from_shards(data: &mut Vec<Option<Vec<u8>>>, num_nodes: usize, num_faults: usize) -> Vec<u8> {
+    let num_data_shards = num_nodes - num_faults;
+    let r = ReedSolomon::new(num_data_shards, num_faults).unwrap();
+    r.reconstruct(data).unwrap();
+    let mut result = Vec::new();
+    for shard in 0..num_data_shards {
+        result.append(&mut data[shard].clone().unwrap());
+    }
+    result.truncate(result.len() - *result.last().unwrap() as usize);
+    result
 }
 
 pub async fn reactor(
@@ -34,11 +64,11 @@ pub async fn reactor(
     let myid = config.id;
     let pl_size = config.payload;
     let delta = config.delta;
-    let mut epoch: Height = 1;
-    let begin = time::Instant::now();
+    let mut epoch: Height = 0;
     // A little time to boot everything up
+    let begin = time::Instant::now() + Duration::from_millis(delta);
     let mut phase = Phase::End;
-    let phase_end = time::sleep_until(begin + Duration::from_millis(delta * 11));
+    let phase_end = time::sleep_until(begin);
     tokio::pin!(phase_end);
     loop {
         tokio::select! {
@@ -63,7 +93,7 @@ pub async fn reactor(
                             }
                         }
                     },
-                    ProtocolMsg::Propose(p) => {
+                    ProtocolMsg::Propose(p, z) => {
                         cx.received_propose = Some(p);
                         cx.reconstructed_propose = cx.received_propose.clone();
                     },
@@ -89,6 +119,7 @@ pub async fn reactor(
                         phase = Phase::Commit;
                         phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                     },
+                    _ => {}
                 };
             },
             tx_opt = cli_recv.recv() => {
@@ -114,7 +145,6 @@ pub async fn reactor(
                             block_hash: new_block.hash.to_vec(),
                             certificate_hash: ser_and_hash(&cx.highest_cert).to_vec(),
                             epoch: epoch,
-                            accumulator: setup.get_public_params(),
                         };
                         let propose = Propose {
                             new_block: new_block,
@@ -123,7 +153,7 @@ pub async fn reactor(
                             proof: proof,
                         };
                         cx.highest_cert = Certificate::empty_cert();
-                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose.clone())))).unwrap();
+                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose.clone(), setup.get_public_params())))).unwrap();
                         cx.received_propose = Some(propose);
                         cx.reconstructed_propose = cx.received_propose.clone();
                         phase = Phase::End;
@@ -168,11 +198,11 @@ pub async fn reactor(
                         epoch += 1;
                         println!("{}: epoch {}. Leader is {}.", myid, epoch, cx.last_leader);
                         if myid != cx.last_leader {
-                            phase = Phase::DeliverPropose;
-                            phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 7));
                             // Send the certification
                             cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.certificate.clone())))).unwrap();
                             println!("{}: Certification sent.", myid);
+                            phase = Phase::DeliverPropose;
+                            phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 7));
                         } else {
                             cx.highest_cert = Certificate::empty_cert();
                             cx.highest_height = 0;
