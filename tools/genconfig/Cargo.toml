@@ -12,4 +12,4 @@ config = { package = "config", path="../../config"}
 types = { package = "types", path="../../types"}
 crypto = { package = "crypto", path="../../crypto"}
 util = { package = "util", path="../../util"}
-crypto_lib = {package="crypto", git="https://github.com/adithyabhatkajake/libchatter-rs"}
+crypto_lib = {package="crypto", git="https://github.com/adithyabhatkajake/libchatter-rs", rev="9ac36d671ed84028092c15f12d90d04195de32f0"}
