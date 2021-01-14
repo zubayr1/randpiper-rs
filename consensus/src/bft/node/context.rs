@@ -115,9 +115,6 @@ impl Context {
             .committed_blocks_by_ht
             .insert(0, Arc::clone(&genesis_block));
         for (id, mut pk_data) in &config.pk_map {
-            if *id == c.myid {
-                continue;
-            }
             let pk = match config.crypto_alg {
                 crypto::Algorithm::ED25519 => {
                     let kp = ed25519::PublicKey::decode(&mut pk_data)

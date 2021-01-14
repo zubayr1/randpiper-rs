@@ -3,7 +3,6 @@ use serde::{Deserialize, Serialize};
 use super::Certificate;
 use crate::{Propose, SignedData, Replica, Vote};
 use types_upstream::WireReady;
-use crypto::EVSSShare381;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ProtocolMsg {

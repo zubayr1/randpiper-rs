@@ -5,6 +5,7 @@ use types::{DataWithAcc, SignedData, Replica};
 use util::io::to_bytes;
 use serde::{Deserialize, Serialize};
 use reed_solomon_erasure::galois_8::ReedSolomon;
+use crypto_lib::PublicKey;
 
 pub fn to_shards(data: &[u8], num_nodes: usize, num_faults: usize) -> Vec<Vec<u8>> {
     let num_data_shards = num_nodes - num_faults;
@@ -14,11 +15,11 @@ pub fn to_shards(data: &[u8], num_nodes: usize, num_faults: usize) -> Vec<Vec<u8
     for _ in 0..suffix_size {
         data_with_suffix.push(suffix_size as u8)
     }
-    let mut result = Vec::new();
+    let mut result = Vec::with_capacity(num_nodes);
     for shard in 0..num_data_shards {
         result.push(data_with_suffix[shard * shard_size..(shard + 1) * shard_size].to_vec());
     }
-    for shard in 0..num_faults {
+    for _shard in 0..num_faults {
         result.push(vec![0; shard_size]);
     }
     let r = ReedSolomon::new(num_data_shards, num_faults).unwrap();
@@ -30,7 +31,7 @@ pub fn from_shards(mut data: Vec<Option<Vec<u8>>>, num_nodes: usize, num_faults:
     let num_data_shards = num_nodes - num_faults;
     let r = ReedSolomon::new(num_data_shards, num_faults).unwrap();
     r.reconstruct(&mut data).unwrap();
-    let mut result = Vec::new();
+    let mut result = Vec::with_capacity(num_data_shards * data[0].as_ref().unwrap().len());
     for shard in 0..num_data_shards {
         result.append(&mut data[shard].clone().unwrap());
     }
@@ -40,17 +41,18 @@ pub fn from_shards(mut data: Vec<Option<Vec<u8>>>, num_nodes: usize, num_faults:
 
 pub fn get_acc<T: Serialize>(cx: &Context, data: &T) -> DataWithAcc {
     let shards = to_shards(&to_bytes(data), cx.num_nodes as usize, cx.num_faults as usize);
-    let mut values = Vec::new();
+    let mut values = Vec::with_capacity(cx.num_nodes as usize);
     for shard in shards.iter() {
         values.push(F381::from_be_bytes_mod_order(&hash::ser_and_hash(&shard)));
     }
     let poly = Biaccumulator381::commit(&cx.accumulator_params, &values[..], &mut StdRng::from_entropy()).unwrap();
-    let mut acc = Vec::new();
+    let mut acc = Vec::with_capacity(cx.num_nodes as usize);
     for value in values.iter() {
         acc.push(Biaccumulator381::create_witness(*value, &cx.accumulator_params, &poly, &mut StdRng::from_entropy()).unwrap());
     }
     DataWithAcc {
         hash: hash::ser_and_hash(data).to_vec(),
+        commit: poly.get_commit(),
         shares: acc,
     }
 }
@@ -83,12 +85,31 @@ impl ShareGatherer {
     }
 
     pub fn clear(&mut self) {
+        self.reference = None;
         self.shard = vec![None; self.size as usize];
         self.shard_num = 0;
     }
 
-    pub fn add_share(&mut self, sh: Vec<u8>, n: Replica, sign: SignedData) {
-        //TODO: Check the sign.
+    pub fn add_share(&mut self, sh: Vec<u8>, n: Replica, pp: &EVSSPublicParams381, pk: &PublicKey, sign: SignedData) {
+        // The hash should match with the sign.
+        if !pk.verify(&hash::ser_and_hash(&sign.data), &sign.sign) {
+            println!("[WARN] The signature of the shard does not match.");
+            return;
+        }
+        if self.reference.is_none() {
+            self.reference = Some(sign);
+        } else {
+            if self.reference.as_ref().unwrap().sign != sign.sign {
+                println!("[WARN] Equivocation detected.");
+                // TODO: Broadcast the blame.
+                return;
+            }
+        }
+        // The share should match with the accumulator.
+        if !Biaccumulator381::check(pp, &self.reference.as_ref().unwrap().data.commit, &self.reference.as_ref().unwrap().data.shares[n as usize], &mut StdRng::from_entropy()).unwrap() {
+            println!("[WARN] Biaccumulator value does not match.");
+            return;
+        }
         self.shard[n as usize] = Some(sh);
         self.shard_num += 1;
     }

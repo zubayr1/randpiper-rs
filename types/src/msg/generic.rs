@@ -7,6 +7,7 @@ use types_upstream::WireReady;
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct DataWithAcc {
     pub hash: Vec<u8>,
+    pub commit: EVSSCommit381,
     pub shares: Vec<EVSSShare381>,
 }
 

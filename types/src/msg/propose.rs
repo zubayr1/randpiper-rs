@@ -1,6 +1,5 @@
 use super::Block;
 use crate::{Certificate, Height};
-use crypto::EVSSPublicParams381;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug, Clone)]

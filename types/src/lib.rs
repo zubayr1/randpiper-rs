@@ -11,6 +11,6 @@ pub use protocol::*;
 
 mod msg;
 pub use msg::*;
-use tokio_util::codec::{Decoder, Encoder};
+pub use tokio_util::codec::{Decoder, Encoder};
 
 pub type View = u64;
