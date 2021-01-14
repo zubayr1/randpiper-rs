@@ -1,7 +1,20 @@
 use serde::{Deserialize, Serialize};
 
 use crate::{protocol::*};
+use crypto::*;
 use types_upstream::WireReady;
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct DataWithAcc {
+    pub hash: Vec<u8>,
+    pub shares: Vec<EVSSShare381>,
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct SignedData {
+    pub data: DataWithAcc,
+    pub sign: Vec<u8>,
+}
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Vote {
@@ -16,9 +29,17 @@ pub struct Certificate {
 }
 
 impl Certificate {
+
     pub const fn empty_cert() -> Self {
         Certificate { votes: Vec::new() }
     }
+
+    pub fn from_bytes(bytes: &[u8]) -> Self {
+        let c: Certificate =
+            flexbuffers::from_slice(&bytes).expect("failed to decode the propose");
+        c
+    }
+
 }
 
 impl std::default::Default for Certificate {
@@ -41,6 +62,7 @@ impl Transaction {
 }
 
 impl WireReady for Transaction {
+
     fn init(self) -> Self {
         self
     }

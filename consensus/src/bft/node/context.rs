@@ -1,3 +1,5 @@
+use super::accumulator::ShareGatherer;
+
 use std::collections::HashMap;
 
 // use crossfire::mpsc::{SharedSenderFRecvB, TxFuture};
@@ -7,7 +9,7 @@ use tokio::sync::mpsc::{UnboundedSender};
 use config::Node;
 use std::sync::Arc;
 use types::{
-    Block, Certificate, Height, Propose, ProtocolMsg, Replica, Storage, Vote, GENESIS_BLOCK,
+    Block, Certificate, Height, Propose, ProtocolMsg, Replica, SignedData, Storage, Vote, GENESIS_BLOCK,
 };
 
 // type Sender<T> = TxFuture<T, SharedFutureBoth>;
@@ -33,12 +35,18 @@ pub struct Context {
     pub highest_height: Height,
 
     pub received_propose: Option<Propose>,
-    pub reconstructed_propose: Option<Propose>,
+    pub received_propose_sign: Option<SignedData>,
 
     pub received_vote: Vec<Vote>,
 
     pub received_certificate: Option<Certificate>,
-    pub reconstructed_certificate: Option<Certificate>,
+    pub received_certificate_sign: Option<SignedData>,
+
+    pub accumulator_pub_params_map: HashMap<Replica, crypto::EVSSPublicParams381>,
+    pub accumulator_params: crypto::EVSSParams381,
+
+    pub propose_gatherer: ShareGatherer, 
+    pub vote_cert_gatherer: ShareGatherer, 
 }
 
 const EXTRA_SPACE: usize = 100;
@@ -87,12 +95,18 @@ impl Context {
             highest_height: 0,
 
             received_propose: None,
-            reconstructed_propose: None,
+            received_propose_sign: None,
 
             received_vote: Vec::new(),
 
             received_certificate: None,
-            reconstructed_certificate: None,
+            received_certificate_sign: None,
+
+            accumulator_pub_params_map: config.bi_pp_map.clone(),
+            accumulator_params: config.bi_p.clone().unwrap(),
+
+            propose_gatherer: ShareGatherer::new(config.num_nodes as u16),
+            vote_cert_gatherer: ShareGatherer::new(config.num_nodes as u16),
         };
         c.storage
             .committed_blocks_by_hash

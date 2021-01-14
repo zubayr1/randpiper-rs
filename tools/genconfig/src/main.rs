@@ -8,6 +8,7 @@ use crypto_lib::{ed25519, secp256k1};
 use std::collections::HashMap;
 use types::Replica;
 use util::io::*;
+use crypto::rand::{SeedableRng, rngs::StdRng};
 
 fn main() {
     let yaml = load_yaml!("cli.yml");
@@ -63,6 +64,7 @@ fn main() {
 
     let mut pk = HashMap::new();
     let mut ip = HashMap::new();
+    let mut bi_pp = HashMap::new();
 
     for i in 0..num_nodes {
         node.push(Node::new());
@@ -97,11 +99,18 @@ fn main() {
             i as Replica,
             format!("127.0.0.1:{}", client_base_port + (i as u16)),
         );
+
+        node[i].bi_p = Some(crypto::Biaccumulator381::setup(num_nodes, &mut StdRng::from_entropy()).unwrap());
+        bi_pp.insert(
+            i as Replica,
+            node[i].bi_p.as_ref().unwrap().get_public_params()
+        );
     }
 
     for i in 0..num_nodes {
         node[i].pk_map = pk.clone();
         node[i].net_map = ip.clone();
+        node[i].bi_pp_map = bi_pp.clone();
     }
 
     client.server_pk = pk;

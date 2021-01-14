@@ -12,10 +12,12 @@ types = { package = "types", path="../types"}
 crypto = { package = "crypto", path="../crypto"}
 util = { package = "util", path="../util"}
 tokio = { version = "1.0", features = ["full"] }
+reed-solomon-erasure = { version = "4.0" }
 # crossfire = "0.1"
 futures = "^0.3"
 bytes = "1.0"
 tokio-util = "0.6"
 tokio-stream = "0.1"
 log = "*"
+serde = { version = "1.0", features = ["derive"] }
 crypto_lib = {package = "crypto", git = "https://github.com/adithyabhatkajake/libchatter-rs"}
