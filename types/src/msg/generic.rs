@@ -1,7 +1,20 @@
 use serde::{Deserialize, Serialize};
 
 use crate::{protocol::*};
+use crypto::*;
 use types_upstream::WireReady;
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct DataWithAcc {
+    pub hash: Vec<u8>,
+    pub shares: Vec<EVSSShare381>,
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct SignedData {
+    pub data: DataWithAcc,
+    pub sign: Vec<u8>,
+}
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Vote {
@@ -49,6 +62,7 @@ impl Transaction {
 }
 
 impl WireReady for Transaction {
+
     fn init(self) -> Self {
         self
     }

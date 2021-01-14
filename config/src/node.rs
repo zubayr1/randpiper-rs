@@ -35,6 +35,10 @@ pub struct Node {
     pub crypto_alg: Algorithm,
     pub pk_map: HashMap<Replica, Vec<u8>>,
     pub secret_key_bytes: Vec<u8>,
+
+    // Biaccumulator setup
+    pub bi_pp_map: HashMap<Replica, crypto::EVSSPublicParams381>,
+    pub bi_p: Option<crypto::EVSSParams381>,
 }
 
 impl Node {
@@ -101,6 +105,8 @@ impl Node {
             pk_map: HashMap::new(),
             secret_key_bytes: Vec::new(),
             payload: 0,
+            bi_pp_map: HashMap::new(),
+            bi_p: None,
         }
     }
 
