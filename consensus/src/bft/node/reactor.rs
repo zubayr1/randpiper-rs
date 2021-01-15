@@ -18,6 +18,20 @@ enum Phase {
     End,
 }
 
+impl Phase {
+
+    pub fn to_string(&self) -> &'static str {
+        match self {
+            Phase::Propose => "Propose",
+            Phase::DeliverPropose => "DeliverPropose",
+            Phase::Vote => "Vote",
+            Phase::Commit => "Commit",
+            Phase::End => "End",
+        }
+    }
+
+}
+
 pub async fn reactor(
     config: &Node,
     is_client_apollo_enabled: bool,
@@ -47,7 +61,9 @@ pub async fn reactor(
                     std::process::exit(0);
                 }
                 let (_, pmsg) = pmsg_opt.unwrap();
-                println!("{}: Received {:?}.", myid, pmsg);
+                let s = pmsg.to_string();
+                println!("{}: Received {:?}.", myid, s);
+                let time_before = time::Instant::now();
                 match pmsg {
                     ProtocolMsg::Certificate(p) => {
                         if myid == cx.last_leader && phase == Phase::Propose {
@@ -103,12 +119,16 @@ pub async fn reactor(
                         cx.vote_cert_gatherer.add_share(sh, n, cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(), cx.pub_key_map.get(&cx.last_leader).unwrap(), z);
                     }
                 };
+                let time_after = time::Instant::now();
+                println!("{}: Message {:?} took {} ms.", myid, s, (time_after - time_before).as_millis());
             },
             _tx_opt = cli_recv.recv() => {
                 // We received a message from the client
             },
             _ = &mut phase_end => {
-                println!("{}: Phase {:?}", myid, phase);
+                let s = phase.to_string();
+                println!("{}: Phase {:?}", myid, s);
+                let time_before = time::Instant::now();
                 match phase {
                     Phase::Propose => {
                         let mut new_block = Block::new();
@@ -189,7 +209,9 @@ pub async fn reactor(
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                         }
                     }
-                }
+                };
+                let time_after = time::Instant::now();
+                println!("{}: Phase {:?} took {} ms.", myid, s, (time_after - time_before).as_millis());
             },
         }
     }
