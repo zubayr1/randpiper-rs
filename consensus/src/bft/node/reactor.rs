@@ -93,7 +93,6 @@ pub async fn reactor(
                                 votes: cx.received_vote.clone(),
                             };
                             let sign = get_sign(&cx, &certificate);
-                            cx.received_vote = Vec::new();
                             cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::VoteCert(certificate.clone(), sign.clone())))).unwrap();
                             cx.received_certificate = Some(certificate);
                             cx.received_propose_sign = Some(sign);
@@ -147,7 +146,6 @@ pub async fn reactor(
                             epoch: epoch,
                         };
                         let sign = get_sign(&cx, &propose);
-                        cx.highest_cert = Certificate::empty_cert();
                         cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose.clone(), sign.clone())))).unwrap();
                         cx.received_propose = Some(propose);
                         cx.received_propose_sign = Some(sign);
@@ -196,6 +194,7 @@ pub async fn reactor(
                         println!("{}: epoch {}. Leader is {}.", myid, epoch, cx.last_leader);
                         cx.propose_gatherer.clear();
                         cx.vote_cert_gatherer.clear();
+                        cx.received_vote.clear();
                         if myid != cx.last_leader {
                             // Send the certification.
                             cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.certificate.clone())))).unwrap();
@@ -203,8 +202,6 @@ pub async fn reactor(
                             phase = Phase::DeliverPropose;
                             phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * (epoch - 1) + delta * 7));
                         } else {
-                            cx.highest_cert = Certificate::empty_cert();
-                            cx.highest_height = 0;
                             phase = Phase::Propose;
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                         }

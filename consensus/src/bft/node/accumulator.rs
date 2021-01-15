@@ -94,6 +94,7 @@ impl ShareGatherer {
         // The hash should match with the sign.
         if !pk.verify(&hash::ser_and_hash(&sign.data), &sign.sign) {
             println!("[WARN] The signature of the shard does not match.");
+            debug_assert!(false);
             return;
         }
         if self.reference.is_none() {
@@ -101,6 +102,7 @@ impl ShareGatherer {
         } else {
             if self.reference.as_ref().unwrap().sign != sign.sign {
                 println!("[WARN] Equivocation detected.");
+                debug_assert!(false);
                 // TODO: Broadcast the blame.
                 return;
             }
@@ -108,6 +110,7 @@ impl ShareGatherer {
         // The share should match with the accumulator.
         if !Biaccumulator381::check(pp, &self.reference.as_ref().unwrap().data.commit, &self.reference.as_ref().unwrap().data.shares[n as usize], &mut StdRng::from_entropy()).unwrap() {
             println!("[WARN] Biaccumulator value does not match.");
+            debug_assert!(false);
             return;
         }
         self.shard[n as usize] = Some(sh);
