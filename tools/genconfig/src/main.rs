@@ -5,6 +5,7 @@ use clap::{load_yaml, App};
 use config::{Client, Node};
 use crypto::rand::{rngs::StdRng, SeedableRng};
 use crypto::Algorithm;
+use crypto::UniformRand;
 use crypto_lib::{ed25519, secp256k1};
 use std::collections::HashMap;
 use types::Replica;
@@ -108,10 +109,43 @@ fn main() {
         );
     }
 
+    let rng = &mut StdRng::from_entropy();
+    let rand_beacon_parameter = crypto::EVSS381::setup(num_faults, rng).unwrap();
+
     for i in 0..num_nodes {
         node[i].pk_map = pk.clone();
         node[i].net_map = ip.clone();
         node[i].bi_pp_map = bi_pp.clone();
+        node[i].rand_beacon_parameter = Some(rand_beacon_parameter.clone());
+    }
+
+    for i in 0..num_nodes {
+        for j in 0..num_nodes {
+            node[j].rand_beacon_queue.insert(
+                i as Replica,
+                std::collections::VecDeque::with_capacity(num_nodes + num_faults),
+            );
+        }
+        for _ in 0..num_nodes + num_faults {
+            let poly =
+                crypto::EVSS381::commit(&rand_beacon_parameter, crypto::F381::rand(rng), rng)
+                    .unwrap();
+            for k in 0..num_nodes {
+                node[k]
+                    .rand_beacon_queue
+                    .get_mut(&(i as Replica))
+                    .unwrap()
+                    .push_back(
+                        crypto::EVSS381::get_share(
+                            crypto::F381::from((k + 1) as u16),
+                            &rand_beacon_parameter,
+                            &poly,
+                            rng,
+                        )
+                        .unwrap(),
+                    );
+            }
+        }
     }
 
     client.server_pk = pk;
