@@ -1,13 +1,13 @@
-use super::accumulator::{to_shards, get_sign};
+use super::accumulator::{get_sign, to_shards};
 use super::context::Context;
 use config::Node;
 use crypto::hash::EMPTY_HASH;
-use util::io::to_bytes;
 use std::time::Duration;
 use std::{convert::TryInto, sync::Arc};
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 use tokio::time;
 use types::{Block, Certificate, Height, Propose, ProtocolMsg, Replica, Transaction, Vote};
+use util::io::to_bytes;
 
 #[derive(PartialEq, Debug)]
 enum Phase {
@@ -19,7 +19,6 @@ enum Phase {
 }
 
 impl Phase {
-
     pub fn to_string(&self) -> &'static str {
         match self {
             Phase::Propose => "Propose",
@@ -29,7 +28,86 @@ impl Phase {
             Phase::End => "End",
         }
     }
+}
 
+fn deliver_propose(cx: &mut Context, myid: Replica) {
+    let shards = to_shards(
+        &to_bytes(&cx.received_propose.as_ref().unwrap())[..],
+        cx.num_nodes as usize,
+        cx.num_faults as usize,
+    );
+    cx.propose_gatherer.add_share(
+        shards[myid as usize].clone(),
+        myid,
+        cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(),
+        cx.pub_key_map.get(&cx.last_leader).unwrap(),
+        cx.received_propose_sign.clone().unwrap(),
+    );
+    for i in 0..cx.num_nodes {
+        if i != myid {
+            cx.net_send
+                .send((
+                    cx.num_nodes,
+                    Arc::new(ProtocolMsg::DeliverPropose(
+                        shards[i as usize].clone(),
+                        i,
+                        cx.received_propose_sign.clone().unwrap(),
+                    )),
+                ))
+                .unwrap();
+        }
+    }
+    cx.net_send
+        .send((
+            cx.num_nodes,
+            Arc::new(ProtocolMsg::DeliverPropose(
+                shards[myid as usize].clone(),
+                myid,
+                cx.received_propose_sign.clone().unwrap(),
+            )),
+        ))
+        .unwrap();
+    cx.propose_share_sent = true;
+}
+
+fn deliver_vote_cert(cx: &mut Context, myid: Replica) {
+    let shards = to_shards(
+        &to_bytes(&cx.received_certificate.as_ref().unwrap())[..],
+        cx.num_nodes as usize,
+        cx.num_faults as usize,
+    );
+    cx.vote_cert_gatherer.add_share(
+        shards[myid as usize].clone(),
+        myid,
+        cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(),
+        cx.pub_key_map.get(&cx.last_leader).unwrap(),
+        cx.received_certificate_sign.clone().unwrap(),
+    );
+    for i in 0..cx.num_nodes {
+        if i != myid {
+            cx.net_send
+                .send((
+                    cx.num_nodes,
+                    Arc::new(ProtocolMsg::DeliverVoteCert(
+                        shards[i as usize].clone(),
+                        i,
+                        cx.received_certificate_sign.clone().unwrap(),
+                    )),
+                ))
+                .unwrap();
+        }
+    }
+    cx.net_send
+        .send((
+            cx.num_nodes,
+            Arc::new(ProtocolMsg::DeliverVoteCert(
+                shards[myid as usize].clone(),
+                myid,
+                cx.received_certificate_sign.clone().unwrap(),
+            )),
+        ))
+        .unwrap();
+    cx.vote_cert_share_sent = true;
 }
 
 pub async fn reactor(
@@ -95,26 +173,49 @@ pub async fn reactor(
                             let sign = get_sign(&cx, &certificate);
                             cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::VoteCert(certificate.clone(), sign.clone())))).unwrap();
                             cx.received_certificate = Some(certificate);
-                            cx.received_propose_sign = Some(sign);
-                            let shards = to_shards(&to_bytes(&cx.received_certificate.as_ref().unwrap())[..], cx.num_nodes as usize, cx.num_faults as usize);
-                            cx.vote_cert_gatherer.add_share(shards[myid as usize].clone(), myid, cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(), cx.pub_key_map.get(&cx.last_leader).unwrap(), cx.received_propose_sign.clone().unwrap());
-                            cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::DeliverVoteCert(shards[myid as usize].clone(), myid, cx.received_propose_sign.clone().unwrap())))).unwrap();
+                            cx.received_certificate_sign = Some(sign);
+                            deliver_vote_cert(&mut cx, myid);
                             phase = Phase::Commit;
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                         }
                     },
                     ProtocolMsg::VoteCert(c, z) => {
                         cx.received_certificate = Some(c);
-                        let shards = to_shards(&to_bytes(&cx.received_certificate.as_ref().unwrap())[..], cx.num_nodes as usize, cx.num_faults as usize);
-                        cx.vote_cert_gatherer.add_share(shards[myid as usize].clone(), myid, cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(), cx.pub_key_map.get(&cx.last_leader).unwrap(), z.clone());
-                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::DeliverVoteCert(shards[myid as usize].clone(), myid, z)))).unwrap();
+                        cx.received_certificate_sign = Some(z);
+                        deliver_vote_cert(&mut cx, myid);
                         phase = Phase::Commit;
                         phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                     },
                     ProtocolMsg::DeliverPropose(sh, n, z) => {
+                        if !cx.propose_share_sent && n == myid {
+                            cx.net_send
+                                .send((
+                                    cx.num_nodes,
+                                    Arc::new(ProtocolMsg::DeliverPropose(
+                                        sh.clone(),
+                                        myid,
+                                        z.clone(),
+                                    )),
+                                ))
+                                .unwrap();
+                            cx.propose_share_sent = true;
+                        }
                         cx.propose_gatherer.add_share(sh, n, cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(), cx.pub_key_map.get(&cx.last_leader).unwrap(), z);
                     }
                     ProtocolMsg::DeliverVoteCert(sh, n, z) => {
+                        if !cx.vote_cert_share_sent && n == myid {
+                            cx.net_send
+                                .send((
+                                    cx.num_nodes,
+                                    Arc::new(ProtocolMsg::DeliverVoteCert(
+                                        sh.clone(),
+                                        myid,
+                                        z.clone(),
+                                    )),
+                                ))
+                                .unwrap();
+                            cx.vote_cert_share_sent = true;
+                        }
                         cx.vote_cert_gatherer.add_share(sh, n, cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(), cx.pub_key_map.get(&cx.last_leader).unwrap(), z);
                     }
                 };
@@ -149,13 +250,12 @@ pub async fn reactor(
                         cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose.clone(), sign.clone())))).unwrap();
                         cx.received_propose = Some(propose);
                         cx.received_propose_sign = Some(sign);
+                        deliver_propose(&mut cx, myid);
                         phase = Phase::End;
                         phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * epoch));
                     }
                     Phase::DeliverPropose => {
-                        let shards = to_shards(&to_bytes(&cx.received_propose.as_ref().unwrap())[..], cx.num_nodes as usize, cx.num_faults as usize);
-                        cx.propose_gatherer.add_share(shards[myid as usize].clone(), myid, cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(), cx.pub_key_map.get(&cx.last_leader).unwrap(), cx.received_propose_sign.clone().unwrap());
-                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::DeliverPropose(shards[myid as usize].clone(), myid, cx.received_propose_sign.clone().unwrap())))).unwrap();
+                        deliver_propose(&mut cx, myid);
                         phase = Phase::Vote;
                         phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                     }
@@ -195,6 +295,8 @@ pub async fn reactor(
                         cx.propose_gatherer.clear();
                         cx.vote_cert_gatherer.clear();
                         cx.received_vote.clear();
+                        cx.propose_share_sent = false;
+                        cx.vote_cert_share_sent = false;
                         if myid != cx.last_leader {
                             // Send the certification.
                             cx.net_send.send((cx.last_leader, Arc::new(ProtocolMsg::Certificate(cx.last_seen_block.certificate.clone())))).unwrap();

@@ -1,7 +1,5 @@
 use super::Certificate;
-use crate::{
-    protocol::{Height, Replica},
-};
+use crate::protocol::{Height, Replica};
 use crypto::hash::{Hash, EMPTY_HASH};
 use serde::{Deserialize, Serialize};
 use types_upstream::WireReady;
@@ -123,5 +121,4 @@ impl types_upstream::WireReady for Block {
     fn from_bytes(data: &[u8]) -> Self {
         Block::from_bytes(data)
     }
-
 }

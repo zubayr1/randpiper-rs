@@ -3,13 +3,14 @@ use super::accumulator::ShareGatherer;
 use std::collections::HashMap;
 
 // use crossfire::mpsc::{SharedSenderFRecvB, TxFuture};
-use crypto_lib::{PublicKey, Keypair, ed25519, secp256k1};
-use tokio::sync::mpsc::{UnboundedSender};
+use crypto_lib::{ed25519, secp256k1, Keypair, PublicKey};
+use tokio::sync::mpsc::UnboundedSender;
 // use crate::Sender;
 use config::Node;
 use std::sync::Arc;
 use types::{
-    Block, Certificate, Height, Propose, ProtocolMsg, Replica, SignedData, Storage, Vote, GENESIS_BLOCK,
+    Block, Certificate, Height, Propose, ProtocolMsg, Replica, SignedData, Storage, Vote,
+    GENESIS_BLOCK,
 };
 
 // type Sender<T> = TxFuture<T, SharedFutureBoth>;
@@ -45,8 +46,11 @@ pub struct Context {
     pub accumulator_pub_params_map: HashMap<Replica, crypto::EVSSPublicParams381>,
     pub accumulator_params: crypto::EVSSParams381,
 
-    pub propose_gatherer: ShareGatherer, 
-    pub vote_cert_gatherer: ShareGatherer, 
+    pub propose_share_sent: bool,
+    pub vote_cert_share_sent: bool,
+
+    pub propose_gatherer: ShareGatherer,
+    pub vote_cert_gatherer: ShareGatherer,
 }
 
 const EXTRA_SPACE: usize = 100;
@@ -104,6 +108,9 @@ impl Context {
 
             accumulator_pub_params_map: config.bi_pp_map.clone(),
             accumulator_params: config.bi_p.clone().unwrap(),
+
+            propose_share_sent: false,
+            vote_cert_share_sent: false,
 
             propose_gatherer: ShareGatherer::new(config.num_nodes as u16),
             vote_cert_gatherer: ShareGatherer::new(config.num_nodes as u16),

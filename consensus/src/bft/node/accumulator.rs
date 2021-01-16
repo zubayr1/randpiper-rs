@@ -1,11 +1,11 @@
 use super::context::Context;
+use crypto::rand::{rngs::StdRng, SeedableRng};
 use crypto::*;
-use crypto::rand::{SeedableRng, rngs::StdRng};
-use types::{DataWithAcc, SignedData, Replica};
-use util::io::to_bytes;
-use serde::{Deserialize, Serialize};
-use reed_solomon_erasure::galois_8::ReedSolomon;
 use crypto_lib::PublicKey;
+use reed_solomon_erasure::galois_8::ReedSolomon;
+use serde::{Deserialize, Serialize};
+use types::{DataWithAcc, Replica, SignedData};
+use util::io::to_bytes;
 
 pub fn to_shards(data: &[u8], num_nodes: usize, num_faults: usize) -> Vec<Vec<u8>> {
     let num_data_shards = num_nodes - num_faults;
@@ -40,15 +40,32 @@ pub fn from_shards(mut data: Vec<Option<Vec<u8>>>, num_nodes: usize, num_faults:
 }
 
 pub fn get_acc<T: Serialize>(cx: &Context, data: &T) -> DataWithAcc {
-    let shards = to_shards(&to_bytes(data), cx.num_nodes as usize, cx.num_faults as usize);
+    let shards = to_shards(
+        &to_bytes(data),
+        cx.num_nodes as usize,
+        cx.num_faults as usize,
+    );
     let mut values = Vec::with_capacity(cx.num_nodes as usize);
     for shard in shards.iter() {
         values.push(F381::from_be_bytes_mod_order(&hash::ser_and_hash(&shard)));
     }
-    let poly = Biaccumulator381::commit(&cx.accumulator_params, &values[..], &mut StdRng::from_entropy()).unwrap();
+    let poly = Biaccumulator381::commit(
+        &cx.accumulator_params,
+        &values[..],
+        &mut StdRng::from_entropy(),
+    )
+    .unwrap();
     let mut acc = Vec::with_capacity(cx.num_nodes as usize);
     for value in values.iter() {
-        acc.push(Biaccumulator381::create_witness(*value, &cx.accumulator_params, &poly, &mut StdRng::from_entropy()).unwrap());
+        acc.push(
+            Biaccumulator381::create_witness(
+                *value,
+                &cx.accumulator_params,
+                &poly,
+                &mut StdRng::from_entropy(),
+            )
+            .unwrap(),
+        );
     }
     DataWithAcc {
         hash: hash::ser_and_hash(data).to_vec(),
@@ -60,7 +77,10 @@ pub fn get_acc<T: Serialize>(cx: &Context, data: &T) -> DataWithAcc {
 pub fn get_sign<T: Serialize>(cx: &Context, data: &T) -> SignedData {
     let data_with_acc = get_acc(cx, data);
     SignedData {
-        sign: cx.my_secret_key.sign(&hash::ser_and_hash(&data_with_acc)).unwrap(),
+        sign: cx
+            .my_secret_key
+            .sign(&hash::ser_and_hash(&data_with_acc))
+            .unwrap(),
         data: data_with_acc,
     }
 }
@@ -74,7 +94,6 @@ pub struct ShareGatherer {
 }
 
 impl ShareGatherer {
-    
     pub fn new(num_nodes: Replica) -> Self {
         ShareGatherer {
             size: num_nodes,
@@ -90,7 +109,17 @@ impl ShareGatherer {
         self.shard_num = 0;
     }
 
-    pub fn add_share(&mut self, sh: Vec<u8>, n: Replica, pp: &EVSSPublicParams381, pk: &PublicKey, sign: SignedData) {
+    pub fn add_share(
+        &mut self,
+        sh: Vec<u8>,
+        n: Replica,
+        pp: &EVSSPublicParams381,
+        pk: &PublicKey,
+        sign: SignedData,
+    ) {
+        if self.shard[n as usize].is_some() {
+            return;
+        }
         // The hash should match with the sign.
         if !pk.verify(&hash::ser_and_hash(&sign.data), &sign.sign) {
             println!("[WARN] The signature of the shard does not match.");
@@ -108,7 +137,14 @@ impl ShareGatherer {
             }
         }
         // The share should match with the accumulator.
-        if !Biaccumulator381::check(pp, &self.reference.as_ref().unwrap().data.commit, &self.reference.as_ref().unwrap().data.shares[n as usize], &mut StdRng::from_entropy()).unwrap() {
+        if !Biaccumulator381::check(
+            pp,
+            &self.reference.as_ref().unwrap().data.commit,
+            &self.reference.as_ref().unwrap().data.shares[n as usize],
+            &mut StdRng::from_entropy(),
+        )
+        .unwrap()
+        {
             println!("[WARN] Biaccumulator value does not match.");
             debug_assert!(false);
             return;
@@ -121,7 +157,10 @@ impl ShareGatherer {
         if self.shard_num < num_nodes - num_faults {
             return None;
         }
-        Some(from_shards(self.shard.clone(), num_nodes as usize, num_faults as usize))
+        Some(from_shards(
+            self.shard.clone(),
+            num_nodes as usize,
+            num_faults as usize,
+        ))
     }
-
 }

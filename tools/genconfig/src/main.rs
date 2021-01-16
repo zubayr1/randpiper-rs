@@ -3,12 +3,12 @@
 
 use clap::{load_yaml, App};
 use config::{Client, Node};
+use crypto::rand::{rngs::StdRng, SeedableRng};
 use crypto::Algorithm;
 use crypto_lib::{ed25519, secp256k1};
 use std::collections::HashMap;
 use types::Replica;
 use util::io::*;
-use crypto::rand::{SeedableRng, rngs::StdRng};
 
 fn main() {
     let yaml = load_yaml!("cli.yml");
@@ -100,10 +100,11 @@ fn main() {
             format!("127.0.0.1:{}", client_base_port + (i as u16)),
         );
 
-        node[i].bi_p = Some(crypto::Biaccumulator381::setup(num_nodes, &mut StdRng::from_entropy()).unwrap());
+        node[i].bi_p =
+            Some(crypto::Biaccumulator381::setup(num_nodes, &mut StdRng::from_entropy()).unwrap());
         bi_pp.insert(
             i as Replica,
-            node[i].bi_p.as_ref().unwrap().get_public_params()
+            node[i].bi_p.as_ref().unwrap().get_public_params(),
         );
     }
 

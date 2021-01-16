@@ -10,11 +10,8 @@ pub struct Propose {
 }
 
 impl Propose {
-
     pub fn from_bytes(bytes: &[u8]) -> Self {
-        let c: Propose =
-            flexbuffers::from_slice(&bytes).expect("failed to decode the propose");
+        let c: Propose = flexbuffers::from_slice(&bytes).expect("failed to decode the propose");
         c
     }
-
 }

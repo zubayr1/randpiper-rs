@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 use super::Certificate;
-use crate::{Propose, SignedData, Replica, Vote};
+use crate::{Propose, Replica, SignedData, Vote};
 use types_upstream::WireReady;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -15,7 +15,6 @@ pub enum ProtocolMsg {
 }
 
 impl ProtocolMsg {
-
     pub fn from_bytes(bytes: &[u8]) -> Self {
         let c: ProtocolMsg =
             flexbuffers::from_slice(&bytes).expect("failed to decode the protocol message");
@@ -32,7 +31,6 @@ impl ProtocolMsg {
             ProtocolMsg::DeliverVoteCert(_, _, _) => "DeliverVoteCert",
         }
     }
-
 }
 
 impl WireReady for ProtocolMsg {
