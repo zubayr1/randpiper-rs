@@ -2,7 +2,8 @@ use super::accumulator::{get_sign, to_shards};
 use super::context::Context;
 use config::Node;
 use crypto::hash::EMPTY_HASH;
-use crypto::CanonicalSerialize;
+use crypto::{CanonicalSerialize, UniformRand};
+use crypto::rand::{rngs::StdRng, SeedableRng};
 use std::time::Duration;
 use std::{convert::TryInto, sync::Arc};
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
@@ -225,6 +226,9 @@ pub async fn reactor(
                             cx.reconstruct_queue[n as usize].push_back((sh, e));
                         }
                     }
+                    ProtocolMsg::Shards(mut sh) => {
+                        cx.rand_beacon_queue.get_mut(&cx.next_leader()).unwrap().append(&mut sh);
+                    }
                 };
                 let time_after = time::Instant::now();
                 println!("{}: Message {:?} took {} ms.", myid, s, (time_after - time_before).as_millis());
@@ -333,10 +337,30 @@ pub async fn reactor(
                             println!("{}: Certification sent.", myid);
                             phase = Phase::DeliverPropose;
                             phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * (epoch - 1) + delta * 7));
+                            if myid == cx.next_leader() {
+                                // Shard generation
+                                let rng = &mut StdRng::from_entropy();
+                                for i in 0..cx.num_nodes {
+                                    cx.shards[i as usize].clear();
+                                }
+                                for _ in 0..cx.num_nodes {
+                                    let poly = crypto::EVSS381::commit(&cx.rand_beacon_parameter, crypto::F381::rand(rng), rng).unwrap();
+                                    for j in 0..cx.num_nodes {
+                                        cx.shards[j as usize].push_back(crypto::EVSS381::get_share(crypto::F381::from((j + 1) as u16), &cx.rand_beacon_parameter, &poly, rng).unwrap());
+                                    }
+                                }
+                                cx.rand_beacon_queue.get_mut(&myid).unwrap().append(&mut cx.shards[myid as usize].clone());
+                                for i in 0..cx.num_nodes {
+                                    if myid != i {
+                                        cx.net_send.send((i, Arc::new(ProtocolMsg::Shards(cx.shards[i as usize].clone())))).unwrap();
+                                    }
+                                }
+                            }
                         } else {
                             phase = Phase::Propose;
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                         }
+                        // Reconstruction Shards
                         for i in 0..cx.num_nodes {
                             let shard = cx.rand_beacon_queue.get_mut(&(i as Replica)).unwrap().pop_front();
                             if shard.is_some() {

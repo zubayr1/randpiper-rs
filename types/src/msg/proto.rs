@@ -13,6 +13,7 @@ pub enum ProtocolMsg {
     DeliverPropose(Vec<u8>, Replica, SignedData),
     DeliverVoteCert(Vec<u8>, Replica, SignedData),
     Reconstruct(crypto::EVSSShare381, Replica, Height),
+    Shards(std::collections::VecDeque<crypto::EVSSShare381>),
 }
 
 impl ProtocolMsg {
@@ -31,6 +32,7 @@ impl ProtocolMsg {
             ProtocolMsg::DeliverPropose(_, _, _) => "DeliverPropose",
             ProtocolMsg::DeliverVoteCert(_, _, _) => "DeliverVoteCert",
             ProtocolMsg::Reconstruct(_, _, _) => "Reconstruct",
+            ProtocolMsg::Shards(_) => "Shards",
         }
     }
 }
