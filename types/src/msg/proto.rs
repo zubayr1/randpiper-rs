@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 use super::Certificate;
-use crate::{Propose, Replica, SignedData, Vote};
+use crate::{Propose, Height, Replica, SignedData, Vote};
 use types_upstream::WireReady;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -12,6 +12,7 @@ pub enum ProtocolMsg {
     VoteCert(Certificate, SignedData),
     DeliverPropose(Vec<u8>, Replica, SignedData),
     DeliverVoteCert(Vec<u8>, Replica, SignedData),
+    Reconstruct(crypto::EVSSShare381, Replica, Height),
 }
 
 impl ProtocolMsg {
@@ -29,6 +30,7 @@ impl ProtocolMsg {
             ProtocolMsg::VoteCert(_, _) => "VoteCert",
             ProtocolMsg::DeliverPropose(_, _, _) => "DeliverPropose",
             ProtocolMsg::DeliverVoteCert(_, _, _) => "DeliverVoteCert",
+            ProtocolMsg::Reconstruct(_, _, _) => "Reconstruct",
         }
     }
 }

@@ -39,6 +39,9 @@ pub struct Node {
     // Biaccumulator setup
     pub bi_pp_map: HashMap<Replica, crypto::EVSSPublicParams381>,
     pub bi_p: Option<crypto::EVSSParams381>,
+
+    pub rand_beacon_parameter: Option<crypto::EVSSParams381>,
+    pub rand_beacon_queue: HashMap<Replica, std::collections::VecDeque<crypto::EVSSShare381>>,
 }
 
 impl Node {
@@ -107,6 +110,8 @@ impl Node {
             payload: 0,
             bi_pp_map: HashMap::new(),
             bi_p: None,
+            rand_beacon_parameter: None,
+            rand_beacon_queue: HashMap::new(),
         }
     }
 
