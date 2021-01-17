@@ -17,12 +17,13 @@ pub fn bi_sh_gen(c: &mut Criterion) {
     BenchmarkGroup::sampling_mode(&mut group, criterion::SamplingMode::Flat);
     for n in &TEST_POINTS {
         let vec: Vec<F381> = (0..*n).map(|_| F381::rand(rng)).collect();
-        let params = Biaccumulator381::setup(&vec[..], *n, rng).expect("");
+        let params = Biaccumulator381::setup(*n, rng).expect("");
+        let poly = Biaccumulator381::commit(&params, &vec[..], rng).expect("");
         group.throughput(Throughput::Bytes(*n as u64));
         group.bench_with_input(BenchmarkId::from_parameter(*n), n, |b, &_n| {
             b.iter(|| {
                 for cred in &vec {
-                    Biaccumulator381::create_witness(*cred, &params, rng).expect("");
+                    Biaccumulator381::create_witness(*cred, &params, &poly, rng).expect("");
                 }
             });
         });
@@ -36,16 +37,17 @@ pub fn bi_sh_vrfy(c: &mut Criterion) {
     BenchmarkGroup::sampling_mode(&mut group, criterion::SamplingMode::Flat);
     for n in &TEST_POINTS {
         let vec: Vec<F381> = (0..*n).map(|_| F381::rand(rng)).collect();
-        let params = Biaccumulator381::setup(&vec[..], *n, rng).expect("");
+        let params = Biaccumulator381::setup(*n, rng).expect("");
+        let poly = Biaccumulator381::commit(&params, &vec[..], rng).expect("");
         let mut shares = Vec::new();
         for cred in &vec {
-            shares.push(Biaccumulator381::create_witness(*cred, &params, rng).expect(""));
+            shares.push(Biaccumulator381::create_witness(*cred, &params, &poly, rng).expect(""));
         }
         group.throughput(Throughput::Bytes(*n as u64));
         group.bench_with_input(BenchmarkId::from_parameter(n), &n, |b, &_n| {
             b.iter(|| {
                 for wit in &shares {
-                    Biaccumulator381::check(&params.get_public_params(), wit, rng).expect("");
+                    Biaccumulator381::check(&params.get_public_params(), &poly.get_commit(), wit, rng).expect("");
                 }
             });
         });

@@ -15,6 +15,7 @@ use util::io::to_bytes;
 enum Phase {
     Propose,
     DeliverPropose,
+    DeliverCommit,
     Vote,
     Commit,
     End,
@@ -25,6 +26,7 @@ impl Phase {
         match self {
             Phase::Propose => "Propose",
             Phase::DeliverPropose => "DeliverPropose",
+            Phase::DeliverCommit => "DeliverCommit",
             Phase::Vote => "Vote",
             Phase::Commit => "Commit",
             Phase::End => "End",
@@ -251,6 +253,7 @@ pub async fn reactor(
                         new_block.header.author = myid;
                         new_block.header.height = cx.highest_height + 1;
                         // TODO: Maybe add something to body?
+                        new_block.body.data = to_bytes(&cx.commits).to_vec();
                         new_block.update_hash();
                         let propose = Propose {
                             new_block: new_block,
@@ -262,13 +265,23 @@ pub async fn reactor(
                         cx.received_propose = Some(propose);
                         cx.received_propose_sign = Some(sign);
                         deliver_propose(&mut cx, myid);
-                        phase = Phase::End;
-                        phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * epoch));
+                        phase = Phase::DeliverCommit;
+                        phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * (epoch - 1) + delta * 8));
                     }
                     Phase::DeliverPropose => {
                         deliver_propose(&mut cx, myid);
-                        phase = Phase::Vote;
-                        phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
+                        phase = Phase::DeliverCommit;
+                        phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * (epoch - 1) + delta * 8));
+                    }
+                    Phase::DeliverCommit => {
+                        deliver_commit(&mut cx, myid);
+                        if myid == cx.last_leader {
+                            phase = Phase::End;
+                            phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * epoch));
+                        } else {
+                            phase = Phase::Vote;
+                            phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 1));
+                        }
                     }
                     Phase::Vote => {
                         let propose = Propose::from_bytes(&cx.propose_gatherer.reconstruct(cx.num_nodes, cx.num_faults).unwrap()[..]);
@@ -343,8 +356,10 @@ pub async fn reactor(
                                 for i in 0..cx.num_nodes {
                                     cx.shards[i as usize].clear();
                                 }
+                                cx.commits.clear();
                                 for _ in 0..cx.num_nodes {
                                     let poly = crypto::EVSS381::commit(&cx.rand_beacon_parameter, crypto::F381::rand(rng), rng).unwrap();
+                                    cx.commits.push(poly.get_commit());
                                     for j in 0..cx.num_nodes {
                                         cx.shards[j as usize].push_back(crypto::EVSS381::get_share(crypto::F381::from((j + 1) as u16), &cx.rand_beacon_parameter, &poly, rng).unwrap());
                                     }

@@ -43,14 +43,19 @@ pub struct Context {
     pub received_certificate: Option<Certificate>,
     pub received_certificate_sign: Option<SignedData>,
 
+    pub received_commit: Option<crypto::EVSSCommit381>,
+    pub received_commit_sign: Option<SignedData>,
+
     pub accumulator_pub_params_map: HashMap<Replica, crypto::EVSSPublicParams381>,
     pub accumulator_params: crypto::EVSSParams381,
 
     pub propose_share_sent: bool,
     pub vote_cert_share_sent: bool,
+    pub commit_share_sent: bool,
 
     pub propose_gatherer: ShareGatherer,
     pub vote_cert_gatherer: ShareGatherer,
+    pub commit_gatherer: ShareGatherer,
     
     pub rand_beacon_parameter: crypto::EVSSParams381,
     pub rand_beacon_queue: HashMap<Replica, std::collections::VecDeque<crypto::EVSSShare381>>,
@@ -58,6 +63,7 @@ pub struct Context {
     pub reconstruct_queue: Vec<std::collections::VecDeque<(crypto::EVSSShare381, Height)>>,
 
     pub shards: Vec<std::collections::VecDeque<crypto::EVSSShare381>>,
+    pub commits: Vec<crypto::EVSSCommit381>,
 }
 
 const EXTRA_SPACE: usize = 100;
@@ -116,11 +122,16 @@ impl Context {
             accumulator_pub_params_map: config.bi_pp_map.clone(),
             accumulator_params: config.bi_p.clone().unwrap(),
 
+            received_commit: None,
+            received_commit_sign: None,
+
             propose_share_sent: false,
             vote_cert_share_sent: false,
+            commit_share_sent: false,
 
             propose_gatherer: ShareGatherer::new(config.num_nodes as u16),
             vote_cert_gatherer: ShareGatherer::new(config.num_nodes as u16),
+            commit_gatherer: ShareGatherer::new(config.num_nodes as u16),
 
             rand_beacon_parameter: config.rand_beacon_parameter.clone().unwrap(),
             rand_beacon_queue: config.rand_beacon_queue.clone(),
@@ -128,6 +139,7 @@ impl Context {
             reconstruct_queue: vec![std::collections::VecDeque::with_capacity(config.num_nodes * 2); config.num_nodes],
 
             shards: vec![std::collections::VecDeque::with_capacity(config.num_nodes); config.num_nodes],
+            commits: Vec::with_capacity(config.num_nodes),
         };
         c.storage
             .committed_blocks_by_hash
