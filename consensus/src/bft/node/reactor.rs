@@ -120,7 +120,7 @@ fn deliver_commit(cx: &mut Context, myid: Replica) {
         cx.num_nodes as usize,
         cx.num_faults as usize,
     );
-    cx.propose_gatherer.add_share(
+    cx.commit_gatherer.add_share(
         shards[myid as usize].clone(),
         myid,
         cx.accumulator_pub_params_map.get(&cx.next_leader()).unwrap(),
@@ -325,11 +325,13 @@ pub async fn reactor(
                         new_block.header.author = myid;
                         new_block.header.height = cx.highest_height + 1;
                         // TODO: Maybe add something to body?
+                        /*
                         let content = Content {
                             commits: cx.commits.clone(),
                             acks: cx.received_ack.clone(),
                         };
                         new_block.body.data = content;
+                        */
                         cx.received_ack.clear();
                         new_block.update_hash();
                         let propose = Propose {
@@ -422,6 +424,7 @@ pub async fn reactor(
                         cx.vote_cert_gatherer.clear();
                         cx.commit_gatherer.clear();
                         cx.received_vote.clear();
+                        cx.received_ack.clear();
                         cx.propose_share_sent = false;
                         cx.vote_cert_share_sent = false;
                         cx.commit_share_sent = false;
