@@ -177,6 +177,7 @@ pub async fn reactor(
     loop {
         tokio::select! {
             pmsg_opt = net_recv.recv() => {
+                log::debug!(target:"consensus", "Got {:?}", pmsg_opt);
                 // Received a protocol message
                 if let None = pmsg_opt {
                     log::error!(target:"node", "Protocol message channel closed");
