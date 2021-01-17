@@ -39,6 +39,23 @@ pub fn from_shards(mut data: Vec<Option<Vec<u8>>>, num_nodes: usize, num_faults:
     result
 }
 
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn shards() {
+        const SIZE: usize = 1024 * 1024;
+        let mut array = [0 as u8; SIZE];
+        for i in 0..SIZE {
+            array[i] = crypto::rand::random();
+        }
+        let shards = super::to_shards(&array, 4, 1);
+        let mut received: Vec<_> = shards.iter().cloned().map(Some).collect();
+        received[0] = None;
+        let reconstructed = super::from_shards(received, 4, 1);
+        assert_eq!(array.to_vec(), reconstructed);
+    }
+}
+
 pub fn get_acc<T: Serialize>(cx: &Context, data: &T) -> DataWithAcc {
     let shards = to_shards(
         &to_bytes(data),
