@@ -325,13 +325,11 @@ pub async fn reactor(
                         new_block.header.author = myid;
                         new_block.header.height = cx.highest_height + 1;
                         // TODO: Maybe add something to body?
-                        /*
                         let content = Content {
                             commits: cx.commits.clone(),
                             acks: cx.received_ack.clone(),
                         };
                         new_block.body.data = content;
-                        */
                         cx.received_ack.clear();
                         new_block.update_hash();
                         let propose = Propose {
