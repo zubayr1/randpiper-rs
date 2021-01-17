@@ -13,7 +13,14 @@ pub enum ProtocolMsg {
     DeliverPropose(Vec<u8>, Replica, SignedData),
     DeliverVoteCert(Vec<u8>, Replica, SignedData),
     Reconstruct(crypto::EVSSShare381, Replica, Height),
-    Shards(std::collections::VecDeque<crypto::EVSSShare381>),
+    Commit(std::collections::VecDeque<crypto::EVSSShare381>, Vec<crypto::EVSSCommit381>, SignedData),
+    DeliverCommit(Vec<u8>, Replica, SignedData),
+    Ack(Vote),
+}
+
+pub fn commit_from_bytes(bytes: &[u8]) -> Vec<crypto::EVSSCommit381> {
+    let c: Vec<crypto::EVSSCommit381> = flexbuffers::from_slice(&bytes).expect("failed to decode the propose");
+    c
 }
 
 impl ProtocolMsg {
@@ -32,7 +39,9 @@ impl ProtocolMsg {
             ProtocolMsg::DeliverPropose(_, _, _) => "DeliverPropose",
             ProtocolMsg::DeliverVoteCert(_, _, _) => "DeliverVoteCert",
             ProtocolMsg::Reconstruct(_, _, _) => "Reconstruct",
-            ProtocolMsg::Shards(_) => "Shards",
+            ProtocolMsg::Commit(_, _, _) => "Commit",
+            ProtocolMsg::DeliverCommit(_, _, _) => "DeliverCommit",
+            ProtocolMsg::Ack(_) => "Ack",
         }
     }
 }

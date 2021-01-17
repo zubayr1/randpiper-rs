@@ -39,11 +39,12 @@ pub struct Context {
     pub received_propose_sign: Option<SignedData>,
 
     pub received_vote: Vec<Vote>,
+    pub received_ack: Vec<Vote>,
 
     pub received_certificate: Option<Certificate>,
     pub received_certificate_sign: Option<SignedData>,
 
-    pub received_commit: Option<crypto::EVSSCommit381>,
+    pub received_commit: Option<Vec<crypto::EVSSCommit381>>,
     pub received_commit_sign: Option<SignedData>,
 
     pub accumulator_pub_params_map: HashMap<Replica, crypto::EVSSPublicParams381>,
@@ -115,6 +116,7 @@ impl Context {
             received_propose_sign: None,
 
             received_vote: Vec::new(),
+            received_ack: Vec::new(),
 
             received_certificate: None,
             received_certificate_sign: None,

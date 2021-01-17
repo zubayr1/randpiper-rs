@@ -1,17 +1,39 @@
 use super::Certificate;
 use crate::protocol::{Height, Replica};
+use crate::Vote;
 use crypto::hash::{Hash, EMPTY_HASH};
 use serde::{Deserialize, Serialize};
 use types_upstream::WireReady;
 
 #[derive(Serialize, Deserialize, Clone)]
+pub struct Content {
+    pub commits: Vec<crypto::EVSSCommit381>,
+    pub acks: Vec<Vote>,
+}
+
+impl Content {
+    pub const fn new() -> Self {
+        Content {
+            commits: Vec::new(),
+            acks: Vec::new(),
+        }
+
+    }
+
+    pub fn from_bytes(bytes: &[u8]) -> Self {
+        let c: Content = flexbuffers::from_slice(&bytes).expect("failed to decode the content");
+        return c;
+    }
+}
+
+#[derive(Serialize, Deserialize, Clone)]
 pub struct BlockBody {
-    pub data: Vec<u8>,
+    pub data: Content,
 }
 
 impl BlockBody {
-    pub fn new() -> Self {
-        BlockBody { data: Vec::new() }
+    pub const fn new() -> Self {
+        BlockBody { data: Content::new() }
     }
 }
 
@@ -36,7 +58,7 @@ impl std::fmt::Debug for BlockHeader {
 impl std::fmt::Debug for BlockBody {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         f.debug_struct("Block Body")
-            .field("data", &self.data)
+            // .field("data", &self.data)
             .finish()
     }
 }
@@ -104,7 +126,7 @@ pub const GENESIS_BLOCK: Block = Block {
         author: 0,
         height: 0,
     },
-    body: BlockBody { data: Vec::new() },
+    body: BlockBody::new(),
     hash: EMPTY_HASH,
     payload: vec![],
     certificate: Certificate::empty_cert(),
