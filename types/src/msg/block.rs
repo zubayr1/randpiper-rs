@@ -21,7 +21,7 @@ impl Content {
     }
 
     pub fn from_bytes(bytes: &[u8]) -> Self {
-        let c: Content = flexbuffers::from_slice(&bytes).expect("failed to decode the content");
+        let c: Content = bincode::deserialize(&bytes).expect("failed to decode the content");
         return c;
     }
 }
@@ -88,7 +88,7 @@ pub struct Block {
 
 impl Block {
     pub fn from_bytes(bytes: &[u8]) -> Self {
-        let c: Block = flexbuffers::from_slice(&bytes).expect("failed to decode the block");
+        let c: Block = bincode::deserialize(&bytes).expect("failed to decode the block");
         return c.init();
     }
 

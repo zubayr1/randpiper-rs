@@ -19,14 +19,14 @@ pub enum ProtocolMsg {
 }
 
 pub fn commit_from_bytes(bytes: &[u8]) -> Vec<crypto::EVSSCommit381> {
-    let c: Vec<crypto::EVSSCommit381> = flexbuffers::from_slice(&bytes).expect("failed to decode the commit");
+    let c: Vec<crypto::EVSSCommit381> = bincode::deserialize(&bytes).expect("failed to decode the commit");
     c
 }
 
 impl ProtocolMsg {
     pub fn from_bytes(bytes: &[u8]) -> Self {
         let c: ProtocolMsg =
-            flexbuffers::from_slice(&bytes).expect("failed to decode the protocol message");
+            bincode::deserialize(&bytes).expect("failed to decode the protocol message");
         return c.init();
     }
 

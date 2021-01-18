@@ -35,7 +35,7 @@ impl Certificate {
     }
 
     pub fn from_bytes(bytes: &[u8]) -> Self {
-        let c: Certificate = flexbuffers::from_slice(&bytes).expect("failed to decode the propose");
+        let c: Certificate = bincode::deserialize(&bytes).expect("failed to decode the propose");
         c
     }
 }
@@ -54,7 +54,7 @@ pub struct Transaction {
 
 impl Transaction {
     pub fn from_bytes(bytes: &[u8]) -> Self {
-        let c: Transaction = flexbuffers::from_slice(&bytes).expect("failed to decode the block");
+        let c: Transaction = bincode::deserialize(&bytes).expect("failed to decode the block");
         return c.init();
     }
 }
