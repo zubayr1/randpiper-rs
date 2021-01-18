@@ -14,7 +14,7 @@ idx=0
 
 for ip in "${IPS[@]}"
 do
-    ssh -t arch@$ip "timeout 200 ./randpiper-rs/target/release/node-bft -c ./randpiper-rs/test/d100-n4/nodes-${idx}.json -i ./randpiper-rs/ips_file > output.log" &
+    ssh -t arch@$ip 'bash -ls --' < scripts/aws/test.sh $idx &
     idx=$(($idx+1))
 done
 
