@@ -61,7 +61,7 @@ pub struct Context {
     pub rand_beacon_parameter: crypto::EVSSParams381,
     pub rand_beacon_queue: HashMap<Replica, std::collections::VecDeque<crypto::EVSSShare381>>,
 
-    pub reconstruct_queue: Vec<std::collections::VecDeque<(crypto::EVSSShare381, Height)>>,
+    pub reconstruct_queue: std::collections::VecDeque<(crypto::EVSSShare381, Height)>,
 
     pub shards: Vec<std::collections::VecDeque<crypto::EVSSShare381>>,
     pub commits: Vec<crypto::EVSSCommit381>,
@@ -138,7 +138,7 @@ impl Context {
             rand_beacon_parameter: config.rand_beacon_parameter.clone().unwrap(),
             rand_beacon_queue: config.rand_beacon_queue.clone(),
 
-            reconstruct_queue: vec![std::collections::VecDeque::with_capacity(config.num_nodes * 2); config.num_nodes],
+            reconstruct_queue: std::collections::VecDeque::with_capacity(config.num_nodes * 2),
 
             shards: vec![std::collections::VecDeque::with_capacity(config.num_nodes); config.num_nodes],
             commits: Vec::with_capacity(config.num_nodes),

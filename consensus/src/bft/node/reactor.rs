@@ -10,6 +10,7 @@ use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 use tokio::time;
 use types::{Block, Certificate, Content, Height, Propose, ProtocolMsg, Replica, Transaction, Vote, commit_from_bytes};
 use util::io::to_bytes;
+use num_traits::Zero;
 
 #[derive(PartialEq, Debug)]
 enum Phase {
@@ -289,10 +290,10 @@ pub async fn reactor(
                         }
                         cx.vote_cert_gatherer.add_share(sh, n, cx.accumulator_pub_params_map.get(&cx.last_leader).unwrap(), cx.pub_key_map.get(&cx.last_leader).unwrap(), z);
                     }
-                    ProtocolMsg::Reconstruct(sh, n, e) => {
-                        let last = cx.reconstruct_queue[n as usize].back();
+                    ProtocolMsg::Reconstruct(sh, e) => {
+                        let last = cx.reconstruct_queue.back();
                         if last.is_none() || e >= last.unwrap().1 {
-                            cx.reconstruct_queue[n as usize].push_back((sh, e));
+                            cx.reconstruct_queue.push_back((sh, e));
                         }
                     }
                     ProtocolMsg::Commit(mut sh, c, z) => {
@@ -428,27 +429,18 @@ pub async fn reactor(
                         phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * epoch));
                     }
                     Phase::End => {
-                        let mut vals = Vec::with_capacity(cx.num_nodes as usize);
-                        for i in 0..cx.num_nodes as usize {
-                            let mut vec = Vec::with_capacity(cx.num_nodes as usize);
-                            while !cx.reconstruct_queue[i].is_empty() && cx.reconstruct_queue[i].front().unwrap().1 < epoch {
-                                cx.reconstruct_queue[i].pop_front();
-                            }
-                            while !cx.reconstruct_queue[i].is_empty() && cx.reconstruct_queue[i].front().unwrap().1 == epoch {
-                                vec.push(cx.reconstruct_queue[i].pop_front().unwrap().0);
-                            }
-                            if vec.len() >= (cx.num_nodes - cx.num_faults) as usize {
-                                vals.push(crypto::EVSS381::reconstruct(&vec));
-                            }
+                        let mut vec = Vec::with_capacity(cx.num_nodes as usize);
+                        while !cx.reconstruct_queue.is_empty() && cx.reconstruct_queue.front().unwrap().1 < epoch {
+                            cx.reconstruct_queue.pop_front();
+                        }
+                        while !cx.reconstruct_queue.is_empty() && cx.reconstruct_queue.front().unwrap().1 == epoch {
+                            vec.push(cx.reconstruct_queue.pop_front().unwrap().0);
                         }
                         let mut hash = [0 as u8; 32];
-                        for val in vals {
+                        if vec.len() >= (cx.num_nodes - cx.num_faults) as usize {
                             let mut buf = Vec::new();
-                            val.serialize(&mut buf).unwrap();
-                            let update = crypto::hash::ser_and_hash(&buf);
-                            for i in 0..32 {
-                                hash[i] ^= update[i];
-                            }
+                            crypto::EVSS381::reconstruct(&vec).serialize(&mut buf).unwrap();
+                            hash = crypto::hash::ser_and_hash(&buf);
                         }
                         println!("Rand Beacon: {:x?}", hash);
                         cx.last_leader = cx.next_leader();
@@ -497,12 +489,26 @@ pub async fn reactor(
                             phase_end.as_mut().reset(time::Instant::now() + Duration::from_millis(delta * 2));
                         }
                         // Reconstruction Shards
+                        let mut sum = crypto::EVSSShare381 {
+                            point: crypto::F381::zero(),
+                            value: crypto::F381::zero(),
+                            challenge: crypto::F381::zero(),
+                            proof: crypto::EVSSProof381 {
+                                w: crypto::EVSSG1Affine381::zero(),
+                                random_v: None,
+                            }
+                        };
                         for i in 0..cx.num_nodes {
                             let shard = cx.rand_beacon_queue.get_mut(&(i as Replica)).unwrap().pop_front();
                             if shard.is_some() {
-                                cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Reconstruct(shard.unwrap(), i, epoch)))).unwrap();
+                                let u = shard.unwrap();
+                                sum.point += u.point;
+                                sum.value += u.value;
+                                sum.challenge += u.challenge;
+                                sum.proof.w += &u.proof.w;
                             }
                         }
+                        cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Reconstruct(sum, epoch)))).unwrap();
                     }
                 };
                 let time_after = time::Instant::now();
