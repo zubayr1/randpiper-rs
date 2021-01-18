@@ -6,8 +6,8 @@ use criterion::{
 };
 
 const SEED: u64 = 42;
-const TEST_POINTS: [usize; 19] = [
-    3, 10, 30, 60, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 700, 800, 900, 1000,
+static TEST_POINTS: [usize; 7] = [
+    3, 10, 20, 30, 50, 75, 100
 ];
 const BENCH_COUNT: usize = 10;
 
