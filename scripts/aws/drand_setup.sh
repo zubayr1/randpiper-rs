@@ -8,4 +8,4 @@ sudo pacman -S go git --noconfirm
 
 git clone https://github.com/drand/drand
 cd drand
-make install
+make build
