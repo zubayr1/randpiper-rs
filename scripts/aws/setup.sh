@@ -12,4 +12,5 @@ source $HOME/.cargo/env
 git clone https://github.com/zhtluo/randpiper-rs.git
 cd randpiper-rs
 
+git pull
 make release
