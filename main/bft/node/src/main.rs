@@ -26,6 +26,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         _ => panic!("Invalid config file extension"),
     };
     config.validate().expect("The decoded config is not valid");
+    if let Some(d) = m.value_of("delta") {
+        config.delta = d.parse().unwrap();
+    }
     if let Some(f) = m.value_of("ip") {
         config.update_config(util::io::file_to_ips(f.to_string()));
     }
