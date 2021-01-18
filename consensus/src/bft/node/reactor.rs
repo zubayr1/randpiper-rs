@@ -331,6 +331,7 @@ pub async fn reactor(
                             acks: cx.received_ack.clone(),
                         };
                         new_block.body.data = content;
+                        cx.commits.clear();
                         cx.received_ack.clear();
                         new_block.update_hash();
                         let propose = Propose {
@@ -342,7 +343,6 @@ pub async fn reactor(
                         cx.net_send.send((cx.num_nodes, Arc::new(ProtocolMsg::Propose(propose.clone(), sign.clone())))).unwrap();
                         cx.received_propose = Some(propose);
                         cx.received_propose_sign = Some(sign);
-                        deliver_propose(&mut cx, myid);
                         phase = Phase::DeliverCommit;
                         phase_end.as_mut().reset(begin + Duration::from_millis(delta * 11 * (epoch - 1) + delta * 8));
                     }
