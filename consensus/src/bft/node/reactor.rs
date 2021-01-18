@@ -205,9 +205,35 @@ pub async fn reactor(
                             }
                         }
                     },
-                    ProtocolMsg::Propose(p, z) => {
-                        cx.received_propose = Some(p);
-                        cx.received_propose_sign = Some(z);
+                    ProtocolMsg::Propose(mut p, z) => {
+                        let mut is_valid = true;
+                        p.new_block.update_hash();
+                        let hash = p.new_block.hash.to_vec();
+                        for cert in p.certificate.votes.iter() {
+                            if cert.msg != hash {
+                                println!("[WARN] The hash of the certification does not match block.");
+                                is_valid = false;
+                            }
+                            if !cx.pub_key_map.get(&cert.origin).unwrap().verify(&cert.msg, &cert.auth) {
+                                println!("[WARN] The auth of the certification does not match block.");
+                                is_valid = false;
+                            }
+                        }
+                        let commit_hash = crypto::hash::ser_and_hash(&p.new_block.body.data.commits);
+                        for cert in p.new_block.body.data.acks.iter() {
+                            if cert.msg != commit_hash {
+                                println!("[WARN] The hash of the certification does not match commit.");
+                                is_valid = false;
+                            }
+                            if !cx.pub_key_map.get(&cert.origin).unwrap().verify(&cert.msg, &cert.auth) {
+                                println!("[WARN] The auth of the certification does not match commit.");
+                                is_valid = false;
+                            }
+                        }
+                        if is_valid {
+                            cx.received_propose = Some(p);
+                            cx.received_propose_sign = Some(z);
+                        }
                     },
                     ProtocolMsg::Vote(p) => {
                         cx.received_vote.push(p);
@@ -270,9 +296,18 @@ pub async fn reactor(
                         }
                     }
                     ProtocolMsg::Commit(mut sh, c, z) => {
-                        cx.rand_beacon_queue.get_mut(&cx.next_leader()).unwrap().append(&mut sh);
-                        cx.received_commit = Some(c);
-                        cx.received_commit_sign = Some(z);
+                        let mut is_valid = true;
+                        let rng = &mut crypto::rand::rngs::StdRng::from_entropy();
+                        for i in 0..cx.num_nodes as usize {
+                            is_valid = is_valid && crypto::EVSS381::check(&cx.rand_beacon_parameter.get_public_params(), &c[i], &sh[i], rng).unwrap();
+                        }
+                        if is_valid {
+                            cx.rand_beacon_queue.get_mut(&cx.next_leader()).unwrap().append(&mut sh);
+                            cx.received_commit = Some(c);
+                            cx.received_commit_sign = Some(z);
+                        } else {
+                            println!("[WARN] Received invalid commit.")
+                        }
                     }
                     ProtocolMsg::DeliverCommit(sh, n, z) => {
                         if !cx.commit_share_sent && n == myid {
