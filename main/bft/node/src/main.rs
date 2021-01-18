@@ -29,6 +29,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     if let Some(f) = m.value_of("ip") {
         config.update_config(util::io::file_to_ips(f.to_string()));
     }
+    println!("{:?}", config.net_map);
     let config = config;
     let mut is_client_apollo_enabled = false;
     if let Some(_x) = m.value_of("special_client") {
