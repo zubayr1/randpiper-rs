@@ -3,8 +3,8 @@ IPS_FILE=${2:-"scripts/aws/ips_file.log"}
 CLI_IPS_FILE=${3:-"scripts/aws/cli_ips.log"}
 PVT_IPS=()
 IPS=()
-BASE_PORT=4000
-CLIENT_PORT=10000
+BASE_PORT=15000
+CLIENT_PORT=16000
 
 if [ -e "$IPS_FILE" ]; then
     echo "File [$IPS_FILE] already exists"

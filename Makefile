@@ -5,6 +5,7 @@ debug:
 
 release:
 	cargo build --release --all
+	cargo build --package=node-bft --release
 
 all: debug release
 
