@@ -55,7 +55,7 @@ fn deliver_propose(cx: &mut Context, myid: Replica) {
         if i != myid {
             cx.net_send
                 .send((
-                    cx.num_nodes,
+                    i,
                     Arc::new(ProtocolMsg::DeliverPropose(
                         shards[i as usize].clone(),
                         i,
@@ -97,7 +97,7 @@ fn deliver_vote_cert(cx: &mut Context, myid: Replica) {
         if i != myid {
             cx.net_send
                 .send((
-                    cx.num_nodes,
+                    i,
                     Arc::new(ProtocolMsg::DeliverVoteCert(
                         shards[i as usize].clone(),
                         i,
@@ -141,7 +141,7 @@ fn deliver_commit(cx: &mut Context, myid: Replica) {
         if i != myid {
             cx.net_send
                 .send((
-                    cx.num_nodes,
+                    i,
                     Arc::new(ProtocolMsg::DeliverCommit(
                         shards[i as usize].clone(),
                         i,
