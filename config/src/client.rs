@@ -109,7 +109,7 @@ impl Client {
         let mut f = File::open(filename).unwrap();
         f.read_to_end(&mut buf).unwrap();
         let bytes: &[u8] = &buf;
-        let c: Client = flexbuffers::from_slice(bytes).unwrap();
+        let c: Client = bincode::deserialize(bytes).unwrap();
         return c;
     }
 
