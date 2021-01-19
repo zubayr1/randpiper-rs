@@ -94,7 +94,7 @@ pub fn get_acc<T: Serialize>(cx: &Context, data: &T) -> (Vec<Vec<u8>>, DataWithA
 
 pub fn get_sign(acc: &DataWithAcc, n: Replica) -> SignedData {
     let mut vec = Vec::with_capacity(acc.size as usize - 1);
-    let mut p = n as usize | 1 << acc.size - 1;
+    let mut p = (1 << acc.size - 1 | n) as usize;
     for _ in 0..acc.size - 1 {
         vec.push((acc.tree[p ^ 1].clone(), acc.tree[p >> 1].clone()));
         p >>= 1;
@@ -183,6 +183,7 @@ impl ShareGatherer {
                 debug_assert!(false);
                 return;
             }
+            change >>= 1;
         }
         self.shard[n as usize] = Some(sh);
         self.shard_num += 1;

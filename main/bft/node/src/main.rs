@@ -47,7 +47,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         2 | _ => log::set_max_level(log::LevelFilter::Trace),
     }
     unsafe {
-        config_lc::SLEEP_TIME = 10 + config.num_nodes as u64;
+        config_lc::SLEEP_TIME = 10 + 2 * config.num_nodes as u64;
     }
 
     log::info!(target:"app","Successfully decoded the config file");
