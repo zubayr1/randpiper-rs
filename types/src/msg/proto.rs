@@ -1,19 +1,19 @@
 use serde::{Deserialize, Serialize};
 
 use super::Certificate;
-use crate::{Propose, Height, Replica, SignedData, Vote};
+use crate::{Propose, Height, Replica, DataWithAcc, SignedData, Vote};
 use types_upstream::WireReady;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ProtocolMsg {
     Certificate(Certificate),
-    Propose(Propose, SignedData),
+    Propose(Propose, DataWithAcc),
     Vote(Vote),
-    VoteCert(Certificate, SignedData),
+    VoteCert(Certificate, DataWithAcc),
     DeliverPropose(Vec<u8>, Replica, SignedData),
     DeliverVoteCert(Vec<u8>, Replica, SignedData),
     Reconstruct(crypto::EVSSShare381, Height),
-    Commit(std::collections::VecDeque<crypto::EVSSShare381>, Vec<crypto::EVSSCommit381>, SignedData),
+    Commit(std::collections::VecDeque<crypto::EVSSShare381>, Vec<crypto::EVSSCommit381>, DataWithAcc),
     DeliverCommit(Vec<u8>, Replica, SignedData),
     Ack(Vote),
 }

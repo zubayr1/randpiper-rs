@@ -19,5 +19,6 @@ Cargo.lock
 
 # Benchmark
 crypto/target/
+consensus/target/
 
 *.log

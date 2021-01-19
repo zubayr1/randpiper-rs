@@ -148,6 +148,34 @@ fn main() {
         }
     }
 
+    for i in 0..num_nodes {
+        let mut vec = Vec::with_capacity(100);
+        for time in 0..100 {
+            println!("{}:{}", i, time);
+            let mut shares = vec![std::collections::VecDeque::with_capacity(num_nodes); num_nodes];
+            let mut commits = Vec::with_capacity(num_nodes);
+            for _ in 0..num_nodes {
+                let poly =
+                    crypto::EVSS381::commit(&rand_beacon_parameter, crypto::F381::rand(rng), rng)
+                        .unwrap();
+                commits.push(poly.get_commit());
+                for j in 0..num_nodes {
+                    shares[j].push_back(
+                        crypto::EVSS381::get_share(
+                            crypto::F381::from((j + 1) as u16),
+                            &rand_beacon_parameter,
+                            &poly,
+                            rng,
+                        )
+                        .unwrap(),
+                    );
+                }
+            }
+            vec.push((shares, commits));
+        }
+        node[i].rand_beacon_shares = vec;
+    }
+
     client.server_pk = pk;
 
     // Write all the files

@@ -5,15 +5,31 @@ use crypto::*;
 use types_upstream::WireReady;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct InnerData {
+    pub commit_hash: Vec<u8>,
+    pub epoch: Height,
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct DataWithAcc {
-    pub hash: Vec<u8>,
+    pub data: InnerData,
+    pub sign: Vec<u8>,
     pub commit: EVSSCommit381,
     pub shares: Vec<EVSSShare381>,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct SignedData {
-    pub data: DataWithAcc,
+    pub data: InnerData,
+    pub sign: Vec<u8>,
+    pub commit: EVSSCommit381,
+    pub share: EVSSShare381,
+}
+
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct DeliveredData {
+    pub commit: EVSSCommit381,
+    pub shares: EVSSShare381,
     pub sign: Vec<u8>,
 }
 

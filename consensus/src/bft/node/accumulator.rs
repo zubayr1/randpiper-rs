@@ -4,7 +4,7 @@ use crypto::*;
 use crypto_lib::PublicKey;
 use reed_solomon_erasure::galois_8::ReedSolomon;
 use serde::{Deserialize, Serialize};
-use types::{DataWithAcc, Replica, SignedData};
+use types::{DataWithAcc, InnerData, Replica, SignedData};
 use util::io::to_bytes;
 
 pub fn to_shards(data: &[u8], num_nodes: usize, num_faults: usize) -> Vec<Vec<u8>> {
@@ -56,7 +56,7 @@ mod tests {
     }
 }
 
-pub fn get_acc<T: Serialize>(cx: &Context, data: &T) -> DataWithAcc {
+pub fn get_acc<T: Serialize>(cx: &Context, data: &T) -> (Vec<Vec<u8>>, DataWithAcc) {
     let shards = to_shards(
         &to_bytes(data),
         cx.num_nodes as usize,
@@ -84,28 +84,34 @@ pub fn get_acc<T: Serialize>(cx: &Context, data: &T) -> DataWithAcc {
             .unwrap(),
         );
     }
-    DataWithAcc {
-        hash: hash::ser_and_hash(data).to_vec(),
-        commit: poly.get_commit(),
-        shares: acc,
-    }
+    let data = InnerData {
+        commit_hash: hash::ser_and_hash(&poly.get_commit()).to_vec(),
+        epoch: cx.epoch,
+    };
+    (
+        shards,
+        DataWithAcc {
+            sign: cx.my_secret_key.sign(&hash::ser_and_hash(&data)).unwrap(),
+            data: data,
+            commit: poly.get_commit(),
+            shares: acc,
+        },
+    )
 }
 
-pub fn get_sign<T: Serialize>(cx: &Context, data: &T) -> SignedData {
-    let data_with_acc = get_acc(cx, data);
+pub fn get_sign(acc: &DataWithAcc, n: Replica) -> SignedData {
     SignedData {
-        sign: cx
-            .my_secret_key
-            .sign(&hash::ser_and_hash(&data_with_acc))
-            .unwrap(),
-        data: data_with_acc,
+        data: acc.data.clone(),
+        sign: acc.sign.clone(),
+        commit: acc.commit.clone(),
+        share: acc.shares[n as usize].clone(),
     }
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct ShareGatherer {
     pub size: Replica,
-    pub reference: Option<SignedData>,
+    pub reference: Option<(InnerData, Vec<u8>)>,
     pub shard: Vec<Option<Vec<u8>>>,
     pub shard_num: Replica,
 }
@@ -138,15 +144,20 @@ impl ShareGatherer {
             return;
         }
         // The hash should match with the sign.
+        if hash::ser_and_hash(&sign.commit).to_vec() != sign.data.commit_hash {
+            println!("[WARN] The hash of the commit does not match.");
+            debug_assert!(false);
+            return;
+        }
         if !pk.verify(&hash::ser_and_hash(&sign.data), &sign.sign) {
             println!("[WARN] The signature of the shard does not match.");
             debug_assert!(false);
             return;
         }
         if self.reference.is_none() {
-            self.reference = Some(sign);
+            self.reference = Some((sign.data, sign.sign));
         } else {
-            if self.reference.as_ref().unwrap().sign != sign.sign {
+            if self.reference.as_ref().unwrap().1 != sign.sign {
                 println!("[WARN] Equivocation detected.");
                 debug_assert!(false);
                 // TODO: Broadcast the blame.
@@ -154,13 +165,8 @@ impl ShareGatherer {
             }
         }
         // The share should match with the accumulator.
-        if !Biaccumulator381::check(
-            pp,
-            &self.reference.as_ref().unwrap().data.commit,
-            &self.reference.as_ref().unwrap().data.shares[n as usize],
-            &mut StdRng::from_entropy(),
-        )
-        .unwrap()
+        if !Biaccumulator381::check(pp, &sign.commit, &sign.share, &mut StdRng::from_entropy())
+            .unwrap()
         {
             println!("[WARN] Biaccumulator value does not match.");
             debug_assert!(false);
