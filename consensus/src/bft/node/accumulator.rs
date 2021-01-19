@@ -55,7 +55,7 @@ mod tests {
     }
 }
 
-fn get_size(num_nodes: Replica) -> Replica {
+pub fn get_size(num_nodes: Replica) -> Replica {
     let mut n: Replica = 1;
     while 1 << n < num_nodes {
         n += 1;
