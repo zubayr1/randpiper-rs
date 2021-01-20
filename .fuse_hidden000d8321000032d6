@@ -1,0 +1,2043 @@
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.97:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.97:8080"
+Key = "806bd5ed90a492c803fdad38ff58a1bd587f68ee93e6fb0deaa60b82e3e26cd803a1c7fc6eb4d41cb60ff75c0ac55f97"
+TLS = false
+Signature = "991e982f7d2f8db6dba135428079b6e08c5f55f1191adcde9c698858d27aa6ea29da7c42b5ac5b91f6ea26edcfc3c1bc13f80f30bc529540a67ca20e51be8074ba5b59f16aa81aa70011654494d9c4f7ce16ba733f2f48c4bece5e9f7f4b1164"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.187:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.187:8080"
+Key = "886e02f36e2a1bc11b68373af197eb420092d7672c9fdec1dec4e27c6bb2a993faf2a056a7b23762973edb47c8359cc8"
+TLS = false
+Signature = "b7a79b1de2a293617c27352a04fc803552912d82fcc7a2e53a5311587b596261fd1caed003851b22178d729a78766bef18358ded7da5b740f6a8bad0c6dde29595f9cb8ba5a70b02bf62dc3cc0f150ff4e10d74029bd4f70613c8887e6be07fd"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.97:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.155:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.155:8080"
+Key = "85aeee1409f4f43c628603b4952ce327af9046aab33f288b94f58759a9ff91d45dfbaf6629aa87cf7014ce6faca6fde9"
+TLS = false
+Signature = "b96d842807df4501df9b1d55b8d0006dc52a7843445dbd03ca8c4351b2eb403181db152b158ca35287a2b3c77c1fbcd20013dd80ffc8c69426426aedfa88a864f556b600400712fd7abfb9e526e2539af8a1a8e7f8d892de38c80f7771a61228"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.136:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.136:8080"
+Key = "b7cfae54912f85777541eafbd68b71aed72595b906e628d58981dc344fe590bcbcae219505dfccc7faf62fed39e9ddd2"
+TLS = false
+Signature = "b8b4eb0bc6bf67a3fb20d81161fa47e557fd9bf0afd520d7870be446b7fe0c14c22e09e67c5d88e085af5bd36ebc6892056fadeab6c9023e4911504c7a218929a8e5f8eef5da5d2eb1e5bd57110bfd974b2a37b361eb1972e3ead6a0570b2c39"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.187:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.75:8080 at datadir/key/drand_id.public
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Saved the key : 10.0.0.30:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.75:8080"
+Key = "96ee660103fa7e370cfadd23d3517bf4ac8099f751085307e8c2fb856f25760c83b4d5df06a51a9b5a262dcea7aa4c35"
+TLS = false
+Signature = "8b9e96e1076f8a06baf08b7906f9be1f1f3ac6e81e414e2dd1ad368965c89541c8d4d015a178c2cfd326da11bd997510151c23f17008b901870232c5d9234378ebb8599abeadb6390e76013d5979f177bc1bd646a587df52c15d731c5e5c52fd"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.30:8080"
+Key = "ace728bb797919790fd07ff8d3d521d2b80989266e0e000ee470ec7dca5ad8d979b2685d36ea3755514bd3a525dddcd6"
+TLS = false
+Signature = "af919738daac1724608988da37b17e203635790d642062364ab30337a700d192741752fb3705823f34b2aebc8230dd610b05455c993dde758be677cb9ea750e2f5df11359f08d95b23ff7f69614031f186a76c898e501b1d6bfc467ded598cb1"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.113:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.113:8080"
+Key = "8f251aa9a58c639e4961adbbdf312bc6331269070d58251b2668db4236672fa89b24b9279a7d584371f90ddfa3fa75f4"
+TLS = false
+Signature = "a8f1fdf7ecbdc9c9c1f2ad1ca5859c4ae7e454ef9790b69e4f6f66bb61aaa9f1a85b55b6266629d583bf227431c485cf064aa8a11aa5fca9ca2f26d2132e4b6b76dd2ad460fb21c06812905d062e94befc1d48ef8f3da51061c27cfa403ac50a"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Saved the key : 10.0.0.71:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.71:8080"
+Key = "94f984244bbc404bf0680835102811db27cf152f7ebb983a13e4bcd6dd694a3bfdd812b62b8c92aef3ceb3830c50e193"
+TLS = false
+Signature = "8ccb90cd1a898df6aee5eb92684336291e94f8f35912d329ae5f3b95c7785a7ced8aacd9edad06eb46485b665a9bd498017ad8c8a03a8899182149c5a49d38bc6d8968650677b59f9ddef96d8dff6058e324a9562429b60fe32ee69b2c030d21"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.155:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.159:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.159:8080"
+Key = "b1dcba48364e985f55fe9089b6963fc71f014d25719bb5c541e9173c9d2f72f255d34103a0a01da7848f3edc0541c8f3"
+TLS = false
+Signature = "865a25efc21cfad8c99df08c063f6bec14526bafda4aac3577cd4ac32af827d5fd45ebb9a2c685199e644d7937371ba0103affa1218b0ac2420a89d890dcf4c4444a0d464331a645d04e5da3e35c5d1b72e8b9c63c5d25c4c9479dcb1298ad3e"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.136:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Saved the key : 10.0.0.112:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.112:8080"
+Key = "8adc9c9e148e65b6fcbfb3d24b61a669d9af7a3d4e2e7655b6aaf52885e639c947b48114a268c447f559d3b31e9a1ddd"
+TLS = false
+Signature = "83f340cbbfa88c3c23a30a44a3ee9c852f195df20f4992a50d46862ce083d162d0621d17053033c6dc44807a3e2c667c12bd7a5822b145b9d8975e8f10ac8a195c28bbfbe8645b20795782b023297e450f69b4e6092e88c99de77cac8269cc47"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+Saved the key : 10.0.0.150:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.150:8080"
+Key = "a049ed66e38bbf55e53f868b0b63f704847d3cb9ebc47e84b94eb42d80e1f03742c9d353c4b90e0cb86d187e679e1eb9"
+TLS = false
+Signature = "91664fd4631f264462da082b1f7efbcaaef992068846f30940b71cb08b2f1a524e1be92f4da5fcd814a7b619cdc3ee1913dcfe02619115d0feadc37c9c3c85602b047ffe9af971dc954ac24f8150e98de63197a4a98946bc4b5e449ea2d1a78d"
+
+
+Saved the key : 10.0.0.40:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.40:8080"
+Key = "9401be6343edef08479d60733eb8dee1771c992b69e50eb1e86ef8d276e35dcacd623bf67a328446e1b851c7227a59a9"
+TLS = false
+Signature = "a71bb7c16513dd597a7f2c51f556f0349faaca285228727757cdc02309c192007cd7ca98274f8a2c41173d0f3964db70120079df10b1dbc51aa50e8764475bcc131bf04f40bc19a54b7c46bdc4193ae430cdb3937b9ed959a5b893242c1992a3"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.75:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Saved the key : 10.0.0.212:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.212:8080"
+Key = "b281fc225cfd14263cfaf0fac599bb360c6382f9f9894188efd78c654477fec3e9793be322bbcc8c729514dcbc8029b2"
+TLS = false
+Signature = "b52cc91dd2f45f367ca0937310eda403af10efa87eac4c79ed1ea6b3df62f7c452fc239c7b16ce3ba7cb9971da91820409b6c04e12db580755165cb115b5bae3245eb00c74b8311f5ea4b6843956531de4e3bd4bc81c7dbab455902e67321229"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.30:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.113:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.71:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+Saved the key : 10.0.0.162:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.162:8080"
+Key = "864204ae9646efe78ff63474695d5cd5b95248beea8ee67516d0e7ca2f2d841c044306ff04e22b019509a4515cb8b70a"
+TLS = false
+Signature = "8ab07aa65c6a7d649a4b69fc19526b7bd0e9aee0f77965a133b1d9ea5cf08c56a0fa9689f390162e51752c468ea8518d0ecff749a8b02f993f1922ffe5550ada31d8d52e427788e9ae137ac0edd327fed9cbf7a2bb488fa5524dbcbb39504e84"
+
+
+Saved the key : 10.0.0.57:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Saved the key : 10.0.0.213:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.213:8080"
+Key = "929cc9c88fe3bb3cee2474fe85b65b1964c2d74938aed19709ac283393c156d3791f7fbccf17c6b6294a42471bfa781f"
+TLS = false
+Signature = "a0f41588fb36d279bce529bb7bd376160776c44f90057a2376ed2ee26bf20a6381aff9961d2dea02b1a994c472f66e6303c43289ee76375e369b96c141797d95c7a68c7660f275b7fa33251ad94b836e0a25dc26562d261f2c154a9b1c5a67d2"
+
+
+Address = "10.0.0.57:8080"
+Key = "b23195cbcf77002c5803413fe0bc3236818f8428940f340ba801c6f734c045e903de8ed35e946f7b091456f3bd3560bb"
+TLS = false
+Signature = "8ca9fe3eb334a2c060a2584a32b52188aea59ef03553e311595224f3bbfe4c90ac507cf0b97c435177c1c166a875a56f07b887ca2a56b56f0c71f89915802967cd0fdab198d728859994b5d81262a25f3b6c61e739362a39a99ce16934e5a0c7"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.179:8080 at datadir/key/drand_id.public
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.163:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.163:8080"
+Key = "acb45aa340e9854aed81ff54fc271d4e1454726fe12b4421c610960a79a5dad7034c8e236f9db35599bcac0b680a5110"
+TLS = false
+Signature = "b51a8909ad3e1fbcb19f40182af1ce226f414ce1dfa1628e3c13a31bc43585523bcc14af6ae8166060052897efb3bb2e19f9a22c0b2fd920ea4f6c15f7954ee7be54ec2dad9e43aef925fd82719ae60881b95e6523771db7eaa6f1c4a45d2bf0"
+
+
+Saved the key : 10.0.0.34:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.34:8080"
+Key = "a206aa4b9c00538964511a0099bc3165c7ffd80652b98fb1c87ebc0baf3e9b85a35fb2936be50210f66cfd1da42c10e0"
+TLS = false
+Signature = "982612d0db36ce3b15a8277ae9c05fc0fd88439747f258850e94c19746ee6db4384956fe92e3faa2bd6999390978e8cf16dc54db51d91bc8dca0d18f089ce2ef3fea56a096eb06d211e0b0cd63439ba6bf61d2190017a806522131a51535c30d"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.179:8080"
+Key = "a33ae639bad2d413edf8845c0db5c5a0d8c135c85d4b936fdfae0e086400bf135b7bbaec77a119d62b238eee1c570a4a"
+TLS = false
+Signature = "b41082fe896fb75e00c4eb85404631e38bb22ce4a9b16b06e1c2975c173f38255e35b13964fc873e77f2a2afe5ecba400df5441c888b49d90c5d336e892560a3c84bc34b12e60520b3eff827e8e0118d79b7318e9e21a8228acd8d150cac281d"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Saved the key : 10.0.0.184:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.184:8080"
+Key = "8fd47cdd61723cb1e1e0f228bcd9d5a0b75992fc3e482a7551074b28d992c0a5b9a297d9e167a47154814a88590bfc23"
+TLS = false
+Signature = "b6a0ab9d2a92acef395d8b338e853e8bab2b2635ea779982fea0aa8e196be1b30ce4da790c98f9d6496fe16b1cc0ff2f07428edb8328d2216adb311fd131951d06e5aa9d2c118803c37668713412d18d163b043af3b3094d849c1fd9ceee0925"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.159:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+Saved the key : 10.0.0.188:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.188:8080"
+Key = "afbc0d376050c45c79f199cc474b149706c58ce1cf3db1a9184ef68849279b52172076822feec973dcae555d37a29398"
+TLS = false
+Signature = "b16d6b0c1a180ade51a4f7e81440f994bc3a747d72af2c25c44904ecc77f59ae1722a0bcf50aadf595375337dc8c449a14b7c4a712497955c513aac9697ae9260bb1c934fc8c3ddad24e0f3f8aa3feb4a491b60403a17774d5831dd10291a75f"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Saved the key : 10.0.0.244:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.244:8080"
+Key = "a08bf8e7b9c31f37003f2a25e6800263ca12544041e3e0180231d4ded976a1d6ace47c20175d6a351de30cad509e9a4b"
+TLS = false
+Signature = "88e45f7baac862fb4dc2f5e53f87f1d8d694494f41d6cf0e7658c46f7768f69dd4861350a1a5e99a58a5aae1a9cf9b871553577236cad4d3123234ad1b881cc5fcc37658617468b6f701180a39530bc1fe52c161f02dc90afcf8fbae997a4e7c"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.112:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.180:8080 at datadir/key/drand_id.public
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.180:8080"
+Key = "b5f2f1ec84d5f94c5bd2efc2609fdecf3cacd9b4a87670fa9435d63d4db4a64bd246cb2d4bde79c9a80bb2fa281577d5"
+TLS = false
+Signature = "8d09c245d54641a817319cac32a28f057656fdec0cde9d32997b9bb5983d889a5f384ea9a124b3fb58694c50f9d16524086902716b323fbc84f4df4434d4746de33bae0d9650cbf1629c2680814a99f5f080783974360b86bbb955b950618ffb"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.40:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.25:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.25:8080"
+Key = "80eb6d3004483b71872e325cfbc6580c4250f9ebc7d9c215ab32ef00109e037624af96fb98d9a2e3750ef36e1167fc19"
+TLS = false
+Signature = "b508f7ea65ba7d0b21d00290dbfaf6916f3c9315d66c3734a588135f27f52451e179954c4fa72cd554824c14d6471c9c17ad26028f66ceec4f4a3db5bd0806dc55820de1ac531137c49bd8303cfbf1ca94233494c1bcf2d4169daf7aeb600cb2"
+
+
+Saved the key : 10.0.0.95:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.95:8080"
+Key = "9217ac917ff12b05b0b2e69d1ee966814c7820f7a15c190c145e24fd04dba34ddbd2a628eea1e6ff0ea879407d95fecf"
+TLS = false
+Signature = "b9fd4f8dd17ba57baf631645aee019a9c8271cfbdbe457be66fe2b55ff6045102f91f2082f2cdc1d3da2a5c5e407972f13471cb0362e2432ab9d38ab9d50e324de33ac5bfbc93a58c2919edc54a88ab7721d34f3befa235d9de55e379dcb1aa2"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+Saved the key : 10.0.0.103:8080 at datadir/key/drand_id.public
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.103:8080"
+Key = "b5cf7d1fe13ea5d1886113fba3bc4a1cbb61fa97e835dfb5bef22eb8cd63e66cf170a249af6712e5c799c252867b8247"
+TLS = false
+Signature = "acdfa6e2769405728916d5c69b11095754aaf4691b3e242fa7a5e6a8216aa753b35000fd25c664643ae222126d5fde120cc27e940a8a60e5d4f59557fdd00d6b07d06a8748e7f57e7ef769ce9f85144a20730debbedf7aaf2671750dba83bab4"
+
+
+Saved the key : 10.0.0.67:8080 at datadir/key/drand_id.public
+Saved the key : 10.0.0.252:8080 at datadir/key/drand_id.public
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.212:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.67:8080"
+Key = "a63860133951755334e225d44af5bab1ab5dea9a6dd7ff8c0a8f2204386c90f4fcc28661d1e57785131c0293fd2ab29e"
+TLS = false
+Signature = "83031cd45152a38df445b075189c42882cbe6eead123a8b1a3ca401daa6d58d64a150ef2662002b646c4dd7e6199c6060bddfdb97921164f598bcfb24723c5a73252c215a2de77b767dbd0d9b31adad1419fdfdd2344559e7c791f26ef28a0e0"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.252:8080"
+Key = "a70ea1edfc59c1d9c2807d167adc59f5fd2324c7fb93598c89fd977a4d008bec3eaef4291ab8534bed672173fd5caddc"
+TLS = false
+Signature = "a67b57d1a4f2f9625252db3addf95ea94fe993e4085372d8af3f2abb1b07325591b182dafb97de9665a31278466be1df0dfd47663cdcef7e615c870db3dee3b74d0a2314a531cf1ef71922121fc93a93dee2f13e7aaf5a28bd2822865ce64959"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.213:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.162:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.57:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.163:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+Saved the key : 10.0.0.91:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.91:8080"
+Key = "a84c0c96045bff523fc98a8fc7611ce1fbdf5d51c5940c3a2fe685860fe68deef73c96baca4df499f855e732c4681147"
+TLS = false
+Signature = "a373045f9c97b18b96be9cef23e18801147bd71fe86ab1fa57a7f0b070671402da3c5de85f6e340f1306de6fe992446f05eb16fb6c4755ae9392c933afb4da0b6c3543b7f6579b3591afe049c007266337249bd2ca13a46982493bcd0938b557"
+
+
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.34:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.179:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand: will run as fresh install -> expect to run DKG.
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.184:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.188:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.244:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.180:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+Saved the key : 10.0.0.170:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.170:8080"
+Key = "8435dac5caeda8f7bc2ba387d14ef1fb3e0392543a070b6791c55e639e8a30a036503a6b7270c67c5f2d4474824cc7cb"
+TLS = false
+Signature = "94e27c1997ef316ced70d4699f9a3c5d4ca05446c0e16f0768ddda1654444439686a17fe0639bcf50bc7e4a518e9e3af19a5d79019ae357fec494dcfdbdb72637e70ec5fedbbc817bafebb8988b85f3ae4a1ea5d14b0b27831aa277ffb741f34"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.25:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.150:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+Saved the key : 10.0.0.185:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.185:8080"
+Key = "885b28a08b33a90132c9fdb8dfe648d9c8563e45bf3a44b82598abf21db6f0a6e25d4e1ec4e6b0fcbb9c57ecd7e82603"
+TLS = false
+Signature = "b793ee3c7b88bfaaec38cabaf5f98ebbaf7e086307c4a664cbeeac00bfe514a8aac91ee4acb7ca0cccba3332b44d79110b43f9ddb30fc702830028376c8245d1973f246c46505138ff09cb63237b740537709966f45b591087d9e7bd602865f4"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.95:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.252:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+Saved the key : 10.0.0.220:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+Address = "10.0.0.220:8080"
+Key = "93558e4755854867c8a150c417deb2838e4201a67ab8b41aa1d77bd5a454918b22a6b840440cfc67ddee166cc4920681"
+TLS = false
+Signature = "a530f4cb960fc171a5c615e510d366325f87bf28ea4c03c909129074e57b40f3982adef88f0aec243c3d8b83e65f180c116a2d6a326f99163f9cf56fc524e4c7e95ecdf5d446f6bfbe43d9d5f9b33ff1846eb9830f36eeb94140135ac88b87d2"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.103:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.67:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.91:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.108:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.108:8080"
+Key = "957caa58df4c3231432a47fa76192a104f6cc4e3eea351a2234297806b7b0da98c8ea6293740b729f2ed2ee98abd6839"
+TLS = false
+Signature = "9646d47098208b3eafbadd6a277bfbb7ab352cdf0df82fba0c29d58c5d2a3eb4808c4fff0028070fd0b07df79fcfb08810149a9f86623ea5655ece5fe2a4e6c868a5c11a119c1cfa2df0b50ab5d390e61ab5f6bea7ad68ebda8372a92c677c86"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.170:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.185:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.220:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+Saved the key : 10.0.0.120:8080 at datadir/key/drand_id.public
+Saved the key : 10.0.0.114:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.114:8080"
+Key = "aef305b71b3bef080e315082dfc6ccafce43e12209f24ae5affdf97831c391a1610b586d6c7cce3e8220804062b52dae"
+TLS = false
+Signature = "a7cd7734920e49a17801fb8651c6496e23fc1c8138e1bd70171c6da68dc798e1f8cec00d631d9887550472fd9c3a106f16c60fe18f17dc28e25a9575976eda46fbe3238da6635f23a7244ffa8f017a1805510bfb4577c7abcd14f7e0da779744"
+
+
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.120:8080"
+Key = "873d93d10f624a7cd129bbe839fa906e3bd1efc3dfc51398376331dbfe22b9b9f7c6ec13fe45ff9e7da71ae38ccfb1d8"
+TLS = false
+Signature = "971cad98c0653be31d28242a3010a8e61cdd52c3ac8d3c21feff3ca1a271ee6355c75a79b6017bf5979c67c0d6a3e29f13578f74fa2e5d98267d76a870beee9fcc6394a7c87ada8de95995e142e5f6cd8d6ba0f1f3398efbc84a4401f8ad9a4a"
+
+
+Saved the key : 10.0.0.235:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.235:8080"
+Key = "83848df89ba85b3596b4590fd813ddcc3aaef3f7ea77cac7ce0c6cc665f6665393b091557af4627797e528703f1b9507"
+TLS = false
+Signature = "a68c936c531523acee7ddcac08a683afc05cb6d5e4ee9b7cbdd268a1ae9b8ec09e2f15a41776df0ed091335bc30fe88615fdec77c43ec04e83a82f83b41ecafc1d761df458a352651f164f936b816963f9b7cccca1f8098fae7db053bc54444a"
+
+
+Saved the key : 10.0.0.190:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.190:8080"
+Key = "81761d84ba1d9708287c1a9876f6050a998a723d4f956cd7eb7142fe6a1467d75d06400f18cff923b8525e190164a209"
+TLS = false
+Signature = "aa8dcd96ccc3984de20ae4efeabf658076321d46539c4546cb3bd00c5f020ec3181f481447ae0393fde3c06222fe1c9906d9360efcf282f217240897e814d2947b830c5e8da658d806093b7c919e7d32344092888910c83c82bb30eb4cd1a118"
+
+
+Saved the key : 10.0.0.228:8080 at datadir/key/drand_id.public
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.228:8080"
+Key = "aec3ada75918fc64ed52b97fe7eb8b65db324298168d357d37528bb752c3b9b2ff0dda8317561b22b72356fcb4f4442f"
+TLS = false
+Signature = "8baa3a3de6537ff00d323f5567ea8123aa3888f94beff57efdd2cf9247545f090a4c04e309a397f1f06a4288de15fe7b088da4dd08afe936fdead77477d0cbf65cbe7b6c5ea337b14a1ca1a07f68bd4a2d275e73f18ba01cffdac64080f46b47"
+
+
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.183:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.183:8080"
+Key = "81e22931af83310190913a1b308de2efa462eb087a0bc03cd63859cfb6693b64f2005e0014cb2f8ce347ae67ce2111b3"
+TLS = false
+Signature = "896561abe5deab9c4b9554ed753dfce711adeb302c254dad5f9a69c73e11276ef2e294c123039f40ff5ee8597b3e9f2806efebe7e1f2e73bfa405bc7c5064760e05c1995041e20bf0ad34bd4e8b4889a3f59798e9f119e52067a50689cb1820e"
+
+
+Saved the key : 10.0.0.61:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.61:8080"
+Key = "b33f2a6a04e440cf044b76a6c49286a93a084c1e827eaef1cf3550be60d8ff4878796e082c20602c7d20e73a183f9e4c"
+TLS = false
+Signature = "a6cf7985f7f913c6e63b564391aec4b55f593970231d63b999937eb795535f19cdc538404aa0545f54e2f3463851369c13987e835f36fa37ee21d560d4c9dc0aad9cf4d10bcf695dc3490f66a386f3bd824d6556a044c4f69bee2406ee8a3182"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Saved the key : 10.0.0.27:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.27:8080"
+Key = "a3af9347b84946bb8a0db68693ec194ea10c07c06964a351cde34d0a7ffc06ba09b0066a6220d0d0777f6b0d50f75aca"
+TLS = false
+Signature = "b3efe13a3c50f1cf174e4b0ce78e7445e1b5b5b95528736db1b1b9b9fd1b93d6798296ac2e0664d84d3f1350c9fc954b1309627ce7a03ddd33a6fd5feb2877829c49558cb3727006239eb7aa593fba45c09b96b4ceeffd7943a6cfcfb5e46c9b"
+
+
+Saved the key : 10.0.0.72:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.72:8080"
+Key = "8c44f11e44d46a1b6b627dbeb41c302c6dbeb3d46d40aba313c671965ad4bd50843b85cca5a88c1d98ce799e16197684"
+TLS = false
+Signature = "ac6a330117584d0edd312a84474bc34195a4e51b9bbdf36bf8d171718e3c92217d6fb72e696ba06fc72efa0b5b9cc5a0044abdf86761a244b210d76414231c7f23689adb248bfc557350dfec87adaeed4012eca3199c20ea73daa6c057c1a5af"
+
+
+Saved the key : 10.0.0.174:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.174:8080"
+Key = "96df70ea80bde306ceafa2f592812065a54c9bb1a3faaffba3deca0d74782d0873c90a880ca76b46319e2224bd2178f4"
+TLS = false
+Signature = "aecf38c3a52bc007dfdbe8210f0518d7adffc73f00d1987c3524b18b5e497f686aee8f419786689ca8a1b06c17d7109f19e871813679abbf4846a08d4d01676d782722798bc8112e75c2ddbe569cf5e9a24b48666da8b0611f1fbb0290703c45"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.174:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:48, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.108:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Saved the key : 10.0.0.79:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.79:8080"
+Key = "a88929357bd665d76f60b05b1a4d7faf77526907da68a3944d2f0844716733cbaf4aa76563ce723b3f14cac78490953d"
+TLS = false
+Signature = "aeedca7da738682d79df1baa20482883b2d794343d04b03dbee88ddb0efb14710a35d2aa0b9b0ab3c00da962836c34990e3537ec292d859d8d568a48e15e61dd6f0166175856f63f11e7ae297ea5ab5e5eaf6c3e55e0c8602ac70232aff13cb2"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.114:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.235:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.120:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.190:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:48, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.228:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.61:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.72:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.183:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.27:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+Saved the key : 10.0.0.231:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.231:8080"
+Key = "b1052525298799dd4b89a256bca2b04d742b5d61adf0748d79a08f6c092a4559722693c5aa87cdf2e7e0554f9cc3147d"
+TLS = false
+Signature = "80b1195d408ebe6424525e4bc5815304d06145eeb18d8770515997812b43441459f42c5322b05fb0a77bbc7f78e8f8f7158ac7846511581524a442f072120dc291055ee834b8788fa8be178fb1baf861b0d65bde950430f53973fd574c305f6b"
+
+
+Saved the key : 10.0.0.210:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.210:8080"
+Key = "a8b3c931ec80c44af400e54f99c097521fc454f4d0d9aee61739d82083fe09d61f6efb1e5cc7cc8258519c345198c79b"
+TLS = false
+Signature = "a8f18cc9a425b2147ffb5cb67cca13813ce7f3f8ffec67f008281aa1b3f1e9ccc6351dc777a3e23fd3f7c62ea4ec9d2a10dc678769c62a713ba7c0a9619d53f8d3bf44757314986e4d619a1616ecd8f35e3d836b914cbbb236b62cf10b1bdcfe"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.19:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.19:8080"
+Key = "a568492f40b1ba583256c36511d25197f6c75a6b17a64b8693c8b1da4391dd44a2e31eb684374212d76f175bb7a94336"
+TLS = false
+Signature = "a9637be315a1d51c822f283db818f2d9183394e62e5ba089102f1195166c3d39053f679d14ebd717fb4f556b1c39ab880996bfb2195ca50a08be9b5cb50b1ae0ee4183b0642a7dd9abcaabfc3a10db57f7fb700ab1afdd963ffc62fd581639d5"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.206:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.206:8080"
+Key = "a0556bfc4ac9617a212f9872495228dc73f9535786d0a5e5ef896ebaeeb6311687e59f813f043b801de31e2421936d84"
+TLS = false
+Signature = "853514e3ea4e28dadec0286045b371ff1674623fb53ecebec81cefd6408ee2f4b2f141d4744217db4e73fa4a8927e5e50e893fb43e44eb71d5af023038be4a38acc347d54eb9a3d0f02b101260f2cbb3d04368e0feef516603d97a01044298e1"
+
+
+Saved the key : 10.0.0.14:8080 at datadir/key/drand_id.public
+Saved the key : 10.0.0.9:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.14:8080"
+Key = "909f3deebfea2c8286d5d767d9bf620d005b81e51c610414522c789ccf47bd205898498a9b7c506d3e926659eab8ed4d"
+TLS = false
+Signature = "add75133887014487a3ad281ec02a5673ec9b0c6a2e12da63c297a4b47480510c90d534e272024fe7a59d5c3f361d8c717df94c5c6fdbb2bb13202056a647f20c258196168d75f670d115f4e268cf7ecf3ba7a1cf2952007285e61f47dabe9be"
+
+
+Address = "10.0.0.9:8080"
+Key = "b3f8dade0d8b282b3ed2294aaee6f3ad61cdbaac8fb2f64e55b837b8d945c644807b2ff53d29da6c778670699ba1adc5"
+TLS = false
+Signature = "8db76991ce26ccf22581448c7f13cfe069ca231baafdcde7308e4a006fb7777c49e5e2975dee9b6b419fe49412158a7e106d75b1b031ed49f83a1096de8f4eeaab03d51a1a5b02010b413aea1f65a8754ade2630f5d8cc0c26bccba510f1c9d8"
+
+
+Saved the key : 10.0.0.211:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.211:8080"
+Key = "b883432aa01dd18fd68f40a994d9087c0085f2cfa2bb783339bb34ca7109aa74730fecc55802597673a01835ca3e29ce"
+TLS = false
+Signature = "8b60d99c63e61f93e1eec5b1784202ed9f26e8e5c193f07abeb39d7726edabae2b1769104b6bb0be25c28e830e36f18e0ff1355230ccab72c1fac76345a005c0d525e38b450352d4b3e84642fddee9c2f9230a7354bf9e627f7ab96cc0002646"
+
+
+Saved the key : 10.0.0.245:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.245:8080"
+Key = "8f1ff5e298c4eb2b24eccf20b5c6b27a4ea7b8b6eaaf24c7bf94cee1d60dc684cc7ec560dac6169e68e77dd1dc89846c"
+TLS = false
+Signature = "af30d22b7e82d89c1da394315ccf1285731e995d336d4248663f8a14c81758a59d18c563d907de568680c897766ab9740476f730ba86742eeb8e8edefc6eb55259261c2651c59715ea297727afb5426d4e98c72b93dc790129d84435e2a6cd2c"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.79:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.231:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.210:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.19:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.9:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.211:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.14:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.206:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 private_listen=10.0.0.245:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.101:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.101:8080"
+Key = "a3b73bb4719d20617b8a949edf0ca2286745bd561f148d0f712559fbaf8281712ec65d6fdc108be20f273f1cde04d1f0"
+TLS = false
+Signature = "8ea3bb77a6d01d27dbaeea26d039abd9e6412f9bd1e6eb36a92f78d61c909e4e0f7212918241bf7b51aff3e6a25dc0d1019c3d97ca36ec01bc6b1a3781af7825b4c8bb221dda856bc4a24fa1a714d1d7fa24eeae294c4af7b8debb15a216d5d1"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:30 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.101:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.247:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.247:8080"
+Key = "b5f7365eaa77041478d981b72497b87dca17ee598c0b51088c3e08cbcd555ece00e9812623678caac24aac6680203700"
+TLS = false
+Signature = "a24a37229e8f59ccff54c6f10e871356a8627e53457c389e5ade1171ed8b982ffa6b6985655f191ef4ba99151b2725f910c33ed6f52326fabfb1b4b71459ff333c11dc2c82ba5cbe7064613507ab338da968755658ca71b944bce6550c51ea28"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.32:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.32:8080"
+Key = "996bb12d19e09762cd74e2b7861f852019c69f951fc2da318dd22407b97b96a82d7112741752550239dbc84b1f093d55"
+TLS = false
+Signature = "ae2e27e3b2e18495bf951079202f137f4e91133ee82f1de3f376aa8a21c300e5452cc34f9d02d4d5b3dbb18d108112c90ce2dafad7237bdbe54692ebbc1256ceff474b0b9a95b2bbd8fd25adec136b133d199cfd20bf302085d657ddb0840662"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.31:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.31:8080"
+Key = "8415304f0f63e90560a1bd699294aeca308d41b253292828820a195ab9cc6ff18bdc8bb35441b6d062fd1742df5e0b21"
+TLS = false
+Signature = "b352b02824d25c444e96dc171c5432ad908216a58f6f20bde6645d01fdbdb92b5881cd232212c284d5ae6490642b5a250c9d0adc39ee836273db7b901d74353fbd63e5a3e5fb6558baada47037ea5b36f4a8f3ce261a96f2f79c6252f47efcce"
+
+
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.247:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+Saved the key : 10.0.0.58:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.58:8080"
+Key = "92bc18928c81e2706021f1cf545a61bc2d59387393d051d302e499cbd724c0bd263870f5c7846000053e08eea23fd30e"
+TLS = false
+Signature = "a036761fc50bcd33a69216cda3a641ae4146386633bc0a3eeb9d1198756fcd0c22363efbb78b010f8c7869617b119c46139d3b64f098ea4ef18c66b61f7682aba9f1a94a0553343adf66b2ef7a29ec8f1ab6d9b7bc5ae0b8c1ad0d5233c92eb7"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.148:8080 at datadir/key/drand_id.public
+Saved the key : 10.0.0.253:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.253:8080"
+Key = "94e144fe870e06dd66e39e1c4d0c751d3260b9b1065ef8114b28f4e5b42ecb35acc42b2a3311f37ee9290bf3670057a1"
+TLS = false
+Signature = "93c2c1c6b578f030709a7b29f1736cb93f15cacd3643265c7bd19601b1a4b626da432d37f477024b9c462f7d73b252e30b85b7694dedaa5afc3dd62a907a3ae9de33d58a78d0a85fa937e174f8158017db273c5121ad9398f813b9600d6276a4"
+
+
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.148:8080"
+Key = "98471059d62a734b3ecbad0b06182e89ba52388ccd6443b7ffff896ef5eea257d092de7784724bc6bf11e290d0fe9d91"
+TLS = false
+Signature = "abc3eef2d97cf2ec108b66f70e3b459ff64ce837269e30d8fd8873088a5d6dcce6cc65d23a546f3e9b92ee00aa950b7514979027ef5c8bcd28b92bcece2ce8f84eb2a0c166789046a030b87c59534c37f40ce7ade95414836a8dfec3e5872654"
+
+
+Saved the key : 10.0.0.8:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.8:8080"
+Key = "8880a81151bc1f7701dce77909f653ab9405dbb1c5e61ace38a90c16e6e27ffc7ba2d20c7591985cdf41cf8e82c8e3dd"
+TLS = false
+Signature = "944854e245c87c2d1ddab86dc86e8dbc13bb447d13f8d92e9bab5a62b4aac86ac4f6c1e80f4b84561bfa50a96cfdd77c015f7a2427fb698e625b201d95b8342a827bfd8d9eaf80b97804e5954d841ed4aa561cfa8d32eeb321865a1b99eee50d"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+Saved the key : 10.0.0.176:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.176:8080"
+Key = "8f3d3c2639785bb8961340b1f13804c240385138016d5be240e088e0028223510199ee58496cf4316a4e4a8e6c256c43"
+TLS = false
+Signature = "a6643535bb4d46ceb6c0b1bd42306e936a1544b07ca34b5b30b82ede66d2ef2b64585e5a4d621964632cbf9897c46e81054aef831c69a8bf8658f8e5948a1648e4dffb89247907a025aa765461eeab0ee4e34c14d3765f9e0efa2ff2605d237c"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.32:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.31:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.58:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.148:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.253:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.8:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.176:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.49:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.49:8080"
+Key = "92bb14a036670ec875159f06fb72d65732ceb14c740a9d6d81ebe6913f10d090b706aff2bb32499fd767de998ab8fd91"
+TLS = false
+Signature = "8fef5765fa3df2d6cd493c6482f34aa66d08b23b536badd1459d12fd8b754c7033f2f80f98de9fb4497317896b43c73418960d8827df04a43e2cd66f801b4019d3b8528b92c9665ebb8ba69c693239c1c96b95135c1530ef06a6d4e0383891b4"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.198:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.198:8080"
+Key = "923695de85a0bd3c7e6e499e6dbf898861d7593074133cf770142b3c39c0ee1387cc434076d0807e85e0d35680ff191a"
+TLS = false
+Signature = "924169e902562c77dcc758ee16eb99fa0398f99e36c15dccc087c382d4568ee2195f9286573b3fffe588b92cb4a362831855db59ba9fca4691c1c95f4d32114fed2681950d14ae9a62ddc4636e9f25448b9973f69b4ba63303c9660084f8a716"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.49:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.198:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.83:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.83:8080"
+Key = "b2847526fc88e743b798b0510c7518a00d0cdafd410662becd8b1f8f337779edde6bd00913cfb8d9539949f894f65ed6"
+TLS = false
+Signature = "b4d25d6d48ce3b21d432b85e75dbf1bfbea01e86a6a1f7d92422a253f930f8484f2c76314dec401aa8a660e6c7e47dd20655fcca334c4d678db2d066d1a73149a11df8c17ecb9a7322178e2e0e1d9cd5a1de01df085d85937f5ef45a9aa9ccba"
+
+
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Wed, 20 Jan 2021 05:27:31 UTC" call=drand.go:69 private_listen=10.0.0.83:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Initiating the DKG as a leader
+You can stop the command at any point. If so, the group file will not be written out to the specified output. To get the group file once the setup phase is done, you can run the `drand show group` command
+level=info ts="Wed, 20 Jan 2021 05:27:32 UTC" call=server.go:1082 init_dkg=begin time=1611120452 leader=true
+level=info ts="Wed, 20 Jan 2021 05:27:32 UTC" call=control_grpc.pb.go:254 reshare=newmanager
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Connecting to 3.138.170.104:8080
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:48, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:36, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:32 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+Connecting to 3.138.170.104:8080
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:41, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.138.170.104:8080
+drand v1.2.5 (date 20/01/2021@05:25:40, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Generated group:
+Threshold = 33
+Period = "1m30s"
+CatchupPeriod = "0s"
+GenesisTime = 1611120600
+TransitionTime = 0
+GenesisSeed = "1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab"
+
+[[Nodes]]
+  Address = "10.0.0.97:8080"
+  Key = "806bd5ed90a492c803fdad38ff58a1bd587f68ee93e6fb0deaa60b82e3e26cd803a1c7fc6eb4d41cb60ff75c0ac55f97"
+  TLS = false
+  Signature = "991e982f7d2f8db6dba135428079b6e08c5f55f1191adcde9c698858d27aa6ea29da7c42b5ac5b91f6ea26edcfc3c1bc13f80f30bc529540a67ca20e51be8074ba5b59f16aa81aa70011654494d9c4f7ce16ba733f2f48c4bece5e9f7f4b1164"
+  Index = 0
+
+[[Nodes]]
+  Address = "10.0.0.25:8080"
+  Key = "80eb6d3004483b71872e325cfbc6580c4250f9ebc7d9c215ab32ef00109e037624af96fb98d9a2e3750ef36e1167fc19"
+  TLS = false
+  Signature = "b508f7ea65ba7d0b21d00290dbfaf6916f3c9315d66c3734a588135f27f52451e179954c4fa72cd554824c14d6471c9c17ad26028f66ceec4f4a3db5bd0806dc55820de1ac531137c49bd8303cfbf1ca94233494c1bcf2d4169daf7aeb600cb2"
+  Index = 1
+
+[[Nodes]]
+  Address = "10.0.0.190:8080"
+  Key = "81761d84ba1d9708287c1a9876f6050a998a723d4f956cd7eb7142fe6a1467d75d06400f18cff923b8525e190164a209"
+  TLS = false
+  Signature = "aa8dcd96ccc3984de20ae4efeabf658076321d46539c4546cb3bd00c5f020ec3181f481447ae0393fde3c06222fe1c9906d9360efcf282f217240897e814d2947b830c5e8da658d806093b7c919e7d32344092888910c83c82bb30eb4cd1a118"
+  Index = 2
+
+[[Nodes]]
+  Address = "10.0.0.183:8080"
+  Key = "81e22931af83310190913a1b308de2efa462eb087a0bc03cd63859cfb6693b64f2005e0014cb2f8ce347ae67ce2111b3"
+  TLS = false
+  Signature = "896561abe5deab9c4b9554ed753dfce711adeb302c254dad5f9a69c73e11276ef2e294c123039f40ff5ee8597b3e9f2806efebe7e1f2e73bfa405bc7c5064760e05c1995041e20bf0ad34bd4e8b4889a3f59798e9f119e52067a50689cb1820e"
+  Index = 3
+
+[[Nodes]]
+  Address = "10.0.0.235:8080"
+  Key = "83848df89ba85b3596b4590fd813ddcc3aaef3f7ea77cac7ce0c6cc665f6665393b091557af4627797e528703f1b9507"
+  TLS = false
+  Signature = "a68c936c531523acee7ddcac08a683afc05cb6d5e4ee9b7cbdd268a1ae9b8ec09e2f15a41776df0ed091335bc30fe88615fdec77c43ec04e83a82f83b41ecafc1d761df458a352651f164f936b816963f9b7cccca1f8098fae7db053bc54444a"
+  Index = 4
+
+[[Nodes]]
+  Address = "10.0.0.31:8080"
+  Key = "8415304f0f63e90560a1bd699294aeca308d41b253292828820a195ab9cc6ff18bdc8bb35441b6d062fd1742df5e0b21"
+  TLS = false
+  Signature = "b352b02824d25c444e96dc171c5432ad908216a58f6f20bde6645d01fdbdb92b5881cd232212c284d5ae6490642b5a250c9d0adc39ee836273db7b901d74353fbd63e5a3e5fb6558baada47037ea5b36f4a8f3ce261a96f2f79c6252f47efcce"
+  Index = 5
+
+[[Nodes]]
+  Address = "10.0.0.170:8080"
+  Key = "8435dac5caeda8f7bc2ba387d14ef1fb3e0392543a070b6791c55e639e8a30a036503a6b7270c67c5f2d4474824cc7cb"
+  TLS = false
+  Signature = "94e27c1997ef316ced70d4699f9a3c5d4ca05446c0e16f0768ddda1654444439686a17fe0639bcf50bc7e4a518e9e3af19a5d79019ae357fec494dcfdbdb72637e70ec5fedbbc817bafebb8988b85f3ae4a1ea5d14b0b27831aa277ffb741f34"
+  Index = 6
+
+[[Nodes]]
+  Address = "10.0.0.155:8080"
+  Key = "85aeee1409f4f43c628603b4952ce327af9046aab33f288b94f58759a9ff91d45dfbaf6629aa87cf7014ce6faca6fde9"
+  TLS = false
+  Signature = "b96d842807df4501df9b1d55b8d0006dc52a7843445dbd03ca8c4351b2eb403181db152b158ca35287a2b3c77c1fbcd20013dd80ffc8c69426426aedfa88a864f556b600400712fd7abfb9e526e2539af8a1a8e7f8d892de38c80f7771a61228"
+  Index = 7
+
+[[Nodes]]
+  Address = "10.0.0.162:8080"
+  Key = "864204ae9646efe78ff63474695d5cd5b95248beea8ee67516d0e7ca2f2d841c044306ff04e22b019509a4515cb8b70a"
+  TLS = false
+  Signature = "8ab07aa65c6a7d649a4b69fc19526b7bd0e9aee0f77965a133b1d9ea5cf08c56a0fa9689f390162e51752c468ea8518d0ecff749a8b02f993f1922ffe5550ada31d8d52e427788e9ae137ac0edd327fed9cbf7a2bb488fa5524dbcbb39504e84"
+  Index = 8
+
+[[Nodes]]
+  Address = "10.0.0.120:8080"
+  Key = "873d93d10f624a7cd129bbe839fa906e3bd1efc3dfc51398376331dbfe22b9b9f7c6ec13fe45ff9e7da71ae38ccfb1d8"
+  TLS = false
+  Signature = "971cad98c0653be31d28242a3010a8e61cdd52c3ac8d3c21feff3ca1a271ee6355c75a79b6017bf5979c67c0d6a3e29f13578f74fa2e5d98267d76a870beee9fcc6394a7c87ada8de95995e142e5f6cd8d6ba0f1f3398efbc84a4401f8ad9a4a"
+  Index = 9
+
+[[Nodes]]
+  Address = "10.0.0.185:8080"
+  Key = "885b28a08b33a90132c9fdb8dfe648d9c8563e45bf3a44b82598abf21db6f0a6e25d4e1ec4e6b0fcbb9c57ecd7e82603"
+  TLS = false
+  Signature = "b793ee3c7b88bfaaec38cabaf5f98ebbaf7e086307c4a664cbeeac00bfe514a8aac91ee4acb7ca0cccba3332b44d79110b43f9ddb30fc702830028376c8245d1973f246c46505138ff09cb63237b740537709966f45b591087d9e7bd602865f4"
+  Index = 10
+
+[[Nodes]]
+  Address = "10.0.0.187:8080"
+  Key = "886e02f36e2a1bc11b68373af197eb420092d7672c9fdec1dec4e27c6bb2a993faf2a056a7b23762973edb47c8359cc8"
+  TLS = false
+  Signature = "b7a79b1de2a293617c27352a04fc803552912d82fcc7a2e53a5311587b596261fd1caed003851b22178d729a78766bef18358ded7da5b740f6a8bad0c6dde29595f9cb8ba5a70b02bf62dc3cc0f150ff4e10d74029bd4f70613c8887e6be07fd"
+  Index = 11
+
+[[Nodes]]
+  Address = "10.0.0.8:8080"
+  Key = "8880a81151bc1f7701dce77909f653ab9405dbb1c5e61ace38a90c16e6e27ffc7ba2d20c7591985cdf41cf8e82c8e3dd"
+  TLS = false
+  Signature = "944854e245c87c2d1ddab86dc86e8dbc13bb447d13f8d92e9bab5a62b4aac86ac4f6c1e80f4b84561bfa50a96cfdd77c015f7a2427fb698e625b201d95b8342a827bfd8d9eaf80b97804e5954d841ed4aa561cfa8d32eeb321865a1b99eee50d"
+  Index = 12
+
+[[Nodes]]
+  Address = "10.0.0.112:8080"
+  Key = "8adc9c9e148e65b6fcbfb3d24b61a669d9af7a3d4e2e7655b6aaf52885e639c947b48114a268c447f559d3b31e9a1ddd"
+  TLS = false
+  Signature = "83f340cbbfa88c3c23a30a44a3ee9c852f195df20f4992a50d46862ce083d162d0621d17053033c6dc44807a3e2c667c12bd7a5822b145b9d8975e8f10ac8a195c28bbfbe8645b20795782b023297e450f69b4e6092e88c99de77cac8269cc47"
+  Index = 13
+
+[[Nodes]]
+  Address = "10.0.0.72:8080"
+  Key = "8c44f11e44d46a1b6b627dbeb41c302c6dbeb3d46d40aba313c671965ad4bd50843b85cca5a88c1d98ce799e16197684"
+  TLS = false
+  Signature = "ac6a330117584d0edd312a84474bc34195a4e51b9bbdf36bf8d171718e3c92217d6fb72e696ba06fc72efa0b5b9cc5a0044abdf86761a244b210d76414231c7f23689adb248bfc557350dfec87adaeed4012eca3199c20ea73daa6c057c1a5af"
+  Index = 14
+
+[[Nodes]]
+  Address = "10.0.0.245:8080"
+  Key = "8f1ff5e298c4eb2b24eccf20b5c6b27a4ea7b8b6eaaf24c7bf94cee1d60dc684cc7ec560dac6169e68e77dd1dc89846c"
+  TLS = false
+  Signature = "af30d22b7e82d89c1da394315ccf1285731e995d336d4248663f8a14c81758a59d18c563d907de568680c897766ab9740476f730ba86742eeb8e8edefc6eb55259261c2651c59715ea297727afb5426d4e98c72b93dc790129d84435e2a6cd2c"
+  Index = 15
+
+[[Nodes]]
+  Address = "10.0.0.113:8080"
+  Key = "8f251aa9a58c639e4961adbbdf312bc6331269070d58251b2668db4236672fa89b24b9279a7d584371f90ddfa3fa75f4"
+  TLS = false
+  Signature = "a8f1fdf7ecbdc9c9c1f2ad1ca5859c4ae7e454ef9790b69e4f6f66bb61aaa9f1a85b55b6266629d583bf227431c485cf064aa8a11aa5fca9ca2f26d2132e4b6b76dd2ad460fb21c06812905d062e94befc1d48ef8f3da51061c27cfa403ac50a"
+  Index = 16
+
+[[Nodes]]
+  Address = "10.0.0.176:8080"
+  Key = "8f3d3c2639785bb8961340b1f13804c240385138016d5be240e088e0028223510199ee58496cf4316a4e4a8e6c256c43"
+  TLS = false
+  Signature = "a6643535bb4d46ceb6c0b1bd42306e936a1544b07ca34b5b30b82ede66d2ef2b64585e5a4d621964632cbf9897c46e81054aef831c69a8bf8658f8e5948a1648e4dffb89247907a025aa765461eeab0ee4e34c14d3765f9e0efa2ff2605d237c"
+  Index = 17
+
+[[Nodes]]
+  Address = "10.0.0.184:8080"
+  Key = "8fd47cdd61723cb1e1e0f228bcd9d5a0b75992fc3e482a7551074b28d992c0a5b9a297d9e167a47154814a88590bfc23"
+  TLS = false
+  Signature = "b6a0ab9d2a92acef395d8b338e853e8bab2b2635ea779982fea0aa8e196be1b30ce4da790c98f9d6496fe16b1cc0ff2f07428edb8328d2216adb311fd131951d06e5aa9d2c118803c37668713412d18d163b043af3b3094d849c1fd9ceee0925"
+  Index = 18
+
+[[Nodes]]
+  Address = "10.0.0.14:8080"
+  Key = "909f3deebfea2c8286d5d767d9bf620d005b81e51c610414522c789ccf47bd205898498a9b7c506d3e926659eab8ed4d"
+  TLS = false
+  Signature = "add75133887014487a3ad281ec02a5673ec9b0c6a2e12da63c297a4b47480510c90d534e272024fe7a59d5c3f361d8c717df94c5c6fdbb2bb13202056a647f20c258196168d75f670d115f4e268cf7ecf3ba7a1cf2952007285e61f47dabe9be"
+  Index = 19
+
+[[Nodes]]
+  Address = "10.0.0.95:8080"
+  Key = "9217ac917ff12b05b0b2e69d1ee966814c7820f7a15c190c145e24fd04dba34ddbd2a628eea1e6ff0ea879407d95fecf"
+  TLS = false
+  Signature = "b9fd4f8dd17ba57baf631645aee019a9c8271cfbdbe457be66fe2b55ff6045102f91f2082f2cdc1d3da2a5c5e407972f13471cb0362e2432ab9d38ab9d50e324de33ac5bfbc93a58c2919edc54a88ab7721d34f3befa235d9de55e379dcb1aa2"
+  Index = 20
+
+[[Nodes]]
+  Address = "10.0.0.198:8080"
+  Key = "923695de85a0bd3c7e6e499e6dbf898861d7593074133cf770142b3c39c0ee1387cc434076d0807e85e0d35680ff191a"
+  TLS = false
+  Signature = "924169e902562c77dcc758ee16eb99fa0398f99e36c15dccc087c382d4568ee2195f9286573b3fffe588b92cb4a362831855db59ba9fca4691c1c95f4d32114fed2681950d14ae9a62ddc4636e9f25448b9973f69b4ba63303c9660084f8a716"
+  Index = 21
+
+[[Nodes]]
+  Address = "10.0.0.213:8080"
+  Key = "929cc9c88fe3bb3cee2474fe85b65b1964c2d74938aed19709ac283393c156d3791f7fbccf17c6b6294a42471bfa781f"
+  TLS = false
+  Signature = "a0f41588fb36d279bce529bb7bd376160776c44f90057a2376ed2ee26bf20a6381aff9961d2dea02b1a994c472f66e6303c43289ee76375e369b96c141797d95c7a68c7660f275b7fa33251ad94b836e0a25dc26562d261f2c154a9b1c5a67d2"
+  Index = 22
+
+[[Nodes]]
+  Address = "10.0.0.49:8080"
+  Key = "92bb14a036670ec875159f06fb72d65732ceb14c740a9d6d81ebe6913f10d090b706aff2bb32499fd767de998ab8fd91"
+  TLS = false
+  Signature = "8fef5765fa3df2d6cd493c6482f34aa66d08b23b536badd1459d12fd8b754c7033f2f80f98de9fb4497317896b43c73418960d8827df04a43e2cd66f801b4019d3b8528b92c9665ebb8ba69c693239c1c96b95135c1530ef06a6d4e0383891b4"
+  Index = 23
+
+[[Nodes]]
+  Address = "10.0.0.58:8080"
+  Key = "92bc18928c81e2706021f1cf545a61bc2d59387393d051d302e499cbd724c0bd263870f5c7846000053e08eea23fd30e"
+  TLS = false
+  Signature = "a036761fc50bcd33a69216cda3a641ae4146386633bc0a3eeb9d1198756fcd0c22363efbb78b010f8c7869617b119c46139d3b64f098ea4ef18c66b61f7682aba9f1a94a0553343adf66b2ef7a29ec8f1ab6d9b7bc5ae0b8c1ad0d5233c92eb7"
+  Index = 24
+
+[[Nodes]]
+  Address = "10.0.0.220:8080"
+  Key = "93558e4755854867c8a150c417deb2838e4201a67ab8b41aa1d77bd5a454918b22a6b840440cfc67ddee166cc4920681"
+  TLS = false
+  Signature = "a530f4cb960fc171a5c615e510d366325f87bf28ea4c03c909129074e57b40f3982adef88f0aec243c3d8b83e65f180c116a2d6a326f99163f9cf56fc524e4c7e95ecdf5d446f6bfbe43d9d5f9b33ff1846eb9830f36eeb94140135ac88b87d2"
+  Index = 25
+
+[[Nodes]]
+  Address = "10.0.0.40:8080"
+  Key = "9401be6343edef08479d60733eb8dee1771c992b69e50eb1e86ef8d276e35dcacd623bf67a328446e1b851c7227a59a9"
+  TLS = false
+  Signature = "a71bb7c16513dd597a7f2c51f556f0349faaca285228727757cdc02309c192007cd7ca98274f8a2c41173d0f3964db70120079df10b1dbc51aa50e8764475bcc131bf04f40bc19a54b7c46bdc4193ae430cdb3937b9ed959a5b893242c1992a3"
+  Index = 26
+
+[[Nodes]]
+  Address = "10.0.0.253:8080"
+  Key = "94e144fe870e06dd66e39e1c4d0c751d3260b9b1065ef8114b28f4e5b42ecb35acc42b2a3311f37ee9290bf3670057a1"
+  TLS = false
+  Signature = "93c2c1c6b578f030709a7b29f1736cb93f15cacd3643265c7bd19601b1a4b626da432d37f477024b9c462f7d73b252e30b85b7694dedaa5afc3dd62a907a3ae9de33d58a78d0a85fa937e174f8158017db273c5121ad9398f813b9600d6276a4"
+  Index = 27
+
+[[Nodes]]
+  Address = "10.0.0.71:8080"
+  Key = "94f984244bbc404bf0680835102811db27cf152f7ebb983a13e4bcd6dd694a3bfdd812b62b8c92aef3ceb3830c50e193"
+  TLS = false
+  Signature = "8ccb90cd1a898df6aee5eb92684336291e94f8f35912d329ae5f3b95c7785a7ced8aacd9edad06eb46485b665a9bd498017ad8c8a03a8899182149c5a49d38bc6d8968650677b59f9ddef96d8dff6058e324a9562429b60fe32ee69b2c030d21"
+  Index = 28
+
+[[Nodes]]
+  Address = "10.0.0.108:8080"
+  Key = "957caa58df4c3231432a47fa76192a104f6cc4e3eea351a2234297806b7b0da98c8ea6293740b729f2ed2ee98abd6839"
+  TLS = false
+  Signature = "9646d47098208b3eafbadd6a277bfbb7ab352cdf0df82fba0c29d58c5d2a3eb4808c4fff0028070fd0b07df79fcfb08810149a9f86623ea5655ece5fe2a4e6c868a5c11a119c1cfa2df0b50ab5d390e61ab5f6bea7ad68ebda8372a92c677c86"
+  Index = 29
+
+[[Nodes]]
+  Address = "10.0.0.174:8080"
+  Key = "96df70ea80bde306ceafa2f592812065a54c9bb1a3faaffba3deca0d74782d0873c90a880ca76b46319e2224bd2178f4"
+  TLS = false
+  Signature = "aecf38c3a52bc007dfdbe8210f0518d7adffc73f00d1987c3524b18b5e497f686aee8f419786689ca8a1b06c17d7109f19e871813679abbf4846a08d4d01676d782722798bc8112e75c2ddbe569cf5e9a24b48666da8b0611f1fbb0290703c45"
+  Index = 30
+
+[[Nodes]]
+  Address = "10.0.0.75:8080"
+  Key = "96ee660103fa7e370cfadd23d3517bf4ac8099f751085307e8c2fb856f25760c83b4d5df06a51a9b5a262dcea7aa4c35"
+  TLS = false
+  Signature = "8b9e96e1076f8a06baf08b7906f9be1f1f3ac6e81e414e2dd1ad368965c89541c8d4d015a178c2cfd326da11bd997510151c23f17008b901870232c5d9234378ebb8599abeadb6390e76013d5979f177bc1bd646a587df52c15d731c5e5c52fd"
+  Index = 31
+
+[[Nodes]]
+  Address = "10.0.0.148:8080"
+  Key = "98471059d62a734b3ecbad0b06182e89ba52388ccd6443b7ffff896ef5eea257d092de7784724bc6bf11e290d0fe9d91"
+  TLS = false
+  Signature = "abc3eef2d97cf2ec108b66f70e3b459ff64ce837269e30d8fd8873088a5d6dcce6cc65d23a546f3e9b92ee00aa950b7514979027ef5c8bcd28b92bcece2ce8f84eb2a0c166789046a030b87c59534c37f40ce7ade95414836a8dfec3e5872654"
+  Index = 32
+
+[[Nodes]]
+  Address = "10.0.0.32:8080"
+  Key = "996bb12d19e09762cd74e2b7861f852019c69f951fc2da318dd22407b97b96a82d7112741752550239dbc84b1f093d55"
+  TLS = false
+  Signature = "ae2e27e3b2e18495bf951079202f137f4e91133ee82f1de3f376aa8a21c300e5452cc34f9d02d4d5b3dbb18d108112c90ce2dafad7237bdbe54692ebbc1256ceff474b0b9a95b2bbd8fd25adec136b133d199cfd20bf302085d657ddb0840662"
+  Index = 33
+
+[[Nodes]]
+  Address = "10.0.0.150:8080"
+  Key = "a049ed66e38bbf55e53f868b0b63f704847d3cb9ebc47e84b94eb42d80e1f03742c9d353c4b90e0cb86d187e679e1eb9"
+  TLS = false
+  Signature = "91664fd4631f264462da082b1f7efbcaaef992068846f30940b71cb08b2f1a524e1be92f4da5fcd814a7b619cdc3ee1913dcfe02619115d0feadc37c9c3c85602b047ffe9af971dc954ac24f8150e98de63197a4a98946bc4b5e449ea2d1a78d"
+  Index = 34
+
+[[Nodes]]
+  Address = "10.0.0.206:8080"
+  Key = "a0556bfc4ac9617a212f9872495228dc73f9535786d0a5e5ef896ebaeeb6311687e59f813f043b801de31e2421936d84"
+  TLS = false
+  Signature = "853514e3ea4e28dadec0286045b371ff1674623fb53ecebec81cefd6408ee2f4b2f141d4744217db4e73fa4a8927e5e50e893fb43e44eb71d5af023038be4a38acc347d54eb9a3d0f02b101260f2cbb3d04368e0feef516603d97a01044298e1"
+  Index = 35
+
+[[Nodes]]
+  Address = "10.0.0.244:8080"
+  Key = "a08bf8e7b9c31f37003f2a25e6800263ca12544041e3e0180231d4ded976a1d6ace47c20175d6a351de30cad509e9a4b"
+  TLS = false
+  Signature = "88e45f7baac862fb4dc2f5e53f87f1d8d694494f41d6cf0e7658c46f7768f69dd4861350a1a5e99a58a5aae1a9cf9b871553577236cad4d3123234ad1b881cc5fcc37658617468b6f701180a39530bc1fe52c161f02dc90afcf8fbae997a4e7c"
+  Index = 36
+
+[[Nodes]]
+  Address = "10.0.0.34:8080"
+  Key = "a206aa4b9c00538964511a0099bc3165c7ffd80652b98fb1c87ebc0baf3e9b85a35fb2936be50210f66cfd1da42c10e0"
+  TLS = false
+  Signature = "982612d0db36ce3b15a8277ae9c05fc0fd88439747f258850e94c19746ee6db4384956fe92e3faa2bd6999390978e8cf16dc54db51d91bc8dca0d18f089ce2ef3fea56a096eb06d211e0b0cd63439ba6bf61d2190017a806522131a51535c30d"
+  Index = 37
+
+[[Nodes]]
+  Address = "10.0.0.179:8080"
+  Key = "a33ae639bad2d413edf8845c0db5c5a0d8c135c85d4b936fdfae0e086400bf135b7bbaec77a119d62b238eee1c570a4a"
+  TLS = false
+  Signature = "b41082fe896fb75e00c4eb85404631e38bb22ce4a9b16b06e1c2975c173f38255e35b13964fc873e77f2a2afe5ecba400df5441c888b49d90c5d336e892560a3c84bc34b12e60520b3eff827e8e0118d79b7318e9e21a8228acd8d150cac281d"
+  Index = 38
+
+[[Nodes]]
+  Address = "10.0.0.27:8080"
+  Key = "a3af9347b84946bb8a0db68693ec194ea10c07c06964a351cde34d0a7ffc06ba09b0066a6220d0d0777f6b0d50f75aca"
+  TLS = false
+  Signature = "b3efe13a3c50f1cf174e4b0ce78e7445e1b5b5b95528736db1b1b9b9fd1b93d6798296ac2e0664d84d3f1350c9fc954b1309627ce7a03ddd33a6fd5feb2877829c49558cb3727006239eb7aa593fba45c09b96b4ceeffd7943a6cfcfb5e46c9b"
+  Index = 39
+
+[[Nodes]]
+  Address = "10.0.0.101:8080"
+  Key = "a3b73bb4719d20617b8a949edf0ca2286745bd561f148d0f712559fbaf8281712ec65d6fdc108be20f273f1cde04d1f0"
+  TLS = false
+  Signature = "8ea3bb77a6d01d27dbaeea26d039abd9e6412f9bd1e6eb36a92f78d61c909e4e0f7212918241bf7b51aff3e6a25dc0d1019c3d97ca36ec01bc6b1a3781af7825b4c8bb221dda856bc4a24fa1a714d1d7fa24eeae294c4af7b8debb15a216d5d1"
+  Index = 40
+
+[[Nodes]]
+  Address = "10.0.0.19:8080"
+  Key = "a568492f40b1ba583256c36511d25197f6c75a6b17a64b8693c8b1da4391dd44a2e31eb684374212d76f175bb7a94336"
+  TLS = false
+  Signature = "a9637be315a1d51c822f283db818f2d9183394e62e5ba089102f1195166c3d39053f679d14ebd717fb4f556b1c39ab880996bfb2195ca50a08be9b5cb50b1ae0ee4183b0642a7dd9abcaabfc3a10db57f7fb700ab1afdd963ffc62fd581639d5"
+  Index = 41
+
+[[Nodes]]
+  Address = "10.0.0.67:8080"
+  Key = "a63860133951755334e225d44af5bab1ab5dea9a6dd7ff8c0a8f2204386c90f4fcc28661d1e57785131c0293fd2ab29e"
+  TLS = false
+  Signature = "83031cd45152a38df445b075189c42882cbe6eead123a8b1a3ca401daa6d58d64a150ef2662002b646c4dd7e6199c6060bddfdb97921164f598bcfb24723c5a73252c215a2de77b767dbd0d9b31adad1419fdfdd2344559e7c791f26ef28a0e0"
+  Index = 42
+
+[[Nodes]]
+  Address = "10.0.0.252:8080"
+  Key = "a70ea1edfc59c1d9c2807d167adc59f5fd2324c7fb93598c89fd977a4d008bec3eaef4291ab8534bed672173fd5caddc"
+  TLS = false
+  Signature = "a67b57d1a4f2f9625252db3addf95ea94fe993e4085372d8af3f2abb1b07325591b182dafb97de9665a31278466be1df0dfd47663cdcef7e615c870db3dee3b74d0a2314a531cf1ef71922121fc93a93dee2f13e7aaf5a28bd2822865ce64959"
+  Index = 43
+
+[[Nodes]]
+  Address = "10.0.0.91:8080"
+  Key = "a84c0c96045bff523fc98a8fc7611ce1fbdf5d51c5940c3a2fe685860fe68deef73c96baca4df499f855e732c4681147"
+  TLS = false
+  Signature = "a373045f9c97b18b96be9cef23e18801147bd71fe86ab1fa57a7f0b070671402da3c5de85f6e340f1306de6fe992446f05eb16fb6c4755ae9392c933afb4da0b6c3543b7f6579b3591afe049c007266337249bd2ca13a46982493bcd0938b557"
+  Index = 44
+
+[[Nodes]]
+  Address = "10.0.0.79:8080"
+  Key = "a88929357bd665d76f60b05b1a4d7faf77526907da68a3944d2f0844716733cbaf4aa76563ce723b3f14cac78490953d"
+  TLS = false
+  Signature = "aeedca7da738682d79df1baa20482883b2d794343d04b03dbee88ddb0efb14710a35d2aa0b9b0ab3c00da962836c34990e3537ec292d859d8d568a48e15e61dd6f0166175856f63f11e7ae297ea5ab5e5eaf6c3e55e0c8602ac70232aff13cb2"
+  Index = 45
+
+[[Nodes]]
+  Address = "10.0.0.210:8080"
+  Key = "a8b3c931ec80c44af400e54f99c097521fc454f4d0d9aee61739d82083fe09d61f6efb1e5cc7cc8258519c345198c79b"
+  TLS = false
+  Signature = "a8f18cc9a425b2147ffb5cb67cca13813ce7f3f8ffec67f008281aa1b3f1e9ccc6351dc777a3e23fd3f7c62ea4ec9d2a10dc678769c62a713ba7c0a9619d53f8d3bf44757314986e4d619a1616ecd8f35e3d836b914cbbb236b62cf10b1bdcfe"
+  Index = 46
+
+[[Nodes]]
+  Address = "10.0.0.163:8080"
+  Key = "acb45aa340e9854aed81ff54fc271d4e1454726fe12b4421c610960a79a5dad7034c8e236f9db35599bcac0b680a5110"
+  TLS = false
+  Signature = "b51a8909ad3e1fbcb19f40182af1ce226f414ce1dfa1628e3c13a31bc43585523bcc14af6ae8166060052897efb3bb2e19f9a22c0b2fd920ea4f6c15f7954ee7be54ec2dad9e43aef925fd82719ae60881b95e6523771db7eaa6f1c4a45d2bf0"
+  Index = 47
+
+[[Nodes]]
+  Address = "10.0.0.30:8080"
+  Key = "ace728bb797919790fd07ff8d3d521d2b80989266e0e000ee470ec7dca5ad8d979b2685d36ea3755514bd3a525dddcd6"
+  TLS = false
+  Signature = "af919738daac1724608988da37b17e203635790d642062364ab30337a700d192741752fb3705823f34b2aebc8230dd610b05455c993dde758be677cb9ea750e2f5df11359f08d95b23ff7f69614031f186a76c898e501b1d6bfc467ded598cb1"
+  Index = 48
+
+[[Nodes]]
+  Address = "10.0.0.228:8080"
+  Key = "aec3ada75918fc64ed52b97fe7eb8b65db324298168d357d37528bb752c3b9b2ff0dda8317561b22b72356fcb4f4442f"
+  TLS = false
+  Signature = "8baa3a3de6537ff00d323f5567ea8123aa3888f94beff57efdd2cf9247545f090a4c04e309a397f1f06a4288de15fe7b088da4dd08afe936fdead77477d0cbf65cbe7b6c5ea337b14a1ca1a07f68bd4a2d275e73f18ba01cffdac64080f46b47"
+  Index = 49
+
+[[Nodes]]
+  Address = "10.0.0.114:8080"
+  Key = "aef305b71b3bef080e315082dfc6ccafce43e12209f24ae5affdf97831c391a1610b586d6c7cce3e8220804062b52dae"
+  TLS = false
+  Signature = "a7cd7734920e49a17801fb8651c6496e23fc1c8138e1bd70171c6da68dc798e1f8cec00d631d9887550472fd9c3a106f16c60fe18f17dc28e25a9575976eda46fbe3238da6635f23a7244ffa8f017a1805510bfb4577c7abcd14f7e0da779744"
+  Index = 50
+
+[[Nodes]]
+  Address = "10.0.0.188:8080"
+  Key = "afbc0d376050c45c79f199cc474b149706c58ce1cf3db1a9184ef68849279b52172076822feec973dcae555d37a29398"
+  TLS = false
+  Signature = "b16d6b0c1a180ade51a4f7e81440f994bc3a747d72af2c25c44904ecc77f59ae1722a0bcf50aadf595375337dc8c449a14b7c4a712497955c513aac9697ae9260bb1c934fc8c3ddad24e0f3f8aa3feb4a491b60403a17774d5831dd10291a75f"
+  Index = 51
+
+[[Nodes]]
+  Address = "10.0.0.231:8080"
+  Key = "b1052525298799dd4b89a256bca2b04d742b5d61adf0748d79a08f6c092a4559722693c5aa87cdf2e7e0554f9cc3147d"
+  TLS = false
+  Signature = "80b1195d408ebe6424525e4bc5815304d06145eeb18d8770515997812b43441459f42c5322b05fb0a77bbc7f78e8f8f7158ac7846511581524a442f072120dc291055ee834b8788fa8be178fb1baf861b0d65bde950430f53973fd574c305f6b"
+  Index = 52
+
+[[Nodes]]
+  Address = "10.0.0.159:8080"
+  Key = "b1dcba48364e985f55fe9089b6963fc71f014d25719bb5c541e9173c9d2f72f255d34103a0a01da7848f3edc0541c8f3"
+  TLS = false
+  Signature = "865a25efc21cfad8c99df08c063f6bec14526bafda4aac3577cd4ac32af827d5fd45ebb9a2c685199e644d7937371ba0103affa1218b0ac2420a89d890dcf4c4444a0d464331a645d04e5da3e35c5d1b72e8b9c63c5d25c4c9479dcb1298ad3e"
+  Index = 53
+
+[[Nodes]]
+  Address = "10.0.0.57:8080"
+  Key = "b23195cbcf77002c5803413fe0bc3236818f8428940f340ba801c6f734c045e903de8ed35e946f7b091456f3bd3560bb"
+  TLS = false
+  Signature = "8ca9fe3eb334a2c060a2584a32b52188aea59ef03553e311595224f3bbfe4c90ac507cf0b97c435177c1c166a875a56f07b887ca2a56b56f0c71f89915802967cd0fdab198d728859994b5d81262a25f3b6c61e739362a39a99ce16934e5a0c7"
+  Index = 54
+
+[[Nodes]]
+  Address = "10.0.0.212:8080"
+  Key = "b281fc225cfd14263cfaf0fac599bb360c6382f9f9894188efd78c654477fec3e9793be322bbcc8c729514dcbc8029b2"
+  TLS = false
+  Signature = "b52cc91dd2f45f367ca0937310eda403af10efa87eac4c79ed1ea6b3df62f7c452fc239c7b16ce3ba7cb9971da91820409b6c04e12db580755165cb115b5bae3245eb00c74b8311f5ea4b6843956531de4e3bd4bc81c7dbab455902e67321229"
+  Index = 55
+
+[[Nodes]]
+  Address = "10.0.0.83:8080"
+  Key = "b2847526fc88e743b798b0510c7518a00d0cdafd410662becd8b1f8f337779edde6bd00913cfb8d9539949f894f65ed6"
+  TLS = false
+  Signature = "b4d25d6d48ce3b21d432b85e75dbf1bfbea01e86a6a1f7d92422a253f930f8484f2c76314dec401aa8a660e6c7e47dd20655fcca334c4d678db2d066d1a73149a11df8c17ecb9a7322178e2e0e1d9cd5a1de01df085d85937f5ef45a9aa9ccba"
+  Index = 56
+
+[[Nodes]]
+  Address = "10.0.0.61:8080"
+  Key = "b33f2a6a04e440cf044b76a6c49286a93a084c1e827eaef1cf3550be60d8ff4878796e082c20602c7d20e73a183f9e4c"
+  TLS = false
+  Signature = "a6cf7985f7f913c6e63b564391aec4b55f593970231d63b999937eb795535f19cdc538404aa0545f54e2f3463851369c13987e835f36fa37ee21d560d4c9dc0aad9cf4d10bcf695dc3490f66a386f3bd824d6556a044c4f69bee2406ee8a3182"
+  Index = 57
+
+[[Nodes]]
+  Address = "10.0.0.9:8080"
+  Key = "b3f8dade0d8b282b3ed2294aaee6f3ad61cdbaac8fb2f64e55b837b8d945c644807b2ff53d29da6c778670699ba1adc5"
+  TLS = false
+  Signature = "8db76991ce26ccf22581448c7f13cfe069ca231baafdcde7308e4a006fb7777c49e5e2975dee9b6b419fe49412158a7e106d75b1b031ed49f83a1096de8f4eeaab03d51a1a5b02010b413aea1f65a8754ade2630f5d8cc0c26bccba510f1c9d8"
+  Index = 58
+
+[[Nodes]]
+  Address = "10.0.0.103:8080"
+  Key = "b5cf7d1fe13ea5d1886113fba3bc4a1cbb61fa97e835dfb5bef22eb8cd63e66cf170a249af6712e5c799c252867b8247"
+  TLS = false
+  Signature = "acdfa6e2769405728916d5c69b11095754aaf4691b3e242fa7a5e6a8216aa753b35000fd25c664643ae222126d5fde120cc27e940a8a60e5d4f59557fdd00d6b07d06a8748e7f57e7ef769ce9f85144a20730debbedf7aaf2671750dba83bab4"
+  Index = 59
+
+[[Nodes]]
+  Address = "10.0.0.180:8080"
+  Key = "b5f2f1ec84d5f94c5bd2efc2609fdecf3cacd9b4a87670fa9435d63d4db4a64bd246cb2d4bde79c9a80bb2fa281577d5"
+  TLS = false
+  Signature = "8d09c245d54641a817319cac32a28f057656fdec0cde9d32997b9bb5983d889a5f384ea9a124b3fb58694c50f9d16524086902716b323fbc84f4df4434d4746de33bae0d9650cbf1629c2680814a99f5f080783974360b86bbb955b950618ffb"
+  Index = 60
+
+[[Nodes]]
+  Address = "10.0.0.247:8080"
+  Key = "b5f7365eaa77041478d981b72497b87dca17ee598c0b51088c3e08cbcd555ece00e9812623678caac24aac6680203700"
+  TLS = false
+  Signature = "a24a37229e8f59ccff54c6f10e871356a8627e53457c389e5ade1171ed8b982ffa6b6985655f191ef4ba99151b2725f910c33ed6f52326fabfb1b4b71459ff333c11dc2c82ba5cbe7064613507ab338da968755658ca71b944bce6550c51ea28"
+  Index = 61
+
+[[Nodes]]
+  Address = "10.0.0.136:8080"
+  Key = "b7cfae54912f85777541eafbd68b71aed72595b906e628d58981dc344fe590bcbcae219505dfccc7faf62fed39e9ddd2"
+  TLS = false
+  Signature = "b8b4eb0bc6bf67a3fb20d81161fa47e557fd9bf0afd520d7870be446b7fe0c14c22e09e67c5d88e085af5bd36ebc6892056fadeab6c9023e4911504c7a218929a8e5f8eef5da5d2eb1e5bd57110bfd974b2a37b361eb1972e3ead6a0570b2c39"
+  Index = 62
+
+[[Nodes]]
+  Address = "10.0.0.211:8080"
+  Key = "b883432aa01dd18fd68f40a994d9087c0085f2cfa2bb783339bb34ca7109aa74730fecc55802597673a01835ca3e29ce"
+  TLS = false
+  Signature = "8b60d99c63e61f93e1eec5b1784202ed9f26e8e5c193f07abeb39d7726edabae2b1769104b6bb0be25c28e830e36f18e0ff1355230ccab72c1fac76345a005c0d525e38b450352d4b3e84642fddee9c2f9230a7354bf9e627f7ab96cc0002646"
+  Index = 63
+
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:33 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=control_grpc.pb.go:254 push_dkg=sending_group status="all succeeded"
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=control_grpc.pb.go:254 init_dkg=START_DKG
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=control_grpc.pb.go:254 init_dkg=wait_dkg_end
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.228:55630 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.228:56410 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.228:52346 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:39356 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:41830 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:54890 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:47750 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:46124 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:49508 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:48252 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:35872 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:49486 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:58478 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:40258 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:51804 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:56800 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:38324 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:46630 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:50724 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:37050 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:38420 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:48646 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:53122 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:54154 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:55200 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:48424 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:47186 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:42754 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:41206 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:33924 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:43302 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:54548 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:46578 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:35336 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:40118 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:48940 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:59004 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:56956 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:54028 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:59066 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:51560 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:51712 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:35758 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:38350 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:36890 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:34642 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:37004 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:54776 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:46704 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:35512 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:50380 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:41134 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:34136 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:49848 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:53964 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:36558 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:46038 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:48608 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:53612 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:42184 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:50528 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:51264 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=info ts="Wed, 20 Jan 2021 05:28:34 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.198:56338 group=1fb06f947e9f2c646d38c66c3aab20738c8dde2356ebaf1bc14229594eb613ab
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=control_grpc.pb.go:254 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:04 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort"
+level=error ts="Wed, 20 Jan 2021 05:29:05 UTC" call=drand_control.go:43 init_dkg="drand: error from dkg: process-justifications: only 1/33 valid deals - dkg abort"
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 0/33 valid deals - dkg abort
+error setting up the network: rpc error: code = Unknown desc = drand: drand: error from dkg: process-justifications: only 1/33 valid deals - dkg abort
+Connection to 3.133.153.48 closed by remote host.
+Connection to 3.138.119.183 closed by remote host.
+Connection to 52.15.162.108 closed by remote host.
+Connection to 18.191.237.229 closed by remote host.
+Connection to 3.16.47.227 closed by remote host.
+Connection to 3.15.189.172 closed by remote host.
+Connection to 3.16.66.195 closed by remote host.
+Connection to 3.133.127.151 closed by remote host.
+Connection to 13.58.131.102 closed by remote host.
+Connection to 52.14.170.125 closed by remote host.
+Connection to 3.129.45.199 closed by remote host.
+Connection to 18.219.245.124 closed by remote host.
+Connection to 18.222.52.139 closed by remote host.
+Connection to 3.138.35.152 closed by remote host.
+Connection to 3.139.239.9 closed by remote host.
+Connection to 18.222.102.245 closed by remote host.
+Connection to 18.220.110.23 closed by remote host.
+Connection to 3.129.247.85 closed by remote host.
+Connection to 3.21.44.8 closed by remote host.
+Connection to 18.189.194.155 closed by remote host.
+Connection to 3.135.185.105 closed by remote host.
+Connection to 3.129.216.148 closed by remote host.
+Connection to 3.12.120.25 closed by remote host.
+Connection to 3.22.181.205 closed by remote host.
+Connection to 3.128.95.18 closed by remote host.
+Connection to 3.17.74.222 closed by remote host.
+Connection to 3.140.188.128 closed by remote host.
+Connection to 3.137.211.187 closed by remote host.
+Connection to 3.12.41.242 closed by remote host.
+Connection to 3.15.148.102 closed by remote host.
+Connection to 52.15.39.30 closed by remote host.
+Connection to 3.138.68.134 closed by remote host.
+Connection to 3.137.216.253 closed by remote host.
+Connection to 3.138.172.159 closed by remote host.
+Connection to 3.129.250.28 closed by remote host.
+Connection to 18.188.177.75 closed by remote host.
+Connection to 3.15.18.57 closed by remote host.
+Connection to 18.188.6.214 closed by remote host.
+Connection to 18.221.93.99 closed by remote host.
+Connection to 3.138.120.235 closed by remote host.
+Connection to 3.138.34.107 closed by remote host.
+Connection to 3.129.45.254 closed by remote host.
+Connection to 52.15.41.5 closed by remote host.
+Connection to 18.216.134.208 closed by remote host.
+Connection to 3.133.133.108 closed by remote host.
+Connection to 3.135.246.39 closed by remote host.
+Connection to 13.59.13.127 closed by remote host.
+Connection to 3.128.205.221 closed by remote host.
+Connection to 3.15.206.93 closed by remote host.
+Connection to 18.224.54.61 closed by remote host.

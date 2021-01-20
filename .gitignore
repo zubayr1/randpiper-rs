@@ -20,4 +20,5 @@ Cargo.lock
 # Benchmark
 crypto/target/
 
+*.json
 *.log
