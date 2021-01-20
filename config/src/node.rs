@@ -42,6 +42,8 @@ pub struct Node {
 
     pub rand_beacon_parameter: Option<crypto::EVSSParams381>,
     pub rand_beacon_queue: HashMap<Replica, std::collections::VecDeque<crypto::EVSSShare381>>,
+
+    pub rand_beacon_shares: Vec<(Vec<std::collections::VecDeque<crypto::EVSSShare381>>, Vec<crypto::EVSSCommit381>)>,
 }
 
 impl Node {
@@ -112,6 +114,7 @@ impl Node {
             bi_p: None,
             rand_beacon_parameter: None,
             rand_beacon_queue: HashMap::new(),
+            rand_beacon_shares: Vec::new(),
         }
     }
 
@@ -140,7 +143,7 @@ impl Node {
         let mut f = File::open(filename).unwrap();
         f.read_to_end(&mut buf).unwrap();
         let bytes: &[u8] = &buf;
-        let c: Node = flexbuffers::from_slice(bytes).unwrap();
+        let c: Node = bincode::deserialize(bytes).unwrap();
         return c;
     }
 

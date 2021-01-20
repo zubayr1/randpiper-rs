@@ -9,7 +9,7 @@ use tokio::sync::mpsc::UnboundedSender;
 use config::Node;
 use std::sync::Arc;
 use types::{
-    Block, Certificate, Height, Propose, ProtocolMsg, Replica, SignedData, Storage, Vote,
+    Block, Certificate, Height, Propose, ProtocolMsg, Replica, DataWithAcc, Storage, Vote,
     GENESIS_BLOCK,
 };
 
@@ -27,6 +27,7 @@ pub struct Context {
 
     pub storage: Storage,
     pub height: Height,
+    pub epoch: Height,
     pub last_leader: Replica,
     pub last_seen_block: Arc<Block>,
     pub last_committed_block_ht: Height,
@@ -36,16 +37,16 @@ pub struct Context {
     pub highest_height: Height,
 
     pub received_propose: Option<Propose>,
-    pub received_propose_sign: Option<SignedData>,
+    pub received_propose_sign: Option<DataWithAcc>,
 
     pub received_vote: Vec<Vote>,
     pub received_ack: Vec<Vote>,
 
     pub received_certificate: Option<Certificate>,
-    pub received_certificate_sign: Option<SignedData>,
+    pub received_certificate_sign: Option<DataWithAcc>,
 
     pub received_commit: Option<Vec<crypto::EVSSCommit381>>,
-    pub received_commit_sign: Option<SignedData>,
+    pub received_commit_sign: Option<DataWithAcc>,
 
     pub accumulator_pub_params_map: HashMap<Replica, crypto::EVSSPublicParams381>,
     pub accumulator_params: crypto::EVSSParams381,
@@ -61,10 +62,12 @@ pub struct Context {
     pub rand_beacon_parameter: crypto::EVSSParams381,
     pub rand_beacon_queue: HashMap<Replica, std::collections::VecDeque<crypto::EVSSShare381>>,
 
-    pub reconstruct_queue: Vec<std::collections::VecDeque<(crypto::EVSSShare381, Height)>>,
+    pub reconstruct_queue: std::collections::VecDeque<(crypto::EVSSShare381, Height)>,
 
     pub shards: Vec<std::collections::VecDeque<crypto::EVSSShare381>>,
     pub commits: Vec<crypto::EVSSCommit381>,
+
+    pub rand_beacon_shares: Vec<(Vec<std::collections::VecDeque<crypto::EVSSShare381>>, Vec<crypto::EVSSCommit381>)>,
 }
 
 const EXTRA_SPACE: usize = 100;
@@ -103,6 +106,7 @@ impl Context {
             /// The height and next leader are both 1 because the genesis block
             /// is of height 0 and its author is replica 0
             height: 0,
+            epoch: 0,
             last_leader: 0,
             last_seen_block: Arc::clone(&genesis_block),
             last_committed_block_ht: 0,
@@ -138,10 +142,12 @@ impl Context {
             rand_beacon_parameter: config.rand_beacon_parameter.clone().unwrap(),
             rand_beacon_queue: config.rand_beacon_queue.clone(),
 
-            reconstruct_queue: vec![std::collections::VecDeque::with_capacity(config.num_nodes * 2); config.num_nodes],
+            reconstruct_queue: std::collections::VecDeque::with_capacity(config.num_nodes * 2),
 
             shards: vec![std::collections::VecDeque::with_capacity(config.num_nodes); config.num_nodes],
             commits: Vec::with_capacity(config.num_nodes),
+
+            rand_beacon_shares: config.rand_beacon_shares.clone(),
         };
         c.storage
             .committed_blocks_by_hash

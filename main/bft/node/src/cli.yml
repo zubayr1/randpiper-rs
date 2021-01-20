@@ -13,6 +13,12 @@ args:
         short: v
         multiple: true
         help: sets the verbosity level
+    - delta:
+        short: d
+        long: delta
+        help: the latency of the network
+        takes_value: true
+        required: false
     - ip:
         short: i
         long: ip

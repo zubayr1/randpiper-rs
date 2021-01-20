@@ -26,6 +26,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         _ => panic!("Invalid config file extension"),
     };
     config.validate().expect("The decoded config is not valid");
+    if let Some(d) = m.value_of("delta") {
+        config.delta = d.parse().unwrap();
+    }
     if let Some(f) = m.value_of("ip") {
         config.update_config(util::io::file_to_ips(f.to_string()));
     }
@@ -44,7 +47,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         2 | _ => log::set_max_level(log::LevelFilter::Trace),
     }
     unsafe {
-        config_lc::SLEEP_TIME = 10 + config.num_nodes as u64;
+        config_lc::SLEEP_TIME = 10 + 4 * config.num_nodes as u64;
     }
 
     log::info!(target:"app","Successfully decoded the config file");

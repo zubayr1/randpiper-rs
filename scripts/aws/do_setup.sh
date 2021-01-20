@@ -19,6 +19,7 @@ done < $FILE
 
 for ip in "${IPS[@]}"
 do
+    echo $ip
     ssh -t arch@$ip 'bash -ls' < scripts/aws/setup.sh &
 done
 
