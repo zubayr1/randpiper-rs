@@ -119,6 +119,8 @@ fn main() {
         node[i].rand_beacon_parameter = Some(rand_beacon_parameter.clone());
     }
 
+    println!("Begin generating queue...");
+
     for i in 0..num_nodes {
         for j in 0..num_nodes {
             node[j].rand_beacon_queue.insert(
@@ -126,51 +128,55 @@ fn main() {
                 std::collections::VecDeque::with_capacity(num_nodes + num_faults),
             );
         }
+        let poly =
+            crypto::EVSS381::commit(&rand_beacon_parameter, crypto::F381::rand(rng), rng).unwrap();
+        let pre_shares: Vec<_> = (0..num_nodes)
+            .map(|j| {
+                crypto::EVSS381::get_share(
+                    crypto::F381::from((j + 1) as u16),
+                    &rand_beacon_parameter,
+                    &poly,
+                    rng,
+                )
+                .unwrap()
+            })
+            .collect();
         for _ in 0..num_nodes + num_faults {
-            let poly =
-                crypto::EVSS381::commit(&rand_beacon_parameter, crypto::F381::rand(rng), rng)
-                    .unwrap();
             for k in 0..num_nodes {
                 node[k]
                     .rand_beacon_queue
                     .get_mut(&(i as Replica))
                     .unwrap()
-                    .push_back(
-                        crypto::EVSS381::get_share(
-                            crypto::F381::from((k + 1) as u16),
-                            &rand_beacon_parameter,
-                            &poly,
-                            rng,
-                        )
-                        .unwrap(),
-                    );
+                    .push_back(pre_shares[k].clone());
             }
         }
     }
+
+    println!("Begin generating...");
 
     for i in 0..num_nodes {
         let mut vec = Vec::with_capacity(100);
         for time in 0..100 {
             println!("{}:{}", i, time);
-            let mut shares = vec![std::collections::VecDeque::with_capacity(num_nodes); num_nodes];
-            let mut commits = Vec::with_capacity(num_nodes);
-            for _ in 0..num_nodes {
-                let poly =
-                    crypto::EVSS381::commit(&rand_beacon_parameter, crypto::F381::rand(rng), rng)
-                        .unwrap();
-                commits.push(poly.get_commit());
-                for j in 0..num_nodes {
-                    shares[j].push_back(
-                        crypto::EVSS381::get_share(
-                            crypto::F381::from((j + 1) as u16),
-                            &rand_beacon_parameter,
-                            &poly,
-                            rng,
-                        )
-                        .unwrap(),
-                    );
-                }
-            }
+            let poly =
+                crypto::EVSS381::commit(&rand_beacon_parameter, crypto::F381::rand(rng), rng)
+                    .unwrap();
+            let poly_commit = poly.get_commit();
+            let pre_shares: Vec<_> = (0..num_nodes)
+                .map(|j| {
+                    crypto::EVSS381::get_share(
+                        crypto::F381::from((j + 1) as u16),
+                        &rand_beacon_parameter,
+                        &poly,
+                        rng,
+                    )
+                    .unwrap()
+                })
+                .collect();
+            let shares: Vec<_> = (0..num_nodes)
+                .map(|i| std::collections::VecDeque::from(vec![pre_shares[i].clone(); num_nodes]))
+                .collect();
+            let commits = vec![poly_commit; num_nodes];
             vec.push((shares, commits));
         }
         node[i].rand_beacon_shares = vec;
