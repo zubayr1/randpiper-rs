@@ -1,0 +1,33 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+uvloop = "*"
+pyzmq = "*"
+ipython = "*"
+pytest = "*"
+matplotlib = "*"
+awscli = "*"
+jupyter = "*"
+
+[dev-packages]
+flake8 = "*"
+rope = "*"
+pytest = "*"
+mypy = "*"
+sympy = "*"
+jupyter = "*"
+pylint = "*"
+flake8-mypy = "*"
+black = "==18.9b0"
+boto3 = "*"
+awscli = "*"
+pip = "*"
+parallel-ssh = "*"
+matplotlib = "*"
+numpy = "*"
+
+[requires]
+python_version = "3.7"

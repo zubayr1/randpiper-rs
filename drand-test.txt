@@ -1,0 +1,329 @@
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+drand: no process found
+drand v1.2.5 (date 16/04/2021@02:44:38, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.70:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.70:8080"
+Key = "8ae7bbabab1cc9285c8354da93910dce8d7292807a675504adf77b6e0ac3e6c365ffe057b751695a3235e9981fb6c3d3"
+TLS = false
+Signature = "893edc1041fafe1072fe5d9a09e90adf1cdabb49f163599ecc81abcb9e4face0bee91becd9d333cb5877135b69b1326d0bed0ea0580f6c7c66159b506d3baa98c74a3a836bf8d91539da4c57b8a545dd19854ed74c365995b14eeee6131b3123"
+
+
+drand v1.2.5 (date 16/04/2021@02:44:38, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Fri, 16 Apr 2021 02:47:47 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Fri, 16 Apr 2021 02:47:47 UTC" call=drand.go:69 private_listen=10.0.0.70:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand: no process found
+drand v1.2.5 (date 16/04/2021@02:45:49, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.254:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.254:8080"
+Key = "a7ac0e0eb8f5ce36be239669661df19c984ac660b7883d5deccc5cfeb4b5760263e8e6888e6e9743a2ff67d0860759cb"
+TLS = false
+Signature = "a0082742fc6ed259c9bc7bc515a8ad24b0a8dbc1097f4bd59aba8eaf4dce23799d230e2e5b5c433dac8b574fa121bb090d452cb7193a447f49c2334a360237bf1263724dd6299637c2bd8c35c4186513498f903d6ed1bef8e282bb1d81f170b1"
+
+
+drand: no process found
+drand v1.2.5 (date 16/04/2021@02:45:12, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.89:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.89:8080"
+Key = "981bb93c1b029552b701a4e14479e8ba55b2ab73c06753b6ad4beaab9607aa744b11017696321a14b10939af2e627f38"
+TLS = false
+Signature = "a427277abd27980541eec7d14a88c9d2c6455b455b88d79cf45b6b9add96ae92d7c0e3a88790cea25d52dc3888e58d91163bcf0b244f370665fda7502075e4880d93add09275dac8ed4093fbc598d41b5c5f264684a2ac2dc902e08b57a19e13"
+
+
+drand v1.2.5 (date 16/04/2021@02:45:12, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Fri, 16 Apr 2021 02:47:48 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Fri, 16 Apr 2021 02:47:48 UTC" call=drand.go:69 private_listen=10.0.0.89:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 16/04/2021@02:45:49, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Fri, 16 Apr 2021 02:47:48 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Fri, 16 Apr 2021 02:47:48 UTC" call=drand.go:69 private_listen=10.0.0.254:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand: no process found
+drand v1.2.5 (date 16/04/2021@02:46:00, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Generating private / public key pair without TLS.
+Saved the key : 10.0.0.187:8080 at datadir/key/drand_id.public
+Generated keys at  /home/arch/drand/datadir/key
+Address = "10.0.0.187:8080"
+Key = "800e7f70a52ade3ae42a1056f281bb2092001d1b7b35c580bf2f8ad14f7e96fce33504129327a9cc3c722f4318f2930b"
+TLS = false
+Signature = "896555c28dac5f2d285b150fc95b90baa5fac4a403824b69b5e1e8bfabf13d9dc12ba49bb32833a4f9820ce4a5399ffa1923a49c6f5650fcc5afd55aff40565cd5493c7f4a68a86d6dba6fb1d3c20e27dc9bef01d1a1f730e1b86c9e413d8888"
+
+
+drand v1.2.5 (date 16/04/2021@02:46:00, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+drand: will run as fresh install -> expect to run DKG.
+level=info ts="Fri, 16 Apr 2021 02:47:48 UTC" call=drand.go:69 network=init insecure=true
+level=info ts="Fri, 16 Apr 2021 02:47:48 UTC" call=drand.go:69 private_listen=10.0.0.187:8080 control_port=8888 public_listen=0.0.0.0:9090 folder=datadir
+drand v1.2.5 (date 16/04/2021@02:45:12, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Initiating the DKG as a leader
+You can stop the command at any point. If so, the group file will not be written out to the specified output. To get the group file once the setup phase is done, you can run the `drand show group` command
+level=info ts="Fri, 16 Apr 2021 02:47:50 UTC" call=server.go:1082 init_dkg=begin time=1618541270 leader=true
+level=info ts="Fri, 16 Apr 2021 02:47:50 UTC" call=control_grpc.pb.go:254 reshare=newmanager
+Connecting to 3.15.26.202:8080
+drand v1.2.5 (date 16/04/2021@02:44:38, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Fri, 16 Apr 2021 02:48:49 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.15.26.202:8080
+drand v1.2.5 (date 16/04/2021@02:45:49, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+Connecting to 3.15.26.202:8080
+drand v1.2.5 (date 16/04/2021@02:46:00, commit 1d6486e40de6b8185fa8249bf6300c16cf48fa0e) by nikkolasg
+Participating to the setup of the DKG
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=control_grpc.pb.go:254 init_dkg=begin leader=false
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=server_metrics.go:107 push_group=received_new
+Generated group:
+Threshold = 3
+Period = "1m30s"
+CatchupPeriod = "0s"
+GenesisTime = 1618541370
+TransitionTime = 0
+GenesisSeed = "9c276e6988dcaa77b0fc79b5e7757d2c46b4aadbae88c41d13f6dc14364c8e73"
+
+[[Nodes]]
+  Address = "10.0.0.187:8080"
+  Key = "800e7f70a52ade3ae42a1056f281bb2092001d1b7b35c580bf2f8ad14f7e96fce33504129327a9cc3c722f4318f2930b"
+  TLS = false
+  Signature = "896555c28dac5f2d285b150fc95b90baa5fac4a403824b69b5e1e8bfabf13d9dc12ba49bb32833a4f9820ce4a5399ffa1923a49c6f5650fcc5afd55aff40565cd5493c7f4a68a86d6dba6fb1d3c20e27dc9bef01d1a1f730e1b86c9e413d8888"
+  Index = 0
+
+[[Nodes]]
+  Address = "10.0.0.70:8080"
+  Key = "8ae7bbabab1cc9285c8354da93910dce8d7292807a675504adf77b6e0ac3e6c365ffe057b751695a3235e9981fb6c3d3"
+  TLS = false
+  Signature = "893edc1041fafe1072fe5d9a09e90adf1cdabb49f163599ecc81abcb9e4face0bee91becd9d333cb5877135b69b1326d0bed0ea0580f6c7c66159b506d3baa98c74a3a836bf8d91539da4c57b8a545dd19854ed74c365995b14eeee6131b3123"
+  Index = 1
+
+[[Nodes]]
+  Address = "10.0.0.89:8080"
+  Key = "981bb93c1b029552b701a4e14479e8ba55b2ab73c06753b6ad4beaab9607aa744b11017696321a14b10939af2e627f38"
+  TLS = false
+  Signature = "a427277abd27980541eec7d14a88c9d2c6455b455b88d79cf45b6b9add96ae92d7c0e3a88790cea25d52dc3888e58d91163bcf0b244f370665fda7502075e4880d93add09275dac8ed4093fbc598d41b5c5f264684a2ac2dc902e08b57a19e13"
+  Index = 2
+
+[[Nodes]]
+  Address = "10.0.0.254:8080"
+  Key = "a7ac0e0eb8f5ce36be239669661df19c984ac660b7883d5deccc5cfeb4b5760263e8e6888e6e9743a2ff67d0860759cb"
+  TLS = false
+  Signature = "a0082742fc6ed259c9bc7bc515a8ad24b0a8dbc1097f4bd59aba8eaf4dce23799d230e2e5b5c433dac8b574fa121bb090d452cb7193a447f49c2334a360237bf1263724dd6299637c2bd8c35c4186513498f903d6ed1bef8e282bb1d81f170b1"
+  Index = 3
+
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=server_metrics.go:107 push_group=received_new
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=control_grpc.pb.go:254 push_dkg=sending_group status="all succeeded"
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=control_grpc.pb.go:254 init_dkg=START_DKG
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=control_grpc.pb.go:254 init_dkg=wait_dkg_end
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.89:42076 group=9c276e6988dcaa77b0fc79b5e7757d2c46b4aadbae88c41d13f6dc14364c8e73
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.89:46418 group=9c276e6988dcaa77b0fc79b5e7757d2c46b4aadbae88c41d13f6dc14364c8e73
+crypto store: saving private share in datadir/groups/dist_key.private
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=drand_control.go:43 init_dkg=dkg_done starting_beacon_time=1618541370 now=1618541330
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=drand_control.go:43 init_dkg=wait_dkg_end
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=server_metrics.go:107 init_dkg="START DKG" signalfromleader=10.0.0.89:46154 group=9c276e6988dcaa77b0fc79b5e7757d2c46b4aadbae88c41d13f6dc14364c8e73
+Copy the following snippet into a new group.toml file
+Threshold = 3
+Period = "1m30s"
+CatchupPeriod = "0s"
+GenesisTime = 1618541370
+TransitionTime = 0
+GenesisSeed = "9c276e6988dcaa77b0fc79b5e7757d2c46b4aadbae88c41d13f6dc14364c8e73"
+
+[[Nodes]]
+  Address = "10.0.0.187:8080"
+  Key = "800e7f70a52ade3ae42a1056f281bb2092001d1b7b35c580bf2f8ad14f7e96fce33504129327a9cc3c722f4318f2930b"
+  TLS = false
+  Signature = "896555c28dac5f2d285b150fc95b90baa5fac4a403824b69b5e1e8bfabf13d9dc12ba49bb32833a4f9820ce4a5399ffa1923a49c6f5650fcc5afd55aff40565cd5493c7f4a68a86d6dba6fb1d3c20e27dc9bef01d1a1f730e1b86c9e413d8888"
+  Index = 0
+
+[[Nodes]]
+  Address = "10.0.0.70:8080"
+  Key = "8ae7bbabab1cc9285c8354da93910dce8d7292807a675504adf77b6e0ac3e6c365ffe057b751695a3235e9981fb6c3d3"
+  TLS = false
+  Signature = "893edc1041fafe1072fe5d9a09e90adf1cdabb49f163599ecc81abcb9e4face0bee91becd9d333cb5877135b69b1326d0bed0ea0580f6c7c66159b506d3baa98c74a3a836bf8d91539da4c57b8a545dd19854ed74c365995b14eeee6131b3123"
+  Index = 1
+
+[[Nodes]]
+  Address = "10.0.0.89:8080"
+  Key = "981bb93c1b029552b701a4e14479e8ba55b2ab73c06753b6ad4beaab9607aa744b11017696321a14b10939af2e627f38"
+  TLS = false
+  Signature = "a427277abd27980541eec7d14a88c9d2c6455b455b88d79cf45b6b9add96ae92d7c0e3a88790cea25d52dc3888e58d91163bcf0b244f370665fda7502075e4880d93add09275dac8ed4093fbc598d41b5c5f264684a2ac2dc902e08b57a19e13"
+  Index = 2
+
+[[Nodes]]
+  Address = "10.0.0.254:8080"
+  Key = "a7ac0e0eb8f5ce36be239669661df19c984ac660b7883d5deccc5cfeb4b5760263e8e6888e6e9743a2ff67d0860759cb"
+  TLS = false
+  Signature = "a0082742fc6ed259c9bc7bc515a8ad24b0a8dbc1097f4bd59aba8eaf4dce23799d230e2e5b5c433dac8b574fa121bb090d452cb7193a447f49c2334a360237bf1263724dd6299637c2bd8c35c4186513498f903d6ed1bef8e282bb1d81f170b1"
+  Index = 3
+
+[PublicKey]
+  Coefficients = ["8a46a64a41feb4b31019760b8d4e0a8731663515a1d61b7cd0ecbd9072819330ded4d1e3f068f22e66487601bb016718", "9938bc4f4489e63eaed9121acc5df37f3d87f2643468cf351773c0027b7281722182885ec9ea4d5405785a31b7cfc7f3", "a114110f32d9bcb54dbfc47d406f7eb4ed25743a711643bb9654d3da827de0da47b03a0e19b271df8a82e625ad15fbb5"]
+
+
+Hash of the group configuration: feb2c155fff6bdef488daf3e414b584be746cc626364f0920c9ce1acd8899390
+crypto store: saving private share in datadir/groups/dist_key.private
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=drand_control.go:43 init_dkg=dkg_done starting_beacon_time=1618541370 now=1618541330
+crypto store: saving private share in datadir/groups/dist_key.private
+Copy the following snippet into a new group.toml file
+Threshold = 3
+Period = "1m30s"
+CatchupPeriod = "0s"
+GenesisTime = 1618541370
+TransitionTime = 0
+GenesisSeed = "9c276e6988dcaa77b0fc79b5e7757d2c46b4aadbae88c41d13f6dc14364c8e73"
+
+[[Nodes]]
+  Address = "10.0.0.187:8080"
+  Key = "800e7f70a52ade3ae42a1056f281bb2092001d1b7b35c580bf2f8ad14f7e96fce33504129327a9cc3c722f4318f2930b"
+  TLS = false
+  Signature = "896555c28dac5f2d285b150fc95b90baa5fac4a403824b69b5e1e8bfabf13d9dc12ba49bb32833a4f9820ce4a5399ffa1923a49c6f5650fcc5afd55aff40565cd5493c7f4a68a86d6dba6fb1d3c20e27dc9bef01d1a1f730e1b86c9e413d8888"
+  Index = 0
+
+[[Nodes]]
+  Address = "10.0.0.70:8080"
+  Key = "8ae7bbabab1cc9285c8354da93910dce8d7292807a675504adf77b6e0ac3e6c365ffe057b751695a3235e9981fb6c3d3"
+  TLS = false
+  Signature = "893edc1041fafe1072fe5d9a09e90adf1cdabb49f163599ecc81abcb9e4face0bee91becd9d333cb5877135b69b1326d0bed0ea0580f6c7c66159b506d3baa98c74a3a836bf8d91539da4c57b8a545dd19854ed74c365995b14eeee6131b3123"
+  Index = 1
+
+[[Nodes]]
+  Address = "10.0.0.89:8080"
+  Key = "981bb93c1b029552b701a4e14479e8ba55b2ab73c06753b6ad4beaab9607aa744b11017696321a14b10939af2e627f38"
+  TLS = false
+  Signature = "a427277abd27980541eec7d14a88c9d2c6455b455b88d79cf45b6b9add96ae92d7c0e3a88790cea25d52dc3888e58d91163bcf0b244f370665fda7502075e4880d93add09275dac8ed4093fbc598d41b5c5f264684a2ac2dc902e08b57a19e13"
+  Index = 2
+
+[[Nodes]]
+  Address = "10.0.0.254:8080"
+  Key = "a7ac0e0eb8f5ce36be239669661df19c984ac660b7883d5deccc5cfeb4b5760263e8e6888e6e9743a2ff67d0860759cb"
+  TLS = false
+  Signature = "a0082742fc6ed259c9bc7bc515a8ad24b0a8dbc1097f4bd59aba8eaf4dce23799d230e2e5b5c433dac8b574fa121bb090d452cb7193a447f49c2334a360237bf1263724dd6299637c2bd8c35c4186513498f903d6ed1bef8e282bb1d81f170b1"
+  Index = 3
+
+[PublicKey]
+  Coefficients = ["8a46a64a41feb4b31019760b8d4e0a8731663515a1d61b7cd0ecbd9072819330ded4d1e3f068f22e66487601bb016718", "9938bc4f4489e63eaed9121acc5df37f3d87f2643468cf351773c0027b7281722182885ec9ea4d5405785a31b7cfc7f3", "a114110f32d9bcb54dbfc47d406f7eb4ed25743a711643bb9654d3da827de0da47b03a0e19b271df8a82e625ad15fbb5"]
+
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=:0 beacon_start=2021-04-16T02:48:50.318352524Z catchup=false
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=asm_amd64.s:1371 beacon=start
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=control_grpc.pb.go:254 init_dkg=dkg_done starting_beacon_time=1618541370 now=1618541330
+Copy the following snippet into a new group.toml file
+Threshold = 3
+Period = "1m30s"
+CatchupPeriod = "0s"
+GenesisTime = 1618541370
+TransitionTime = 0
+GenesisSeed = "9c276e6988dcaa77b0fc79b5e7757d2c46b4aadbae88c41d13f6dc14364c8e73"
+
+[[Nodes]]
+  Address = "10.0.0.187:8080"
+  Key = "800e7f70a52ade3ae42a1056f281bb2092001d1b7b35c580bf2f8ad14f7e96fce33504129327a9cc3c722f4318f2930b"
+  TLS = false
+  Signature = "896555c28dac5f2d285b150fc95b90baa5fac4a403824b69b5e1e8bfabf13d9dc12ba49bb32833a4f9820ce4a5399ffa1923a49c6f5650fcc5afd55aff40565cd5493c7f4a68a86d6dba6fb1d3c20e27dc9bef01d1a1f730e1b86c9e413d8888"
+  Index = 0
+
+[[Nodes]]
+  Address = "10.0.0.70:8080"
+  Key = "8ae7bbabab1cc9285c8354da93910dce8d7292807a675504adf77b6e0ac3e6c365ffe057b751695a3235e9981fb6c3d3"
+  TLS = false
+  Signature = "893edc1041fafe1072fe5d9a09e90adf1cdabb49f163599ecc81abcb9e4face0bee91becd9d333cb5877135b69b1326d0bed0ea0580f6c7c66159b506d3baa98c74a3a836bf8d91539da4c57b8a545dd19854ed74c365995b14eeee6131b3123"
+  Index = 1
+
+[[Nodes]]
+  Address = "10.0.0.89:8080"
+  Key = "981bb93c1b029552b701a4e14479e8ba55b2ab73c06753b6ad4beaab9607aa744b11017696321a14b10939af2e627f38"
+  TLS = false
+  Signature = "a427277abd27980541eec7d14a88c9d2c6455b455b88d79cf45b6b9add96ae92d7c0e3a88790cea25d52dc3888e58d91163bcf0b244f370665fda7502075e4880d93add09275dac8ed4093fbc598d41b5c5f264684a2ac2dc902e08b57a19e13"
+  Index = 2
+
+[[Nodes]]
+  Address = "10.0.0.254:8080"
+  Key = "a7ac0e0eb8f5ce36be239669661df19c984ac660b7883d5deccc5cfeb4b5760263e8e6888e6e9743a2ff67d0860759cb"
+  TLS = false
+  Signature = "a0082742fc6ed259c9bc7bc515a8ad24b0a8dbc1097f4bd59aba8eaf4dce23799d230e2e5b5c433dac8b574fa121bb090d452cb7193a447f49c2334a360237bf1263724dd6299637c2bd8c35c4186513498f903d6ed1bef8e282bb1d81f170b1"
+  Index = 3
+
+[PublicKey]
+  Coefficients = ["8a46a64a41feb4b31019760b8d4e0a8731663515a1d61b7cd0ecbd9072819330ded4d1e3f068f22e66487601bb016718", "9938bc4f4489e63eaed9121acc5df37f3d87f2643468cf351773c0027b7281722182885ec9ea4d5405785a31b7cfc7f3", "a114110f32d9bcb54dbfc47d406f7eb4ed25743a711643bb9654d3da827de0da47b03a0e19b271df8a82e625ad15fbb5"]
+
+
+Hash of the group configuration: feb2c155fff6bdef488daf3e414b584be746cc626364f0920c9ce1acd8899390
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=:0 beacon_start=2021-04-16T02:48:50.328262577Z catchup=false
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=asm_amd64.s:1371 beacon=start
+crypto store: saving private share in datadir/groups/dist_key.private
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=drand_control.go:43 init_dkg=dkg_done starting_beacon_time=1618541370 now=1618541330
+Copy the following snippet into a new group.toml file
+Threshold = 3
+Period = "1m30s"
+CatchupPeriod = "0s"
+GenesisTime = 1618541370
+TransitionTime = 0
+GenesisSeed = "9c276e6988dcaa77b0fc79b5e7757d2c46b4aadbae88c41d13f6dc14364c8e73"
+
+[[Nodes]]
+  Address = "10.0.0.187:8080"
+  Key = "800e7f70a52ade3ae42a1056f281bb2092001d1b7b35c580bf2f8ad14f7e96fce33504129327a9cc3c722f4318f2930b"
+  TLS = false
+  Signature = "896555c28dac5f2d285b150fc95b90baa5fac4a403824b69b5e1e8bfabf13d9dc12ba49bb32833a4f9820ce4a5399ffa1923a49c6f5650fcc5afd55aff40565cd5493c7f4a68a86d6dba6fb1d3c20e27dc9bef01d1a1f730e1b86c9e413d8888"
+  Index = 0
+
+[[Nodes]]
+  Address = "10.0.0.70:8080"
+  Key = "8ae7bbabab1cc9285c8354da93910dce8d7292807a675504adf77b6e0ac3e6c365ffe057b751695a3235e9981fb6c3d3"
+  TLS = false
+  Signature = "893edc1041fafe1072fe5d9a09e90adf1cdabb49f163599ecc81abcb9e4face0bee91becd9d333cb5877135b69b1326d0bed0ea0580f6c7c66159b506d3baa98c74a3a836bf8d91539da4c57b8a545dd19854ed74c365995b14eeee6131b3123"
+  Index = 1
+
+[[Nodes]]
+  Address = "10.0.0.89:8080"
+  Key = "981bb93c1b029552b701a4e14479e8ba55b2ab73c06753b6ad4beaab9607aa744b11017696321a14b10939af2e627f38"
+  TLS = false
+  Signature = "a427277abd27980541eec7d14a88c9d2c6455b455b88d79cf45b6b9add96ae92d7c0e3a88790cea25d52dc3888e58d91163bcf0b244f370665fda7502075e4880d93add09275dac8ed4093fbc598d41b5c5f264684a2ac2dc902e08b57a19e13"
+  Index = 2
+
+[[Nodes]]
+  Address = "10.0.0.254:8080"
+  Key = "a7ac0e0eb8f5ce36be239669661df19c984ac660b7883d5deccc5cfeb4b5760263e8e6888e6e9743a2ff67d0860759cb"
+  TLS = false
+  Signature = "a0082742fc6ed259c9bc7bc515a8ad24b0a8dbc1097f4bd59aba8eaf4dce23799d230e2e5b5c433dac8b574fa121bb090d452cb7193a447f49c2334a360237bf1263724dd6299637c2bd8c35c4186513498f903d6ed1bef8e282bb1d81f170b1"
+  Index = 3
+
+[PublicKey]
+  Coefficients = ["8a46a64a41feb4b31019760b8d4e0a8731663515a1d61b7cd0ecbd9072819330ded4d1e3f068f22e66487601bb016718", "9938bc4f4489e63eaed9121acc5df37f3d87f2643468cf351773c0027b7281722182885ec9ea4d5405785a31b7cfc7f3", "a114110f32d9bcb54dbfc47d406f7eb4ed25743a711643bb9654d3da827de0da47b03a0e19b271df8a82e625ad15fbb5"]
+
+
+Hash of the group configuration: feb2c155fff6bdef488daf3e414b584be746cc626364f0920c9ce1acd8899390
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=:0 beacon_start=2021-04-16T02:48:50.316011409Z catchup=false
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=asm_amd64.s:1371 beacon=start
+
+Hash of the group configuration: feb2c155fff6bdef488daf3e414b584be746cc626364f0920c9ce1acd8899390
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=:0 beacon_start=2021-04-16T02:48:50.321700997Z catchup=false
+level=info ts="Fri, 16 Apr 2021 02:48:50 UTC" call=asm_amd64.s:1371 beacon=start
+level=info ts="Fri, 16 Apr 2021 02:49:30 UTC" call=:0 aggregated_beacon=1
+level=info ts="Fri, 16 Apr 2021 02:49:30 UTC" call=chain.go:180 NEW_BEACON_STORED="{ round: 1, sig: b43ec7, prevSig: 9c276e }" time_discrepancy_ms=360.606888
+level=info ts="Fri, 16 Apr 2021 02:49:30 UTC" call=:0 aggregated_beacon=1
+level=info ts="Fri, 16 Apr 2021 02:49:30 UTC" call=chain.go:180 NEW_BEACON_STORED="{ round: 1, sig: b43ec7, prevSig: 9c276e }" time_discrepancy_ms=363.224241
+level=info ts="Fri, 16 Apr 2021 02:49:30 UTC" call=:0 aggregated_beacon=1
+level=info ts="Fri, 16 Apr 2021 02:49:30 UTC" call=:0 aggregated_beacon=1
+level=info ts="Fri, 16 Apr 2021 02:49:30 UTC" call=chain.go:180 NEW_BEACON_STORED="{ round: 1, sig: b43ec7, prevSig: 9c276e }" time_discrepancy_ms=399.446068
+level=info ts="Fri, 16 Apr 2021 02:49:30 UTC" call=chain.go:180 NEW_BEACON_STORED="{ round: 1, sig: b43ec7, prevSig: 9c276e }" time_discrepancy_ms=396.645416
+level=info ts="Fri, 16 Apr 2021 02:51:00 UTC" call=:0 aggregated_beacon=2
+level=info ts="Fri, 16 Apr 2021 02:51:00 UTC" call=chain.go:180 NEW_BEACON_STORED="{ round: 2, sig: a14b0d, prevSig: b43ec7 }" time_discrepancy_ms=369.358871
+level=info ts="Fri, 16 Apr 2021 02:51:00 UTC" call=:0 aggregated_beacon=2
+level=info ts="Fri, 16 Apr 2021 02:51:00 UTC" call=chain.go:180 NEW_BEACON_STORED="{ round: 2, sig: a14b0d, prevSig: b43ec7 }" time_discrepancy_ms=367.948723
+level=info ts="Fri, 16 Apr 2021 02:51:00 UTC" call=:0 aggregated_beacon=2
+level=info ts="Fri, 16 Apr 2021 02:51:00 UTC" call=chain.go:180 NEW_BEACON_STORED="{ round: 2, sig: a14b0d, prevSig: b43ec7 }" time_discrepancy_ms=366.674535
+level=info ts="Fri, 16 Apr 2021 02:51:00 UTC" call=:0 aggregated_beacon=2
+level=info ts="Fri, 16 Apr 2021 02:51:00 UTC" call=chain.go:180 NEW_BEACON_STORED="{ round: 2, sig: a14b0d, prevSig: b43ec7 }" time_discrepancy_ms=385.979977
+Connection to 3.137.172.162 closed by remote host.
+Connection to 3.15.26.202 closed by remote host.
+Connection to 3.17.179.235 closed by remote host.
+Connection to 13.58.243.14 closed by remote host.

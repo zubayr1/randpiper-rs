@@ -1,0 +1,7 @@
+n = 3: propose_length = 761
+n = 10: propose_length = 2308
+n = 20: propose_length = 4518
+n = 30: propose_length = 6728
+n = 50: propose_length = 11148
+n = 75: propose_length = 16673
+n = 100: propose_length = 22198

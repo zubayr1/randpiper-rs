@@ -1,0 +1,16 @@
+[package]
+name = "types"
+version = "0.1.0"
+authors = ["hermitsage <dth.bht@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1"
+crypto = {package = "crypto", path = "../crypto"}
+linked-hash-map = "0.5.3"
+tokio-util = {version = "0.6", features= ["codec"]}
+bytes = "1.0"
+types_upstream = {package="types", git="https://github.com/adithyabhatkajake/libchatter-rs", rev="9ac36d671ed84028092c15f12d90d04195de32f0"}

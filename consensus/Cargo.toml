@@ -1,0 +1,31 @@
+[package]
+name = "consensus"
+version = "0.1.0"
+authors = ["hermitsage <dth.bht@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+config = { package = "config", path="../config"}
+types = { package = "types", path="../types"}
+crypto = { package = "crypto", path="../crypto"}
+util = { package = "util", path="../util"}
+tokio = { version = "1.0", features = ["full"] }
+reed-solomon-erasure = { version = "4.0" }
+# crossfire = "0.1"
+futures = "^0.3"
+bytes = "1.0"
+tokio-util = "0.6"
+tokio-stream = "0.1"
+log = "*"
+serde = { version = "1.0", features = ["derive"] }
+crypto_lib = {package = "crypto", git = "https://github.com/adithyabhatkajake/libchatter-rs", rev="9ac36d671ed84028092c15f12d90d04195de32f0"}
+num-traits = "0.2"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "bench"
+harness = false
