@@ -7,7 +7,7 @@ done < $FILE
 
 for ip in "${IPS[@]}"
 do
-    ssh arch@$ip 'ip address show' | \
+    ssh -i "randpiper.pem" ubuntu@$ip 'ip address show' | \
     grep "inet .* brd" | \
     sed 's/ brd.*//g' | \
     sed 's/inet //' | \

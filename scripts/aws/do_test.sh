@@ -14,7 +14,7 @@ idx=0
 
 for ip in "${IPS[@]}"
 do
-    ssh -t arch@$ip 'bash -ls --' < scripts/aws/test.sh $idx &
+    ssh -i "randpiper.pem" -t ubuntu@$ip 'bash -ls --' < scripts/aws/test.sh $idx &
     idx=$(($idx+1))
 done
 
@@ -24,7 +24,7 @@ idx=0
 
 for ip in "${IPS[@]}"
 do
-  scp arch@$ip:./output.log ./$idx.log &
+  scp -i "randpiper.pem" ubuntu@$ip:./output.log ./$idx.log &
   idx=$(($idx+1))
 done
 

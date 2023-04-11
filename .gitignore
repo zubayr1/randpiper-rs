@@ -24,3 +24,5 @@ consensus/target/
 *.json
 *.log
 .fuse_hidden000d8321000032d6
+
+*.pem
