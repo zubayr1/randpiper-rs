@@ -1,0 +1,2593 @@
+{2: "0.0.0.0:7002", 0: "172.31.84.30:7000", 1: "172.31.89.130:7001"}
+2023-04-11T10:31:37.181Z INFO  [app] Successfully decoded the config file
+2023-04-11T10:31:50.169Z INFO  [net] New incoming connection from 172.31.89.130:44872
+2023-04-11T10:31:50.196Z INFO  [net] New incoming connection from 172.31.84.30:56932
+2023-04-11T10:31:50.196Z INFO  [net] Connected to all nodes in the protocol
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "End"
+Rand Beacon: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2: cx.epoch 1. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 0 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 10 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 0 ms.
+2: Phase "End"
+Rand Beacon: [45, 5e, a9, 62, db, 2e, 5e, 1b, 77, 9, 5e, 57, cb, 5c, 29, bf, d1, 43, 10, 7f, 3, c2, d8, 23, d9, f5, e0, d1, 14, 24, f, 5b]
+2: cx.epoch 2. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [cb, 2f, 46, e, 3b, fc, d4, e9, 60, e7, 6b, c2, a5, 73, 2f, 96, 5f, a3, e9, 9d, df, 6, 92, 39, c8, 9b, 5e, e1, 67, ff, 48, 3e]
+2: cx.epoch 3. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [be, 4b, e0, 8e, f9, d, 4b, 5a, 1, d7, 53, 1a, 56, 85, c3, ee, 33, f4, 8f, 18, 3a, 82, da, 12, f9, c2, 1d, d1, 1f, 9, 78, 2c]
+2: cx.epoch 4. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [bb, 5c, 21, 3c, 6c, 7c, 9d, 13, 6a, bf, f7, b3, d1, 8b, 8, 80, 23, 7d, 3, 88, b5, fd, 6d, 49, a7, 18, 85, ea, e2, 9c, e7, ef]
+2: cx.epoch 5. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [d0, 2d, 4c, 6c, f1, f1, 38, 7b, 4, 58, b9, 7d, 51, da, de, 34, 6b, 9e, 31, 6e, fd, 10, 4d, f4, 86, fc, 94, d6, a2, 20, b6, df]
+2: cx.epoch 6. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [46, 8d, 7f, b7, 82, 38, 8c, 13, 26, ab, 8, 99, 82, 9, b8, d0, 48, a3, ed, a9, ba, b8, 71, 84, be, 3a, 6f, e, 77, c7, c4, 1c]
+2: cx.epoch 7. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [34, a4, 64, e7, c, 4c, 41, 58, f9, 17, f6, 3b, 32, ac, 35, a, 13, 56, 93, 85, c9, 95, cc, 18, 2f, c8, be, aa, 58, ae, 3f, 3]
+2: cx.epoch 8. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [9f, 7d, 7b, 20, 21, 65, 6e, a1, 7f, 93, e7, 80, 5e, 6, 1e, 84, d9, 6b, 23, ee, 34, 22, 53, c, 80, 61, 61, 92, 8, 47, 5d, 26]
+2: cx.epoch 9. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [8d, 46, 8, 2b, f9, 5d, ea, f8, 40, c8, db, 74, e1, 3, e7, 99, d5, 7e, 70, 90, 4f, bb, 22, 71, ed, 8e, 96, 44, a1, 96, a2, 2b]
+2: cx.epoch 10. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 5 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [cc, b9, 27, 7d, 37, 20, 61, 6, 5a, c8, cd, ff, 9e, 4a, 64, 8f, 24, aa, fd, f4, f9, da, 5f, 87, 5d, c9, fc, d8, b4, c8, 44, 8e]
+2: cx.epoch 11. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [ff, d5, 6, c3, c2, dc, 7e, 10, c4, b2, ff, 19, 41, 3a, 2, 89, fa, fb, b4, 43, b, df, 42, 12, cd, d6, c8, a3, 4a, cf, 7d, c2]
+2: cx.epoch 12. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [7b, b6, be, f4, 25, de, 87, 91, e3, 8f, 44, 23, 84, be, 1c, 7c, be, 74, e9, 9a, ac, 7e, 8d, b, 8e, 67, 82, 62, 73, dd, d0, fb]
+2: cx.epoch 13. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 9 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [f8, b4, 60, 5e, d4, 83, 49, 61, 53, 43, 9a, e6, 1c, 3b, 57, 14, d, d6, e6, 9f, 38, b1, 10, fa, b5, 27, cf, 25, bd, e6, 4b, fc]
+2: cx.epoch 14. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [75, 7f, 5c, dd, d5, 12, 3d, 37, 90, 3e, 20, 86, 18, 6a, c2, ee, 54, 8e, a2, 2f, cd, 7c, 81, fd, de, dd, 65, 87, 7a, 7d, 6d, 18]
+2: cx.epoch 15. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [39, 44, 6b, 9, 16, 6e, 10, a3, 19, e4, 28, d, e2, 6a, 27, 60, 1f, 78, 9b, 63, 79, 96, 74, 83, 6a, 6b, 55, 71, a5, b0, 1c, 47]
+2: cx.epoch 16. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 5 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 10 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [9d, 68, 26, a8, bc, 11, 5d, 14, 76, 38, a9, e9, 24, c0, 79, e1, e0, 0, 7e, 2c, 50, 40, c5, 3d, 89, 91, 39, 69, 9e, 3d, fb, 4e]
+2: cx.epoch 17. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [d7, bd, bb, f1, 2e, 8, 32, 6d, f4, f0, 21, b5, 86, 5f, 2b, c3, 58, 0, e3, 32, 9d, 4e, 35, c1, 9a, 19, f7, 67, f, 59, 86, 2e]
+2: cx.epoch 18. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 7 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [49, b3, e7, d6, 43, f5, a1, 88, 2a, b0, 95, 28, cb, 12, d2, 95, f5, 65, 10, c, 88, e5, e3, 81, ab, e6, d3, 48, be, c7, 28, c7]
+2: cx.epoch 19. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 10 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [ea, 8e, 15, 0, e8, ef, 6f, 88, 51, 8a, ce, 32, 43, ab, 55, 29, a2, 20, 28, 56, e9, 9e, 7, 1e, 71, e9, 5b, 2d, 34, b1, 2d, 45]
+2: cx.epoch 20. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 9 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [ac, 43, 56, cf, 35, 39, 91, c4, c6, 8c, 6a, 31, 7c, 57, c9, a3, d0, 8f, d0, 2a, ea, 4d, 72, 2d, 3f, 61, 57, da, 9f, 65, 62, 7b]
+2: cx.epoch 21. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [fd, 1f, 63, 3d, f3, b3, 7f, 73, a7, 4a, ee, f3, 8a, 83, ce, 83, 74, 4c, 4, d7, 73, d8, 1c, 6, b1, 75, 27, cb, 2b, f4, 23, 71]
+2: cx.epoch 22. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [a7, 2f, 40, 6e, 55, 81, 94, 9, e0, fb, 63, f9, 91, 97, 48, 8c, d1, b0, b8, 62, 9a, 59, dc, 94, d0, 40, 1a, f1, a, e8, 8d, 54]
+2: cx.epoch 23. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [cb, 37, c2, 3d, aa, f7, 9d, a1, 35, a7, ed, ec, 1f, ff, ce, 7f, a0, c4, 13, e3, 63, e1, 4e, 76, 99, 4b, 90, 33, 8c, 56, 65, fc]
+2: cx.epoch 24. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 10 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [a3, 61, 70, 6f, c1, d3, 3f, 89, 78, 42, a3, 53, 32, 63, 42, 29, cd, 37, a5, d5, e6, 38, 15, a6, 28, a7, c9, c6, 9d, 1a, 6e, e2]
+2: cx.epoch 25. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 5 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [86, ca, ad, 35, aa, 35, 8b, 69, 10, 83, 80, 31, dc, 2f, a6, 16, 18, 38, 62, cd, b8, 59, 5d, d6, f0, 35, 1d, 27, 5c, aa, 1c, 73]
+2: cx.epoch 26. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [df, dc, 62, c5, 8e, d1, 41, 93, f9, ce, a8, 5c, 25, 52, ac, b, 4, 92, 4c, b1, a3, e5, 78, f9, be, 5e, c4, 9e, 54, b4, 5a, a2]
+2: cx.epoch 27. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [df, d3, 79, a9, 57, f2, b1, db, fd, 3d, 1c, 71, 66, e5, a8, 3, e6, 88, a4, c6, 42, e3, fa, 5a, 85, b1, ca, d5, 75, 63, b6, a8]
+2: cx.epoch 28. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [55, 9f, 8f, d6, 1a, f4, 88, 1f, 5d, b8, f, c2, f7, 8b, 7b, 62, 0, 12, 80, 1b, 9b, 47, 6d, 92, 84, c6, a4, 69, 2e, 55, bb, ff]
+2: cx.epoch 29. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [3d, fa, b0, f8, db, e3, 1e, 7b, f8, 96, da, 90, 77, 7c, 4e, c3, 3c, 39, f7, df, 2d, f3, 3d, 7c, a8, cf, 93, 28, 5e, 2, da, 4c]
+2: cx.epoch 30. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 10 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [4e, 3a, ee, 8f, 64, 76, 31, de, 44, c5, d5, 62, 45, ea, b6, 4a, b7, 6b, ae, 90, 8d, 23, c5, 86, a6, f3, 20, b3, 80, 59, bb, d9]
+2: cx.epoch 31. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 9 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [b7, 90, 68, 8d, a9, 66, 68, 1, 86, 1, a8, ee, 3e, f1, 1f, 53, f4, 9e, e5, 8c, 78, 45, 64, 2e, 5d, 69, 3, b4, 3a, a9, 73, 72]
+2: cx.epoch 32. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 9 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [5, 25, ad, b0, fa, e8, c7, 46, 7c, 9a, eb, 40, c0, 34, 85, e4, ed, 43, 90, 9c, f0, ee, 56, 3e, 1b, c2, b1, b4, 99, f5, 78, 6b]
+2: cx.epoch 33. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 9 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 9 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [c7, ef, 9f, 77, 67, b8, 50, 14, e3, da, e6, 1b, e8, 75, b8, 56, d3, 58, 64, 9c, e1, e1, 97, 97, f2, 92, 13, a6, cb, 23, 58, 9c]
+2: cx.epoch 34. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 10 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 9 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [d, 22, 14, 9d, c0, 2d, 66, a5, 23, ee, 30, ae, ac, e7, 2f, 83, 1, 6b, b3, 27, ac, b3, 78, ad, 38, 76, 18, 58, 5, 34, d4, b4]
+2: cx.epoch 35. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 7 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [f1, e7, 6, d3, dc, 2c, 45, fd, 6e, 91, 40, ab, da, f1, 28, a6, 43, 95, 33, 60, f, b8, 74, d2, c6, c8, 45, 3e, b, e2, ed, 75]
+2: cx.epoch 36. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 9 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 10 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 7 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [f4, e7, 7e, 4e, 8b, 64, 47, fc, 2b, c4, b6, 8f, 14, 3f, f2, f7, 9d, 56, c7, 94, 9e, 45, 2f, fe, 77, 50, d0, b8, 9c, a2, fa, 1e]
+2: cx.epoch 37. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [2b, 31, 44, 14, 61, c, c7, b8, d8, f8, 74, 24, 47, d7, dc, 4f, e9, 69, 83, 4d, d1, 65, 79, 20, ed, 7e, 1b, a9, d4, 12, c0, 9d]
+2: cx.epoch 38. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [11, 52, 79, 4c, dd, bd, ab, 25, ca, 1d, 72, 6e, 52, d6, 70, ee, df, 39, 77, 33, cb, 27, 56, d3, 4a, db, c7, e1, d, 9d, c, ea]
+2: cx.epoch 39. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 9 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [61, a1, 7f, e7, 5c, 16, fa, 53, 90, fa, 89, 20, 41, 31, 44, 12, 5f, 7e, c, bf, dd, d9, b7, cd, e5, 87, 39, ab, e, 46, ee, 3a]
+2: cx.epoch 40. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 5 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [12, 70, 63, 8b, 6, 52, cd, 96, a0, 3c, 55, c2, 78, 70, 73, 87, 3f, ab, d, 8d, f3, d4, 64, 22, 5e, fa, b0, a6, 73, e0, 20, 5a]
+2: cx.epoch 41. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [4c, 6b, 9d, af, 98, 71, bd, e4, 7e, 9e, a, a0, 35, f8, c6, c1, 6d, 26, 2e, a4, 27, f0, cc, 84, e8, 58, 80, 82, 33, 54, a6, df]
+2: cx.epoch 42. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 9 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [15, 40, 9a, 2, 2c, c2, d, cc, 5f, 4f, 40, 1f, 67, 34, 1f, 34, aa, 6f, e2, e9, 96, 1c, b0, 42, ce, b2, fe, fc, 89, 9a, e7, b]
+2: cx.epoch 43. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 5 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [7f, 6d, c1, aa, 47, 93, 43, ea, 24, c6, 8a, c8, 31, 37, b4, 17, 6, a4, 5c, 52, c8, 7a, 3b, b0, ae, 52, 57, c4, 74, 87, ac, 35]
+2: cx.epoch 44. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [a2, e, a9, 3e, 67, 77, 55, 8c, f6, 88, 51, da, 79, 73, 89, f7, 2, c0, 86, c8, 3c, e0, 68, e8, fc, 24, ce, 97, a9, d8, bd, 9f]
+2: cx.epoch 45. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 9 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [85, 2a, d9, 21, 28, cc, 7, 35, 24, df, 58, 68, 7c, 11, 8, 6f, f0, 6d, a7, 5f, 1, cf, cc, a3, c1, 9f, e5, 63, 7e, b2, ff, ff]
+2: cx.epoch 46. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 9 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 7 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [e6, 1b, b, fa, 7f, c6, 6, 31, a7, d4, b9, d, 6b, bd, 49, d3, 1e, ec, ae, 88, 8d, e5, 9b, cc, 67, 7e, b3, f4, 8, 54, 4b, 22]
+2: cx.epoch 47. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 9 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [4f, 35, bd, a7, 8f, c6, d6, 24, 47, e9, 39, ff, 42, fb, 81, bd, 5b, be, 7, bf, b1, d4, ec, 88, b0, 90, c9, dc, 1, f4, 53, 2b]
+2: cx.epoch 48. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [bd, df, d3, 7d, f5, 99, c3, c0, bd, bc, 54, ac, 56, 27, d4, 1, d, e3, 47, 90, 2c, a8, fb, 6e, 46, e5, 3c, bd, 1d, df, 58, 4f]
+2: cx.epoch 49. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 9 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 7 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [7, e9, 2a, 15, 6a, 93, 59, 51, a1, 57, bf, 49, c9, 30, ed, 37, e1, 94, 72, 4f, 16, af, ec, aa, df, d8, 97, 78, eb, c3, 73, fa]
+2: cx.epoch 50. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 7 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [8c, 90, 98, c0, f7, cd, d4, 33, 12, f6, 5a, c0, c7, 38, 55, 7d, d9, d9, 79, dd, cc, ff, 91, 8d, 1b, 6e, 9f, cb, 4a, d6, fc, 78]
+2: cx.epoch 51. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 10 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 9 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 7 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [b5, 85, aa, 6d, 1f, e4, 91, e9, c8, b5, 7e, 46, 8a, 8a, 8a, 15, 22, 6e, 2b, ab, a5, e, 8d, 80, d1, 45, 6a, 85, e3, f5, 9e, 75]
+2: cx.epoch 52. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 5 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Received "Ack".
+2: Message "Ack" took 0 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [97, 0, d4, a2, 8b, 2c, c8, 90, 4e, 8d, 3e, 68, ce, a6, df, fb, 66, 90, f7, 2b, b5, d, 6, 2, 47, 6a, c1, bb, 81, c8, d4, 6c]
+2: cx.epoch 53. Leader is 2.
+2: Phase "End" took 0 ms.
+2: Received "Certificate".
+2: Message "Certificate" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Propose"
+2: Phase "Propose" took 4 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 8 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 8 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Received "Vote".
+2: Message "Vote" took 0 ms.
+2: Received "Vote".
+2: Message "Vote" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 8 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [5c, cb, 92, 89, b0, f2, e0, 8, 75, a2, e, f2, 6b, 82, 9d, 3c, b7, 51, e6, 11, 3, 8a, 1c, 8d, 4e, fb, 85, d9, 75, ea, fb, 73]
+2: cx.epoch 54. Leader is 0.
+2: Certification sent.
+2: Phase "End" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Commit".
+2: Message "Commit" took 12 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Propose".
+2: Message "Propose" took 0 ms.
+2: Phase "DeliverPropose"
+2: Phase "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 7 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 0 ms.
+2: Received "DeliverPropose".
+2: Message "DeliverPropose" took 6 ms.
+2: Phase "DeliverCommit"
+2: Phase "DeliverCommit" took 7 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 0 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 10 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 1 ms.
+2: Received "DeliverCommit".
+2: Message "DeliverCommit" took 6 ms.
+2: Phase "Vote"
+2: Phase "Vote" took 1 ms.
+2: Received "VoteCert".
+2: Message "VoteCert" took 11 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 7 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 0 ms.
+2: Received "DeliverVoteCert".
+2: Message "DeliverVoteCert" took 6 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Received "Reconstruct".
+2: Message "Reconstruct" took 0 ms.
+2: Phase "Commit"
+2: Phase "Commit" took 1 ms.
+2: Phase "End"
+Rand Beacon: [ee, 7d, 49, fd, 57, 81, be, ce, 47, cc, a, 3c, dc, da, eb, 33, b1, af, 42, 52, 8a, 2f, 26, 6, a4, 67, 35, 78, b1, f0, e5, 93]
+2: cx.epoch 55. Leader is 1.
+2: Certification sent.
+2: Phase "End" took 4 ms.
+2023-04-11T10:34:37.006Z WARN  [peer] Disconnected from peer
