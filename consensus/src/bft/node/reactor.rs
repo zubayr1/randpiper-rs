@@ -25,6 +25,7 @@ enum Phase {
     End,
 }
 
+
 impl Phase {
     pub fn to_string(&self) -> &'static str {
         match self {
