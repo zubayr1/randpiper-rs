@@ -15,7 +15,7 @@ pub enum ProtocolMsg {
     Reconstruct(crypto::EVSSShare381, Height),
     Commit(std::collections::VecDeque<crypto::EVSSShare381>, Vec<crypto::EVSSCommit381>, DataWithAcc),
     DeliverCommit(Vec<u8>, Replica, SignedData),
-    Ack(Vote),
+    // Ack(Vote),
 }
 
 pub fn commit_from_bytes(bytes: &[u8]) -> Vec<crypto::EVSSCommit381> {
@@ -41,7 +41,7 @@ impl ProtocolMsg {
             ProtocolMsg::Reconstruct(_, _) => "Reconstruct",
             ProtocolMsg::Commit(_, _, _) => "Commit",
             ProtocolMsg::DeliverCommit(_, _, _) => "DeliverCommit",
-            ProtocolMsg::Ack(_) => "Ack",
+            // ProtocolMsg::Ack(_) => "Ack",
         }
     }
 }
